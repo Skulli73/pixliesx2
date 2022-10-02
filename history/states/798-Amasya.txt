@@ -1,0 +1,21 @@
+state={
+	id=798
+	name="STATE_798"
+	provinces={
+		919 3807 3862 3964 11826 11844 
+	}
+	manpower = 0# = 531172
+	
+	state_category = rural
+
+	history= {
+		owner = BYZ
+		add_core_of = BYZ
+		buildings = {
+			#infrastructure = 2
+		}
+		# = TUR
+	}
+
+	local_supplies=0.0 
+}

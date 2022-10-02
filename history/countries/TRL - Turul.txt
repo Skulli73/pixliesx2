@@ -1,0 +1,37 @@
+﻿oob = "GENERIC"
+capital = 43
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 1
+set_convoys = 0
+
+
+add_ideas = {
+	all_adults_serve
+	war_economy
+}
+
+
+
+#Politics for 50.1.1
+set_politics = {
+	ruling_party = fascism
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	fascism = 60
+	neutrality = 25
+}
+create_country_leader = {
+	name = "Xanax"
+	ideology = nazism
+	picture = "xanax.dds"
+	traits = {
+		dictator
+		great_war_hero
+		autocratic_imperialist
+	}
+}

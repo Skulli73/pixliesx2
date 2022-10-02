@@ -1,0 +1,106 @@
+characters = {
+#Create country leader - Zenetty
+zenetty = {
+	name = zenetty
+	portraits = {
+		civilian = {
+			#Custom image for Zenetty
+			large = "/gfx/leaders/GRE/ytqRjhpO-231952.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {  veteran_communist }
+	}
+}
+
+#Create country leader - QTVNickBro
+qtvnickbro = {
+	name = qtvnickbro
+	portraits = {
+		civilian = {
+			#Custom image for QTVNickBro
+			large = "/gfx/leaders/GRE/QAXxKDur-231951.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {  royal_dictator conservative_nationalist }
+	}
+}
+
+#Create country leader - Crepite
+crepite = {
+	name = crepite
+	portraits = {
+		civilian = {
+			#Custom image for Crepite
+			large = "/gfx/leaders/GRE/zYqbwCAf-231953.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = centrism
+		traits = {  popular_queen constitutional_monarch champion_of_peace_1 }
+	}
+}
+
+#Create country leader - King Zenetty
+king_zenetty = {
+	name = king_zenetty
+	portraits = {
+		civilian = {
+			#Custom image for King Zenetty
+			large = "/gfx/leaders/GRE/QfiwnheL-231950.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  popular_queen constitutional_monarch champion_of_peace_1 }
+	}
+}
+
+#Create military leader - QTVNickBro
+	ZBTqKeMN = {
+		name = "ZBTqKeMN"
+		portraits = {
+			army = {
+				#Custom images for QTVNickBro
+				large = "/gfx/leaders/GRE/ZBTqKeMN-231967.dds"
+				small = "/gfx/interface/ideas/GRE/ZBTqKeMN-231967.dds"
+			}
+		}
+		field_marshal = {
+			traits = { infantry_leader politically_connected }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		legacy_id = 13321060
+		}
+	}
+
+	fAUDkGNq = {
+		name = "fAUDkGNq"
+		portraits = {
+			army = {
+				#Custom images for Crepite
+				large = "/gfx/leaders/GRE/fAUDkGNq-231969.dds"
+				small = "/gfx/interface/ideas/GRE/fAUDkGNq-231969.dds"
+			}
+		}
+		navy_leader = {
+			traits = { politically_connected media_personality winter_specialist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			legacy_id = 33321060
+		}
+	}
+}

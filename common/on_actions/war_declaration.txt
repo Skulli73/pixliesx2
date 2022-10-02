@@ -1,0 +1,124 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+				IF = {
+					limit = {
+						FROM = {
+							OR = {
+								tag = GME
+								tag = FGE
+							}
+						}
+						ROOT = {
+							OR = {
+								tag = GME
+								tag = FGE
+							}
+						}
+					}
+					FGE = {
+						set_country_flag = {
+							flag = no_fall_events
+							days = 15
+						}
+					}
+					IF = {
+						limit = {
+							FGE = {has_completed_focus = FGE_promise_pardons}
+						}
+						FGE = {
+							division_template = {
+								name = "Partisan"
+								is_locked = yes
+								priority = 0
+								template_counter = 0
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								FGE = {has_completed_focus = FGE_behind_enemy_lines}
+							}
+							division_template = {
+								name = "Partisan"
+								is_locked = yes
+								priority = 0
+								template_counter = 0
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+								}
+							}
+							else = {
+								division_template = {
+									name = "Partisan"
+									is_locked = yes
+									priority = 0
+									template_counter = 0
+									regiments = {
+										infantry = { x = 0 y = 0 }
+									}
+								}
+							}
+						}
+					}
+					GME = {
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = GME
+								}
+								is_core_of = FGE
+							}
+							teleport_armies = {
+								limit = {
+									always = yes
+								}
+								to_state_array = owned_controlled_states
+							}
+							set_state_province_controller = {
+								controller = FGE
+								limit = {
+									always = yes
+								}
+							}
+							create_unit = {
+								division = "name = \"Partisan\" division_template = \"Partisan\" start_experience_factor = 0"
+								owner = FGE
+							}
+						}
+					}
+					IF = {
+						limit = {
+							has_global_flag = FGE_ILY_pact
+						}
+						ILY = {
+							OVERLORD = {
+								end_puppet = ILY
+							}
+							leave_faction = yes
+							declare_war_on = {
+								target = CSA
+								type = puppet_wargoal_focus
+							}
+							add_to_war = {
+								targeted_alliance = FGE
+								enemy = GME
+								hostility_reason = asked_to_join
+							}
+							white_peace = TRL
+							recognize_fge_effect = yes
+						}
+						FGE = {
+							add_to_faction = ILY
+						}
+					}
+				}
+			
+		}
+	}
+}

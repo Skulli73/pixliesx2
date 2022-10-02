@@ -1,0 +1,33 @@
+characters = {	chomkii = {
+		name = chomkii
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/UqrXwlYe-160947.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = chomkii
+			allowed = {
+				original_tag = UWU
+			}
+			traits = { the_king_of_the_castle}
+		}
+	}
+	chomkii = {
+		name = chomkii
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/NSKfeucF-160950.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = chomkii
+			allowed = {
+				original_tag = UWU
+			}
+			traits = { war_industrialist captain_of_industry}
+		}
+	}
+}

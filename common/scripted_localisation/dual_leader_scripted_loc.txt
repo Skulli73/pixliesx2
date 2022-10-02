@@ -1,0 +1,375 @@
+# For the Duel Leader Title, Leader Names, and custom portrait!
+
+defined_text = {
+	name = GetFirstTitle
+	text = {
+		trigger = {
+			tag = ROM
+			has_government = neutrality
+		}
+		localization_key = ROM_PRIME_MINISTER_TITLE
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+			has_government = democratic
+		}
+		localization_key = ENG_PRIME_MINISTER_TITLE
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			has_government = fascism
+		}
+		localization_key = "Führer"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			AND = {
+				has_government = neutrality
+				has_country_leader = {
+					character = katz
+				}
+			}
+		}
+		localization_key = "Kaiser"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			OR = {
+				has_government = democratic
+				AND = {
+					has_government = neutrality
+					NOT = {
+						has_country_leader = {
+							character = katz
+						}
+					}
+				}
+			}
+			NOT = {
+				has_country_flag = acting_pm
+			}
+		}
+		localization_key = "Prime Minister"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			has_government = democratic
+			has_country_flag = acting_pm
+		}
+		localization_key = "Acting Prime Minister"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			has_government = communism
+		}
+		localization_key = "General Secretary"
+	}
+	text = {
+		trigger = {
+			original_tag = CSA
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		localization_key = "President for Life"
+	}
+	text = {
+		trigger = {
+			original_tag = ESP
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		localization_key = "President"
+	}
+	text = {
+		localization_key = DEFAULT_FIRST_TITLE
+	}
+}
+
+defined_text = {
+	name = GetSecondTitle
+	text = {
+		trigger = {
+			tag = ROM
+			has_government = neutrality
+		}
+		localization_key = ROM_MONARCH_TITLE
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+			has_government = democratic
+		}
+		localization_key = ENG_KING_TITLE
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			has_government = fascism
+			is_subject = no
+		}
+		localization_key = "Deputy-Führer"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			has_government = fascism
+			is_subject = yes
+		}
+		localization_key = "Overseeer"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			AND = {
+				has_government = neutrality
+				has_country_leader = {
+					character = katz
+				}
+			}
+		}
+		localization_key = "Prime Minister"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			OR = {
+				has_government = democratic
+				AND = {
+					has_government = neutrality
+					NOT = {
+						has_country_leader = {
+							character = katz
+						}
+					}
+				}
+			}
+			NOT = {
+				has_cosmetic_tag = GME_REPUBLIC
+			}
+		}
+		localization_key = "Kaiser"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			has_government = democratic
+			OR = {
+				has_cosmetic_tag = GME_REPUBLIC
+				has_cosmetic_tag = FGE_REPUBLIC
+			}
+		}
+		localization_key = "President"
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = GME
+				original_tag = FGE
+			}
+			has_government = communism
+		}
+		localization_key = "President"
+	}
+	text = {
+		trigger = {
+			original_tag = ESP
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		localization_key = "Prime Minister"
+	}
+}
+
+defined_text = {
+	name = GetDualLeaderName
+	text = {
+		trigger = {
+			tag = ROM
+			has_government = neutrality
+		}
+		localization_key = ROM_CAROL_II
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+			ENG = {
+				has_idea = george_v
+			}
+		}
+		localization_key = ENG_GEORGE_V
+	}
+	text = {
+		trigger = {
+			has_idea = alternis_head_of_state
+		}
+		localization_key = "Alternis"
+	}
+	text = {
+		trigger = {
+			has_idea = needless_head_of_state
+		}
+		localization_key = "NeedlessMeming"
+	}
+	text = {
+		trigger = {
+			has_idea = skulli_head_of_state
+		}
+		localization_key = "Skulli"
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_idea = fortressia_head_of_state
+				has_idea = fortressia2_head_of_state
+			}
+		}
+		localization_key = "Fortressia"
+	}
+	text = {
+		trigger = {
+			has_idea = katz_head_of_state
+		}
+		localization_key = "Kätz"
+	}
+	text = {
+		trigger = {
+			has_idea = birb_head_of_state
+		}
+		localization_key = "Karl"
+	}
+	text = {
+		localization_key = DEFAULT_TITLE
+	}
+}
+
+defined_text = {
+    name = GetDualLeaderPortrait
+	text = {
+		trigger = {
+			tag = ROM
+			has_government = neutrality
+		}
+		localization_key = GFX_ROM_Carol_II
+	}
+    text = {
+        trigger = {
+			original_tag = ENG
+			ENG = {
+				has_idea = george_v
+			}
+        }
+        localization_key = "GFX_ENG_George_V"
+	}
+	text = {
+		trigger = {
+			has_idea = alternis_head_of_state
+		}
+		localization_key = "GFX_GME_alternis"
+	}
+	text = {
+		trigger = {
+			has_idea = needless_head_of_state
+		}
+		localization_key = "GFX_GME_needless"
+	}
+	text = {
+		trigger = {
+			has_idea = skulli_head_of_state
+		}
+		localization_key = "GFX_GME_skulli73"
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_idea = fortressia_head_of_state
+				has_idea = fortressia2_head_of_state
+			}
+		}
+		localization_key = "GFX_GME_fortressia"
+	}
+	text = {
+		trigger = {
+			has_idea = katz_head_of_state
+		}
+		localization_key = "GFX_GME_katz"
+	}
+	text = {
+		trigger = {
+			has_idea = birb_head_of_state
+		}
+		localization_key = "GFX_ESP_birb"
+	}
+	text = {
+		localization_key = "GFX_portrait_bg_blank"
+	}
+}
+
+defined_text = {
+    name = GetDualLeaderDesc
+    
+    text = {
+        trigger = {
+			original_tag = ENG
+			ENG = {
+				has_idea = george_v
+			}
+        }
+        localization_key = "DESCRIPTION_TEST"
+	}
+}
+
+defined_text = {
+    name = GetFirstLeaderDesc
+    
+    text = {
+        trigger = {
+			original_tag = ENG
+			ENG = {
+				has_idea = george_v
+			}
+        }
+        localization_key = "FIRST_LEADER_DESC_TEST"
+	}
+}

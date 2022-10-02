@@ -1,0 +1,20 @@
+state={
+	id=61
+	name="STATE_61"
+	manpower = 0# = 836353
+
+
+	state_category = town
+
+	history={
+		owner = GME
+		add_core_of = GME
+		# = GER
+	}
+
+	provinces={
+		268 293 321 9294 11276 11305 
+	}
+
+	local_supplies=3.0 
+}

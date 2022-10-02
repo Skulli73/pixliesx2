@@ -1,0 +1,127 @@
+characters = {
+#Create country leader - AMEST_III
+amest_iii = {
+	name = amest_iii
+	portraits = {
+		civilian = {
+			#Custom image for AMEST_III
+			large = "/gfx/leaders/QUE/kUZrCnXl-228713.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = centrism
+		traits = {  }
+	}
+}
+
+#Create country leader - Wujii
+wujii = {
+	name = wujii
+	portraits = {
+		civilian = {
+			#Custom image for Wujii
+			large = "/gfx/leaders/QUE/BYTrWIwo-228712.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {  }
+	}
+}
+
+#Create country leader - Geek_Gamer374
+geek_gamer374 = {
+	name = geek_gamer374
+	portraits = {
+		civilian = {
+			#Custom image for Geek_Gamer374
+			large = "/gfx/leaders/QUE/xHtnLKzr-228710.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  }
+	}
+}
+
+#Create country leader - Geek_Gamer374
+geek_gamer374 = {
+	name = geek_gamer374
+	portraits = {
+		civilian = {
+			#Custom image for Geek_Gamer374
+			large = "/gfx/leaders/QUE/XGIxOkzF-228711.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {  }
+	}
+}
+
+#Create military leader - Geek_Gamer374
+	dUVmOPoq = {
+		name = "dUVmOPoq"
+		portraits = {
+			army = {
+				#Custom images for Geek_Gamer374
+				large = "/gfx/leaders/QUE/dUVmOPoq-228771.dds"
+				small = "/gfx/interface/ideas/QUE/dUVmOPoq-228771.dds"
+			}
+		}
+		field_marshal = {
+			traits = { infantry_leader offensive_doctrine }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		legacy_id = 112315190
+		}
+	}
+
+#Create military leader - Wujii
+	pWcfovTP = {
+		name = "pWcfovTP"
+		portraits = {
+			army = {
+				#Custom images for Wujii
+				large = "/gfx/leaders/QUE/pWcfovTP-228775.dds"
+				small = "/gfx/interface/ideas/QUE/pWcfovTP-228775.dds"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		legacy_id = 112315191
+		}
+	}
+
+	dylanou29 = {
+		name = "dylanou29"
+		portraits = {
+			army = {
+				#Custom images for Dylanou29
+				large = "/gfx/leaders/QUE/dylanou29-228779.dds"
+				small = "/gfx/interface/ideas/QUE/dylanou29-228779.dds"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+			legacy_id = 312315190
+		}
+	}
+}

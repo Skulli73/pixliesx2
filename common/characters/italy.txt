@@ -1,0 +1,44 @@
+characters = {
+     nikiblago08 = {
+		name = "nikiblago08"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ILY/niki.dds"
+			}
+		}
+        country_leader={
+            ideology=nazism
+            traits = { dictator }
+		}	
+	}
+    zacx1492 = {
+		name = "Zacx1492"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/ILY/zacx1492.dds"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = zacx1492
+			ledger = army
+            traits = { military_theorist }
+			cost = 100
+		}
+	}
+	cangus3to = {
+		name = "cangus3to"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/ILY/cangus3to.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = cangus3to
+			ledger = army
+            traits = { military_theorist }
+			cost = 100
+		}
+	}
+}

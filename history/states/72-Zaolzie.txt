@@ -1,0 +1,23 @@
+state={
+	id=72
+	name="STATE_72"
+	manpower = 0# = 152000
+	
+	state_category = rural
+	
+	history={
+		owner = TRL
+		add_core_of = TRL
+
+		1939.3.14 = {
+			owner = WIL# = POL
+			controller = WIL# = POL
+		}
+	}
+
+	provinces={
+		9551 9567 
+	}
+
+	local_supplies=1.0 
+}

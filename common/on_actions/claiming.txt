@@ -1,0 +1,29 @@
+on_actions = {
+    on_weekly = {
+        effect = {
+            every_country = {
+                set_variable = {
+                    total_population = 0
+                }
+                every_owned_state = {
+                    PREV = {
+                        add_to_variable = {
+                            total_population = PREV.state_population
+                        }
+                    }
+                }
+
+                set_variable = {
+                    colonize_cost = num_owned_states
+                }
+                multiply_variable = {
+                    colonize_cost = num_owned_states
+                }
+                multiply_variable = {
+                    colonize_cost = 0.15
+                }
+                round_variable = colonize_cost
+            }
+        }
+    }
+}

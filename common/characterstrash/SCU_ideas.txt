@@ -1,0 +1,116 @@
+characters = {	ascarrbii = {
+		name = ascarrbii
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/pcoUAvSz-153785.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ascarrbii
+			allowed = {
+				original_tag = SCU
+			}
+			traits = { dictator}
+		}
+	}
+	scanian_electronics_company = {
+		name = scanian_electronics_company
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/hAxLucWD-156034.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			ledger = army
+			idea_token = scanian_electronics_company
+			allowed = {
+				original_tag = SCU
+			}
+			traits = { military_theorist army_infantry_1}
+		}
+	}
+	scanian_electronics_company = {
+		name = scanian_electronics_company
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/pcoUAvSz-153785.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = scanian_electronics_company
+			allowed = {
+				original_tag = SCU
+			}
+			traits = { dictator army_infantry_2 grand_battle_plan_expert great_war_hero}
+		}
+	}
+	scanian_electronics_company = {
+		name = scanian_electronics_company
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/qSkntdIx-153784.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = scanian_electronics_company
+			allowed = {
+				original_tag = SCU
+			}
+			traits = { warrior_code navy_chief_naval_aviation_1}
+		}
+	}
+	scanian_electronics_company = {
+		name = scanian_electronics_company
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/qSkntdIx-153784.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = scanian_electronics_company
+			allowed = {
+				original_tag = SCU
+			}
+			traits = { air_chief_reform_1 warrior_code}
+		}
+	}
+	scanian_electronics_company = {
+		name = scanian_electronics_company
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/pcoUAvSz-153785.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = scanian_electronics_company
+			allowed = {
+				original_tag = SCU
+			}
+			traits = { dictator great_war_hero grand_battle_plan_expert army_infantry_2}
+		}
+	}
+	scanian_electronics_company = {
+		name = scanian_electronics_company
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/hAxLucWD-156034.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = scanian_electronics_company
+			allowed = {
+				original_tag = SCU
+			}
+			traits = { military_theorist army_infantry_1}
+		}
+	}
+}

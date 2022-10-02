@@ -1,0 +1,127 @@
+characters = {
+#Create country leader - DaEmuGuy
+daemuguy = {
+	name = daemuguy
+	portraits = {
+		civilian = {
+			#Custom image for DaEmuGuy
+			large = "/gfx/leaders/SCU/TPEqtNcK-156033.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  }
+	}
+}
+
+#Create country leader - YOUREAKEK
+youreakek = {
+	name = youreakek
+	portraits = {
+		civilian = {
+			#Custom image for YOUREAKEK
+			large = "/gfx/leaders/SCU/YpwimKFI-153784.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = anarchist_communism
+		traits = {  }
+	}
+}
+
+#Create country leader - AscarrBii
+ascarrbii = {
+	name = ascarrbii
+	portraits = {
+		civilian = {
+			#Custom image for AscarrBii
+			large = "/gfx/leaders/SCU/JzXnraWk-156034.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {  warrior_code }
+	}
+}
+
+#Create country leader - Tqrtl
+tqrtl = {
+	name = tqrtl
+	portraits = {
+		civilian = {
+			#Custom image for Tqrtl
+			large = "/gfx/leaders/SCU/xUrYOXuJ-153775.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {  dictator grand_battle_plan_expert great_war_hero }
+	}
+}
+
+#Create military leader - Trqlt
+	trqlt = {
+		name = "trqlt"
+		portraits = {
+			army = {
+				#Custom images for Trqlt
+				large = "/gfx/leaders/SCU/trqlt-153785.dds"
+				small = "/gfx/interface/ideas/SCU/trqlt-153785.dds"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist old_guard politically_connected infantry_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		legacy_id = 175330180
+		}
+	}
+
+#Create military leader - AscarrBii
+	ZbhjkrKp = {
+		name = "ZbhjkrKp"
+		portraits = {
+			army = {
+				#Custom images for AscarrBii
+				large = "/gfx/leaders/SCU/ZbhjkrKp-156034.dds"
+				small = "/gfx/interface/ideas/SCU/ZbhjkrKp-156034.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		legacy_id = 175330181
+		}
+	}
+
+	TsjIFnEQ = {
+		name = "TsjIFnEQ"
+		portraits = {
+			army = {
+				#Custom images for YOUREAKEK
+				large = "/gfx/leaders/SCU/TsjIFnEQ-153784.dds"
+				small = "/gfx/interface/ideas/SCU/TsjIFnEQ-153784.dds"
+			}
+		}
+		navy_leader = {
+			traits = { naval_liason politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+			legacy_id = 375330180
+		}
+	}
+}

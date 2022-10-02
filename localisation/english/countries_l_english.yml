@@ -1,0 +1,458 @@
+﻿l_english: 
+#germania normal names
+GME:0 "Germania"
+GME_DEF:0 "Germania"
+GME_ADJ:0 "Germanic"
+GME_neutrality:0 "Germanic Empire"
+GME_neutrality_DEF:0 "the Germanic Empire"
+GME_fascism:0 "National State of Germania"
+GME_fascism_DEF:0 "the National State of Germania"
+GME_democratic:0 "Germanic Empire"
+GME_democratic_DEF:0 "the Germanic Empire"
+GME_communism:0 "Worker's Republic of Central Europe"
+GME_communism_DEF:0 "The Worker's Republic of Central Europe"
+
+#special germania names
+GME_REPUBLIC_democratic:0 "Germanic Republic"
+GME_REPUBLIC_democratic_DEF:0 "the Germanic Republic"
+GME_REPUBLIC_ADJ:0 "Germanic"
+
+
+#su normal names
+CSA:0 "Southern Union"
+CSA_DEF:0 "The Union of the South"
+CSA_ADJ:0 "Dixie"
+CSA_fascism:0 "Southern Union"
+CSA_fascism_DEF:0 "the Southern Union"
+CSA_fascism_ADJ:0 "Dixie"
+CSA_neutraltiy:0 "Southern Union"
+CSA_neutraltiy_DEF:0 "the Southern Union"
+CSA_neutraltiy_ADJ:0 "Dixie"
+CSA_democratic:0 "Federatation of American States"
+CSA_democratic_DEF:0 "the Federation of American States"
+CSA_democratic_ADJ:0 "American"
+CSA_communism:0 "Worker's Commune of America"
+CSA_communism_DEF:0 "the Worker's Commune of America"
+CSA_communism_ADJ:0 "American"
+
+#special SU names
+
+CSA_FGE_autonomy_integrated_puppet:0 "$OVERLORDADJ$ Occupied Southern Union"
+CSA_FGE_autonomy_integrated_puppet_DEF:0 "the $OVERLORDADJ$ Occupied Southern Union"
+CSA_FGE_autonomy_puppet:0 "Federated Southern Provinces"
+CSA_FGE_autonomy_puppet_DEF:0 "the Federated Southern Provinces"
+CSA_FGE_autonomy_colony:0 "Federated Southern Colonies"
+CSA_FGE_autonomy_colony_DEF:0 "the Federated Southern Colonies"
+CSA_FGE_autonomy_dominion:0 "Dominion of Dixie"
+CSA_FGE_autonomy_colony:0 "the Dominion of Dixie"
+
+#free germania normal names
+FGE:0 "Germanic Government in Exile"
+FGE_DEF:0 "the Germanic Government in Exile"
+FGE_ADJ:0 "Free Germanic"
+
+#special free germania names
+
+FGE_SULAWESI:0 "Sulawesi"
+FGE_SULAWESI_DEF:0 "Sulawesi"
+FGE_SULAWESI_ADJ:0 "Sulawesi"
+
+FGE_monarchist_civil_war:0 "Germania"
+FGE_monarchist_civil_war_DEF:0 "Germania"
+FGE_monarchist_civil_war_ADJ:0 "Germanic"
+FGE_monarchist_civil_war_neutrality:0 "Kätz Loyalists"
+FGE_monarchist_civil_war_neutrality_DEF:0 "the Kätz Loyalists"
+FGE_nsu_civil_war:0 "Germania"
+FGE_nsu_civil_war_DEF:0 "Germania"
+FGE_nsu_civil_war_ADJ:0 "Germanic"
+FGE_nsu_civil_war_fascism:0 "National Corporatist Underground"
+FGE_nsu_civil_war_fascism_DEF:0 "the National Corporatist Underground"
+FGE_republican_civil_war:0 "Germania"
+FGE_republican_civil_war_DEF:0 "Germania"
+FGE_republican_civil_war_ADJ:0 "Germanic"
+FGE_republican_civil_war_democratic:0 "Republican Front of Germania"
+FGE_republican_civil_war_democratic_DEF:0 "the Republican Front of Germania"
+
+FGE_FRANKISH_EMPIRE:0 "Francia"
+FGE_FRANKISH_EMPIRE_DEF:0 "Francia"
+FGE_FRANKISH_EMPIRE_ADJ:0 "Frankish"
+FGE_FRANKISH_EMPIRE_neutrality:0 "Frankish Empire"
+FGE_FRANKISH_EMPIRE_neutrality_DEF:0 "the Frankish Empire"
+FGE_FRANKISH_EMPIRE_neutrality_ADJ:0 "Frankish"
+
+#normal spain names
+
+ESP:0 "Spain"
+ESP_DEF:0 "Spain"
+ESP_ADJ:0 "Spanish"
+ESP_fascism:0 "Spanish State"
+ESP_fascism_DEF:0 "the Spanish State"
+ESP_communism:0 "Spanish Commune"
+ESP_communism_DEF:0 "the Spanish Commune"
+
+#special spain names
+
+
+#normal Turul names
+
+TRL:0 "Turulia"
+TRL_DEF:0 "Turulia"
+TRL_ADJ:0 "Turul"
+TRL_fascism:0 "Turul Empire"
+TRL_fascism_DEF:0 "the Turul Empire"
+TRL_neutrality:0 "Turul Empire"
+TRL_neutrality_DEF:0 "the Turul Empire"
+
+#special turul names
+
+#normal zapadoslavia names
+
+ZAP:0 "Zapadoslavia"
+ZAP_DEF:0 "Zapadoslavia"
+ZAP_ADJ:0 "Zapadoslav"
+ZAP_neutrality:0 "Kingdom of Zapadoslavia"
+ZAP_neutrality_DEF:0 "the Kingdom of Zapadoslavia"
+ZAP_democratic:0 "Kingdom of Zapadoslavia"
+ZAP_democratic_DEF:0 "the Kingdom of Zapadoslavia"
+ZAP_communism:0 "People's Republic of Zapadoslavia"
+ZAP_communism_DEF:0 "the People's Republic of Zapadoslavia"
+ZAP_fascism:0 "Zapadoslav State"
+ZAP_fascism_DEF:0 "the Zapadoslav State"
+
+#normal britain names
+
+BRT:0 "Great Britain"
+BRT_DEF:0 "Great Britain"
+BRT_ADJ:0 "British"
+BRT_neutrality:0 "United Kingdom"
+BRT_neutrality_DEF:0 "the United Kingdom"
+BRT_communism:0 "Union of Britain"
+BRT_communism_DEF:0 "the Union of Britain"
+BRT_democratic:0 "United Kingdom"
+BRT_democratic_DEF:0 "the United Kingdom"
+BRT_fascism:0 "British Empire"
+BRT_fascism_DEF:0 "the British Empire"
+
+#special britain names
+
+BRT_ENGLAND:0 "England"
+BRT_ENGLAND_DEF:0 "England"
+BRT_ENGLAND_ADJ:0 "English"
+
+#normal italy names
+
+ILY:0 "Italy"
+ILY_DEF:0 "Italy"
+ILY_ADJ:0 "Italian"
+ILY_CSA_autonomy_satellite:0 "National State of Northern Italy"
+ILY_CSA_autonomy_satellite_DEF:0 "the National State of Northern Italy"
+ILY_CSA_autonomy_puppet:0 "National State of Northern Italy"
+ILY_CSA_autonomy_puppet_DEF:0 "the National State of Northern Italy"
+ILY_fascism:0 "National State of Italy"
+ILY_fascism_DEF:0 "the National State of Italy"
+
+#special italy names
+
+ILY_partisans_civil_war:0 "Italian Partisans"
+ILY_partisans_civil_war_DEF:0 "the Italian Partisans"
+
+#normal japan names
+
+JPN:0 "Japan"
+JPN_DEF:0 "Japan"
+JPN_ADJ:0 "Japanese"
+JPN_neutrality:0 "Japanese Empire"
+JPN_neutrality_DEF:0 "the Japanese Empire"
+JPN_fascism:0 "Japanese Empire"
+JPN_fascism_DEF:0 "the Japanese Empire"
+
+#special japan names
+
+
+#normal russia names
+RUS:0 "Russia"
+RUS_DEF:0 "Russia"
+RUS_ADJ:0 "Russian"
+RUS_communism:0 "Soviet Union"
+RUS_communism_DEF:0 "the Soviet Union"
+RUS_communism_ADJ:0 "Soviet"
+RUS_fascism:0 "Russian Empire"
+RUS_fascism_DEF:0 "the Russian Empire"
+RUS_neutrality:0 "Russian Empire"
+RUS_neutrality_DEF:0 "the Russian Empire"
+RUS_democratic:0 "Russian Federation"
+RUS_democratic_DEF:0 "the Russian Federation"
+
+#special russia names
+
+
+#normal armenia names
+
+ ARM_fascism:0 "Greater Armenia"
+ ARM_fascism_DEF:0 "Greater Armenia"
+ ARM_democratic:0 "Kingdom of Armenia"
+ ARM_democratic_DEF:0 "the Kingdom of Armenia"
+ ARM_neutrality:0 "Kingdom of Armenia"
+ ARM_neutrality_DEF:0 "the Kingdom of Armenia"
+ ARM_communism:1 "Armenian Socialist Republic"
+ ARM_communism_DEF:1 "the Armenian Socialist Republic"
+ ARM_fascism_ADJ:0 "Armenian"
+ ARM_democratic_ADJ:0 "Armenian"
+ ARM_neutrality_ADJ:0 "Armenian"
+ ARM_communism_ADJ:0 "Armenian"
+ ARM:0 "Armenia"
+ ARM_DEF:0 "Armenia"
+ ARM_ADJ:0 "Armenian"
+
+#normal venezuela names
+VNZ:0 "Venezuela"
+VNZ_DEF:0 "Venezuela"
+VNZ_ADJ:0 "Venezuelan"
+VNZ_communism:0 "Venezuelan Internationalist State"
+VNZ_communism_DEF:0 "the Internationalist State of Venezuela"
+VNZ_fascism:0 "Venezuelan State"
+VNZ_fascism_DEF:0 "the Venezuelan State"
+VNZ_neutrality:0 "Venezuelan Republic"
+VNZ_neutrality_DEF:0 "the Venezuelan Republic"
+VNZ_democratic:0 "Free Venezuela"
+VNZ_democratic_DEF:0 "the Free Nation of Venezuela"
+
+#special venezuela names
+
+
+#normal byzantium names
+
+BYZ:0 "Byzantium"
+BYZ_DEF:0 "Byzantium"
+BYZ_ADJ:0 "Byzantine"
+BYZ_neutrality:0 "Byzantine Empire"
+BYZ_neutrality_DEF:0 "the Byzantine Empire"
+BYZ_fascism:0 "Byzantine Empire"
+BYZ_fascism_DEF:0 "the Byzantine Empire"
+BYZ_democratic:0 "Byzantine Empire"
+BYZ_democratic_DEF:0 "the Byzantine Empire"
+BYZ_communism:0 "People's Republic of Greece"
+BYZ_communism_DEF:0 "the People's Republic of Grece"
+BYZ_communism_ADJ:0 "Greek"
+
+#special byzantium names
+
+
+
+#normal portugal names
+PRT:0 "Portugal"
+PRT_DEF:0 "Portugal"
+PRT_ADJ:0 "Portugese"
+PRT_neutrality:0 "Portugal"
+PRT_neutrality_DEF:0 "The Kingdom of Portugal"
+PRT_fascism:0 "Falangist Portugal"
+PRT_fascism_DEF:0 "the Falangist country of Portugal"
+PRT_democratic:0 "Republic of Portugal"
+PRT_democratic_DEF:0 "the Republic of Portugal"
+PRT_communism:0 "Portugese Commune"
+PRT_communism_DEF:0 "the people's commune of Portugal"
+PRT_communism_ADJ:0 "Portugese"
+
+#special portugal names
+
+
+
+#normal fiji names
+FIJ:0 "Fiji"
+FIJ_DEF:0 "Fiji"
+FIJ_DEF:0 "Fijian"
+
+#special fiji names
+
+
+#normal roi names
+IND:0 "India"
+IND_DEF:0 "India"
+IND_ADJ:0 "Indian"
+
+#special roi names
+
+#normal finland names
+FNL:0 "Finland"
+FNL_DEF:0 "Finland"
+FNL_ADJ:0 "Finnish"
+
+
+#special finland names
+
+
+#normal Virginia names
+VIR:0 "Virginia"
+VIR_DEF:0 "Virginia"
+VIR_ADJ:0 "Virginian"
+
+#special Virginia names
+VIR_KAT:0 "Kätzylvania"
+VIR_KAT_DEF:0 "Kätzylvania"
+VIR_KAT_ADJ:0 "Kätzylvanian"
+VIR_KAT_FGE_autonomy_integrated_puppet:0 "$OVERLORDADJ$ Occupied Kätzylvania"
+VIR_KAT_FGE_autonomy_integrated_puppet_DEF:0 "$OVERLORDADJ$ Occupied Kätzylvania"
+VIR_KAT_FGE_autonomy_puppet:0 "Province of Kätzylvania"
+VIR_KAT_FGE_autonomy_puppet_DEF:0 "Province of Kätzylvania"
+VIR_KAT_FGE_autonomy_colony:0 "Colony of Kätzylvania"
+VIR_KAT_FGE_autonomy_colony_DEF:0 "Colony of Kätzylvania"
+VIR_KAT_FGE_autonomy_dominion:0 "Dominion of Kätzylvania"
+VIR_KAT_FGE_autonomy_dominion_DEF:0 "Dominion of Kätzylvania"
+VIR_KAT_FGE_autonomy_supervised_state:0 "Dominion of Kätzylvania"
+VIR_KAT_FGE_autonomy_supervised_state_DEF:0 "Dominion of Kätzylvania"
+
+#normal Virginia names
+GRG:0 "Georgia"
+GRG_DEF:0 "Georgia"
+GRG_ADJ:0 "Georgia"
+
+#special Virginia names
+GRG_SHE:0 "Shermania"
+GRG_SHE_DEF:0 "Shermania"
+GRG_SHE_ADJ:0 "Shermania"
+GRG_SHE_FGE_autonomy_integrated_puppet:0 "$OVERLORDADJ$ Occupied Shermania"
+GRG_SHE_FGE_autonomy_integrated_puppet_DEF:0 "$OVERLORDADJ$ Occupied Shermania"
+GRG_SHE_FGE_autonomy_puppet:0 "Province of Shermania"
+GRG_SHE_FGE_autonomy_puppet_DEF:0 "Province of Shermania"
+GRG_SHE_FGE_autonomy_colony:0 "Colony of Shermania"
+GRG_SHE_FGE_autonomy_colony_DEF:0 "Colony of Shermania"
+GRG_SHE_FGE_autonomy_dominion:0 "Dominion of Shermania"
+GRG_SHE_FGE_autonomy_dominion_DEF:0 "Dominion of Shermania"
+GRG_SHE_FGE_autonomy_supervised_state:0 "Dominion of Shermania"
+GRG_SHE_FGE_autonomy_supervised_state_DEF:0 "Dominion of Shermania"
+
+#normal Texas names
+TEX:0 "Texas"
+TEX_DEF:0 "Texas"
+TEX_ADJ:0 "Texan"
+
+#special Texas names
+TEX_FGE_autonomy_integrated_puppet:0 "$OVERLORDADJ$ Occupied Texas"
+TEX_FGE_autonomy_integrated_puppet_DEF:0 "$OVERLORDADJ$ Occupied Texas"
+TEX_FGE_autonomy_puppet:0 "Province of Texas"
+TEX_FGE_autonomy_puppet_DEF:0 "Province of Texas"
+TEX_FGE_autonomy_colony:0 "Colony of Texas"
+TEX_FGE_autonomy_colony_DEF:0 "Colony of Texas"
+TEX_FGE_autonomy_dominion:0 "Dominion of Texas"
+TEX_FGE_autonomy_dominion_DEF:0 "Dominion of Texas"
+TEX_FGE_autonomy_supervised_state:0 "Dominion of Texas"
+TEX_FGE_autonomy_supervised_state_DEF:0 "Dominion of Texas"
+
+#normal Cuba names
+CUB:0 "Carribean"
+CUB_DEF:0 "The Carribean"
+CUB_ADJ:0 "Carribean"
+
+#special Cuba names
+CUB_FGE_autonomy_integrated_puppet:0 "Special Administrative Zone of the Carribean"
+CUB_FGE_autonomy_integrated_puppet_DEF:0 "Special Administrative Zone of the Carribean"
+CUB_FGE_autonomy_puppet:0 "Province of the Carribean"
+CUB_FGE_autonomy_puppet_DEF:0 "Province of the Carribean"
+CUB_FGE_autonomy_colony:0 "Colony of the Carribean"
+CUB_FGE_autonomy_colony_DEF:0 "Colony of the Carribean"
+CUB_FGE_autonomy_dominion:0 "Dominion of the Carribean"
+CUB_FGE_autonomy_dominion_DEF:0 "Dominion of the Carribean"
+CUB_FGE_autonomy_supervised_state:0 "Dominion of the Carribean"
+CUB_FGE_autonomy_supervised_state_DEF:0 "Dominion of the Carribean"
+
+#normal France names
+FRA:0 "France"
+FRA_DEF:0 "France"
+FRA_ADJ:0 "French"
+
+#special France names
+FRA_GME_REPUBLIC_autonomy_colony:0 "Autonomous Province of France"
+FRA_GME_REPUBLIC_autonomy_colony_DEF:0 "the Autonomous Province of of France"
+FRA_GME_REPUBLIC_autonomy_dominion:0 "French Republic"
+FRA_GME_REPUBLIC_autonomy_dominion_DEF:0 "the French Republic"
+FRA_GME_REPUBLIC_autonomy_supervised_state:0 "France"
+FRA_GME_REPUBLIC_autonomy_supervised_state_DEF:0 "France"
+
+FRA_FGE_autonomy_integrated_puppet:0 "Occupied France"
+FRA_FGE_autonomy_integrated_puppet_DEF:0 "Occupied France"
+FRA_FGE_autonomy_puppet:0 "Special Administrative Zone of France"
+FRA_FGE_autonomy_puppet_DEF:0 "the Special Administrative Zone of France"
+FRA_FGE_autonomy_colony:0 "Duchy of France"
+FRA_FGE_autonomy_colony_DEF:0 "the Duchy of France"
+FRA_FGE_autonomy_dominion:0 "Kingdom of France"
+FRA_FGE_autonomy_dominion_DEF:0 "the Kingdom of France"
+
+
+#normal Greenland names
+
+GRE:0 "Greenland"
+GRE_DEF:0 "Greenland"
+GRE_ADJ:0 "Greenlandic"
+GRE_neutrality:0 "Greenland"
+GRE_neutrality_DEF:0 "Greenland"
+GRE_fascism:0 "Falangist Greenland"
+GRE_fascism_DEF:0 "the Falangist country of Greenland"
+GRE_democratic:0 "Republic of Greenland"
+GRE_democratic_DEF:0 "the Republic of Greenland"
+GRE_communism:0 "Greenland Republic"
+GRE_communism_DEF:0 "the people's republic of Greenland"
+GRE_communism_ADJ:0 "Greenlandic"
+
+#special Greenland names
+
+#normal Byzantine Antarctica names
+
+BGA:0 "Byzantine Antarctica"
+BGA_DEF:0 "Byzantine Antarctica"
+BGA_ADJ:0 "American Byzantine"
+BGA_neutrality:0 "Byzantine Antarctica"
+BGA_neutrality_DEF:0 "Byzantine Antarctica"
+BGA_fascism:0 "South American State"
+BGA_fascism_DEF:0 "The South American State"
+BGA_democratic:0 "Confederation of Southern Teritories"
+Bga_democratic_DEF:0 "The Confederation of Southern Teritories"
+BGA_communism:0 "Southern Commune"
+BGA_communism_DEF:0 "The Southern Commune"
+BGA_communism_ADJ:0 "Southern Commune"
+
+#speacial Byzantine Antarctica names
+
+#normal sulawesi names
+INS:0 "Sulawesi"
+INS_DEF:0 "Sulawesi"
+INS_ADJ:0 "Sulawesian"
+INS_subject:0 "$OVERLORDADJ$ Sulawesi"
+INS_subject_DEF:0 "$OVERLORDADJ$ Sulawesi"
+
+
+#normal ecuador
+ECD:0 "Ecuador"
+ECD_DEF:0 "Ecuador"
+ECD_ADJ:0 "Ecuadorian"
+
+
+#normal slovakia
+SVK:0 "Slovakia"
+SVK_DEF:0 "Slovakia"
+SVK_ADJ:0 "Slovakian"
+
+
+#normal yugoslavia
+YGO:0 "Yugoslavia"
+YGO_DEF:0 "Yugoslavia"
+YGO_ADJ:0 "Yugoslav"
+
+
+#normal central america
+HON:0 "Central America"
+HON_DEF:0 "Central America"
+HON_ADJ:0 "Central American"
+HON_democratic:0 "United States of Central America"
+HON_democratic_DEF:0 "United States of Central America"
+
+#special central america names
+HON_FGE_autonomy_integrated_puppet:0 "$OVERLORDADJ$ Occupied Central America"
+HON_FGE_autonomy_integrated_puppet_DEF:0 "$OVERLORDADJ$ Occupied Central America"
+HON_FGE_autonomy_puppet:0 "Special Administrative Zone of Central America"
+HON_FGE_autonomy_puppet_DEF:0 "the Special Administrative Zone of Central America"
+HON_FGE_autonomy_colony:0 "$OVERLORDADJ$ Central America"
+HON_FGE_autonomy_colony_DEF:0 "$OVERLORDADJ$ Central America"
+HON_FGE_autonomy_dominion:0 "Dominion of Central America"
+HON_FGE_autonomy_dominion_DEF:0 "the Dominion of Central America"
+HON_FGE_autonomy_supervised_state:0 "Dominion of Central America"
+HON_FGE_autonomy_supervised_state_DEF:0 "the Dominion of Central America"

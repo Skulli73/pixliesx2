@@ -1,0 +1,22 @@
+state={
+	id=80
+	name="STATE_80"
+	manpower = 0# = 474600
+	
+	state_category = rural
+	
+	history=
+	{
+		owner = TRL
+		add_core_of = TRL
+		buildings = {
+			#infrastructure = 3
+			#arms_factory = 1
+		}
+	}
+	provinces={
+		577 9548
+	}
+
+	local_supplies=0.0 
+}

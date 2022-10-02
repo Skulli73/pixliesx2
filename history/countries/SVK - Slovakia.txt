@@ -1,0 +1,28 @@
+oob = "SVK"
+capital = 219
+set_research_slots = 1
+set_stability = 0.12
+set_war_support = 1
+set_convoys = 0
+add_manpower = 30
+
+
+add_ideas = {
+	all_adults_serve
+	war_economy
+}
+
+
+
+#Politics for 50.1.1
+set_politics = {
+	ruling_party = neutrality
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = yes
+}
+set_popularities = {
+	neutrality = 100
+}
+
+inherit_technology = CSA

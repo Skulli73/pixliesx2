@@ -1,0 +1,104 @@
+add_namespace = demo
+country_event = { #turuls unally su - turuls
+	id = demo.01
+	title = demo.01.t
+	desc = demo.01.d
+	fire_only_once = yes
+	trigger = {
+		date > 50.03.02
+		tag = TRL
+	}
+	option = {
+		name = demo.01.a
+		leave_faction = yes
+		create_faction = "Turul Sphere"
+		CSA = {
+			country_event = {
+				id = demo.02
+			}
+		}
+		news_event = {
+			id = demo.03
+			days = 1
+		}
+		recognize_fge_and_gme_effect = yes
+		JPN = {
+			recognize_fge_and_gme_effect = yes
+		}  
+	}
+}
+country_event = { # turuls unally su - su
+	id = demo.02
+	title = demo.02.t
+	desc = demo.02.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = demo.02.a
+		hidden_effect = {
+			country_event = {
+				id = demo.04
+				days = 30
+			}
+		}
+	}
+}
+news_event = { # turuls unally su - news
+	id = demo.03
+	title = demo.03.t
+	desc = demo.03.d
+	is_triggered_only = yes
+	picture = GFX_news_event_su_turul_split
+	major = yes
+	option = {
+		name = demo.03.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = CSA
+			}
+		}
+	}
+	option = {
+		name = demo.03.b
+		trigger = {
+			is_in_faction_with = CSA
+		}
+	}
+}
+country_event = { # assasination attempt on matt - su
+	id = demo.04
+	title = demo.04.t
+	desc = demo.04.d
+	is_triggered_only = yes
+	option = {
+		name = demo.04.a
+		news_event = demo.05
+		add_country_leader_trait = recent_assasination_attempt
+		add_stability = -0.5
+		set_country_flag = matt_failed_assasination
+		complete_national_focus = CSA_Matt_Dies_Tragically_JK
+	}
+}
+news_event = { # assasination attempt on matt - news
+	id = demo.05
+	title = demo.05.t
+	desc = demo.05.d
+	is_triggered_only = yes
+	picture = GFX_news_event_matt_assasination
+	major = yes
+	option = {
+		name = demo.05.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = CSA
+				tag = FGE
+			}
+		}
+	}
+	option = {
+		name = demo.05.b
+		trigger = {
+			is_in_faction_with = CSA
+		}
+	}
+}

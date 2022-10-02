@@ -1,0 +1,127 @@
+characters = {
+#Create country leader - NasaSpaceShuttle
+nasaspaceshuttle = {
+	name = nasaspaceshuttle
+	portraits = {
+		civilian = {
+			#Custom image for NasaSpaceShuttle
+			large = "/gfx/leaders/ALA/iRJTGQdk-227643.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  }
+	}
+}
+
+#Create country leader - McKicks
+mckicks = {
+	name = mckicks
+	portraits = {
+		civilian = {
+			#Custom image for McKicks
+			large = "/gfx/leaders/ALA/BafLPRFH-227642.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {  }
+	}
+}
+
+#Create country leader - RiderOfBlacc
+riderofblacc = {
+	name = riderofblacc
+	portraits = {
+		civilian = {
+			#Custom image for RiderOfBlacc
+			large = "/gfx/leaders/ALA/hXYmSvlU-227641.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {  }
+	}
+}
+
+#Create country leader - NasaSpaceShuttle
+nasaspaceshuttle = {
+	name = nasaspaceshuttle
+	portraits = {
+		civilian = {
+			#Custom image for NasaSpaceShuttle
+			large = "/gfx/leaders/ALA/MCHfSRem-227638.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {  }
+	}
+}
+
+#Create military leader - NasaSpaceShuttle
+	XxhfHiJa = {
+		name = "XxhfHiJa"
+		portraits = {
+			army = {
+				#Custom images for NasaSpaceShuttle
+				large = "/gfx/leaders/ALA/XxhfHiJa-227655.dds"
+				small = "/gfx/interface/ideas/ALA/XxhfHiJa-227655.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected defensive_doctrine }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		legacy_id = 137310010
+		}
+	}
+
+#Create military leader - RiderOfBlacc
+	cNMHYrJn = {
+		name = "cNMHYrJn"
+		portraits = {
+			army = {
+				#Custom images for RiderOfBlacc
+				large = "/gfx/leaders/ALA/cNMHYrJn-227658.dds"
+				small = "/gfx/interface/ideas/ALA/cNMHYrJn-227658.dds"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		legacy_id = 137310011
+		}
+	}
+
+	yWDpqgAv = {
+		name = "yWDpqgAv"
+		portraits = {
+			army = {
+				#Custom images for McKicks
+				large = "/gfx/leaders/ALA/yWDpqgAv-227660.dds"
+				small = "/gfx/interface/ideas/ALA/yWDpqgAv-227660.dds"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			legacy_id = 337310010
+		}
+	}
+}

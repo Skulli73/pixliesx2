@@ -1,0 +1,86 @@
+characters = {
+#Create country leader - Matthew Cobrant the 1st
+matthew_cobrant_the_1st = {
+	name = matthew_cobrant_the_1st
+	portraits = {
+		civilian = {
+			#Custom image for Matthew Cobrant the 1st
+			large = "/gfx/leaders/CSA/nuIWNOPG-166523.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  }
+	}
+}
+
+#Create country leader - The Collective
+the_collective = {
+	name = the_collective
+	portraits = {
+		civilian = {
+			#Custom image for The Collective
+			large = "/gfx/leaders/CSA/tnGvejSp-166522.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = anarchist_communism
+		traits = {  }
+	}
+}
+
+#Create country leader - SlowBullet
+slowbullet = {
+	name = slowbullet
+	portraits = {
+		civilian = {
+			#Custom image for SlowBullet
+			large = "/gfx/leaders/CSA/ArnUKxpa-149158.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  }
+	}
+}
+
+#Create country leader - MattCobra
+mattcobra = {
+	name = mattcobra
+	portraits = {
+		civilian = {
+			#Custom image for MattCobra
+			large = "/gfx/leaders/CSA/laoFHNfK-149159.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {  }
+	}
+}
+
+#Create military leader - MattCobra
+	JVmQLTXw = {
+		name = "JVmQLTXw"
+		portraits = {
+			army = {
+				#Custom images for MattCobra
+				large = "/gfx/leaders/CSA/JVmQLTXw-155350.dds"
+				small = "/gfx/interface/ideas/CSA/JVmQLTXw-155350.dds"
+			}
+		}
+		field_marshal = {
+			traits = { infantry_leader offensive_doctrine urban_assault_specialist politically_connected }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		legacy_id = 171320900
+		}
+	}
+}

@@ -1,0 +1,91 @@
+characters = {
+	maurice = {
+		name = "TAMaurice"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ESP/maurice.dds"
+			}
+			army = {
+				large = "gfx/leaders/ESP/maurice.dds"
+				small = "gfx/interface/ideas/ESP/maurice.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = maurice_head_of_state
+			name = "TAMaurice"
+			cost = 75
+			removal_cost = -1
+			allowed = {
+				original_tag = ESP
+			}
+			available = {
+				has_idea = maurice_head_of_state
+			}
+			traits = {
+				
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			desc = "The Atomic Maurice cannot move it move it"
+		}
+		country_leader = {
+			ideology = centrism
+			traits = {
+			}
+			desc = "The Atomic Maurice cannot move it move it"
+		}
+		field_marshal = {
+			skill = 0
+			attack_skill = 0
+			defense_skill = 0
+			planning_skill = 0
+			logistics_skill = 0
+			visible = {
+				OR = {
+					has_country_leader = {
+						character = maurice
+					}
+					has_idea = maurice_head_of_state
+				}
+			}
+		}
+	}
+	birb = {
+		name = "Karl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ESP/birb.dds"
+			}
+			army = {
+				large = "gfx/leaders/ESP/birb.dds"
+				small = "gfx/interface/ideas/ESP/birb.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = birb_head_of_state
+			name = "Karl"
+			cost = 75
+			removal_cost = -1
+			allowed = {
+				original_tag = ESP
+			}
+			available = {
+				has_idea = birb_head_of_state
+			}
+			traits = {
+				
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			desc = ""
+		}
+	}
+}

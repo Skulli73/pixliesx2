@@ -1,0 +1,177 @@
+guiTypes = {
+	containerWindowType = {
+		name = "recognize_fge_gme_interface"
+		position = { x = 0 y = 0 }
+		size = {
+			width = 700
+			height = 1100
+		}
+		iconType ={
+			name =ns_germania_flag
+			quadTextureSprite = "GFX_shield_medium"
+			position = { x = 55 y = 3 }
+
+			pdx_tooltip = "[GME.GetNameDEF]"
+		}
+		iconType ={
+			name =ns_germania_flag_frame
+			quadTextureSprite = "GFX_large_flag_frame"
+			position = { x = 50 y = 0 }
+		}
+		instantTextBoxType = {
+			name = ns_germania_name
+			text = "Recognize the National State"
+			font = hoi_16mbs
+			position = {
+				x = 25
+				y = 55
+			}
+		}
+		gridboxtype = {
+			name = "recognizes_ns_flag_gridbox"
+			position = { x = 0 y = 0 }
+			size = { width = 200 height = 100%% }
+			slotsize = { width = 75 height = 75 }
+			max_slots_horizontal = 3
+			add_horizontal = yes
+		}
+		
+		iconType ={
+			name =exile_germania_flag
+			quadTextureSprite = "GFX_shield_medium"
+			position = { x = 375 y = 0 }
+
+			pdx_tooltip = "[FGE.GetNameDEF]"
+		}
+		iconType ={
+			name =exile_germania_flag_frame
+			quadTextureSprite = "GFX_large_flag_frame"
+			position = { x = 370 y = 0 }
+		}
+		instantTextBoxType = {
+			name = exile_germania_name
+			text = "Recognize the Exiles"
+			font = hoi_16mbs
+			position = {
+				x = 350
+				y = 55
+			}
+		}
+		gridboxtype = {
+			name = "recognizes_exiles_flag_gridbox"
+			position = { x = 0 y = 0 }
+			size = { width = 300 height = 100%% }
+			slotsize = { width = 75 height = 75 }
+			max_slots_horizontal = 3
+			add_horizontal = yes
+			format = UPPER_RIGHT
+		}
+		instantTextBoxType = {
+			name = recognize_neither_both_text_name
+			text = "Recognize neither/both"
+			font = hoi_36header
+			maxWidth = 500
+			position = {
+				x = 0
+				y = 700
+			}
+		}
+		gridboxtype = {
+			name = "recognizes_neither_both_flag_gridbox"
+			position = { x = 100 y = 750 }
+			size = { width = 300 height = 100%% }
+			slotsize = { width = 75 height = 75 }
+			max_slots_horizontal = 6
+			add_horizontal = yes
+			format = UPPER_LEFT
+		}
+	}
+	containerWindowType = {
+		name = "recognizes_ns_list_entry"
+		position = {
+			x = -35
+			y = 100
+		}
+		iconType = {
+			name = "recognizes_ns_flag" 
+			quadTextureSprite = "GFX_flag_small2" 
+			position = { x = 00 y = 3 }
+		}
+		iconType = {
+			name = "recognizes_ns_flag_border" 
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame" 
+			position = { x = -4 y = 0 }
+		}
+		instantTextBoxType = {
+			name = "recognizes_ns_text"
+			text = "this_get_name"
+			position = {
+				x = -20
+				y = 35
+			}
+			font = Arial12
+			maxWidth = 75
+			format = CENTER
+			fixedsize = yes
+		}
+	}
+	containerWindowType = {
+		name = "recognizes_exiles_list_entry"
+		position = {
+			x = 225
+			y = 100
+		}
+		iconType = {
+			name = "recognizes_exiles_flag" 
+			quadTextureSprite = "GFX_flag_small2" 
+			position = { x = 00 y = 3 }
+		}
+		iconType = {
+			name = "recognizes_exiles_flag_border" 
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame" 
+			position = { x = -4 y = 0 }
+		}
+		instantTextBoxType = {
+			name = "recognizes_exiles_text"
+			text = "this_get_name"
+			position = {
+				x = -20
+				y = 35
+			}
+			font = Arial12
+			maxWidth = 75
+			format = CENTER
+			fixedsize = yes
+		}
+	}
+	containerWindowType = {
+		name = "recognizes_neither_both_list_entry"
+		position = {
+			x = -75
+			y = 15
+		}
+		orientation = UPPER_LEFT
+		iconType = {
+			name = "recognizes_neither_both_flag" 
+			quadTextureSprite = "GFX_flag_small2" 
+			position = { x = 00 y = 3 }
+		}
+		iconType = {
+			name = "recognizes_neither_both_flag_border" 
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame" 
+			position = { x = -4 y = 0 }
+		}
+		instantTextBoxType = {
+			name = "recognizes_neither_both_text"
+			text = "this_get_name"
+			position = {
+				x = -20
+				y = 35
+			}
+			font = Arial12
+			maxWidth = 75
+			format = CENTER
+			fixedsize = yes
+		}
+	}
+}

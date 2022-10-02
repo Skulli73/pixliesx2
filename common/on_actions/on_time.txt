@@ -1,0 +1,103 @@
+on_actions = {
+    on_weekly = {
+        effect = {
+            every_country = {
+                set_variable = {
+                    total_population = 0
+                }
+                every_owned_state = {
+                    PREV = {
+                        add_to_variable = {
+                            total_population = PREV.state_population
+                        }
+                    }
+                }
+
+                set_variable = {
+                    colonize_cost = num_owned_states
+                }
+                multiply_variable = {
+                    colonize_cost = num_owned_states
+                }
+                multiply_variable = {
+                    colonize_cost = 0.15
+                }
+                round_variable = colonize_cost
+            }
+
+            every_state = {
+                limit = {
+                    NOT = {
+                        is_owned_by = WIL
+                    }
+                }
+                add_to_temp_variable = {
+                    global.total_states = 1
+                }
+            }
+            every_state = { 
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_fge
+                        value = OWNER
+                    }
+                }
+                add_to_temp_variable = {
+                    global.fge_states = 1
+                }
+            }
+            set_variable = {
+                global.recognizes_fge_percentage = global.fge_states
+            }
+            divide_variable = {
+                global.recognizes_fge_percentage = global.total_states
+            }
+            every_state = { 
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_gme
+                        value = OWNER
+                    }
+                }
+                add_to_temp_variable = {
+                    global.gme_states = 1
+                }
+            }
+            set_variable = {
+                global.recognizes_gme_percentage = global.gme_states
+            }
+            divide_variable = {
+                global.recognizes_gme_percentage = global.total_states
+            }
+
+            set_variable = {
+                global.recognizes_gme_amount = 0
+            }
+            every_country = {
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_gme
+                        value = THIS
+                    }
+                }
+                add_to_variable = {
+                    global.recognizes_gme_amount = 1
+                }
+            }
+            set_variable = {
+                global.recognizes_fge_amount = 0
+            }
+            every_country = {
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_fge
+                        value = THIS
+                    }
+                }
+                add_to_variable = {
+                    global.recognizes_fge_amount = 1
+                }
+            }
+        }
+    }
+}

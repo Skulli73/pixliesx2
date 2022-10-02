@@ -1,0 +1,35 @@
+
+state={
+	id=305
+	name="STATE_305"
+	manpower = 5# = 2000000
+	resources={
+		oil=2 # was: 2
+	}
+	
+	state_category = city
+
+	history={
+		owner = FGE
+		add_core_of = FGE
+		add_core_of = ECD
+		buildings = {
+			#infrastructure = 2
+			arms_factory =3
+			industrial_complex = 4
+			#air_base = 1
+			8252 = {
+				naval_base = 4
+			}
+		}
+		# = ECU
+		
+
+	}
+
+	provinces={
+		  8047  8252    
+	}
+
+	local_supplies=0.0 
+}

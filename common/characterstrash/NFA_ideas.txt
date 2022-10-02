@@ -1,0 +1,113 @@
+characters = {	pickhead = {
+		name = pickhead
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/mRziJCWn-155690.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = pickhead
+			allowed = {
+				original_tag = NFA
+			}
+			traits = {}
+		}
+	}
+	neo_french_industrial_concern = {
+		name = neo_french_industrial_concern
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/HIeiRmsX-155872.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = neo_french_industrial_concern
+			allowed = {
+				original_tag = NFA
+			}
+			traits = { naval_theorist}
+		}
+	}
+	neo_french_industrial_concern = {
+		name = neo_french_industrial_concern
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/mRziJCWn-155690.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = neo_french_industrial_concern
+			allowed = {
+				original_tag = NFA
+			}
+			traits = { army_infantry_2}
+		}
+	}
+	neo_french_industrial_concern = {
+		name = neo_french_industrial_concern
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/HIeiRmsX-155872.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = neo_french_industrial_concern
+			allowed = {
+				original_tag = NFA
+			}
+			traits = { naval_theorist navy_chief_maneuver_1}
+		}
+	}
+	neo_french_industrial_concern = {
+		name = neo_french_industrial_concern
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/XZjUOLoR-155800.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = neo_french_industrial_concern
+			allowed = {
+				original_tag = NFA
+			}
+			traits = { air_chief_all_weather_1}
+		}
+	}
+	neo_french_industrial_concern = {
+		name = neo_french_industrial_concern
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/mRziJCWn-155690.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = neo_french_industrial_concern
+			allowed = {
+				original_tag = NFA
+			}
+			traits = { army_infantry_2}
+		}
+	}
+	neo_french_industrial_concern = {
+		name = neo_french_industrial_concern
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/HIeiRmsX-155872.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = neo_french_industrial_concern
+			allowed = {
+				original_tag = NFA
+			}
+			traits = { naval_theorist navy_chief_maneuver_1}
+		}
+	}
+}

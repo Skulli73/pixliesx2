@@ -1,0 +1,43 @@
+bookmarks = {
+	bookmark = {
+		name = "start_name"
+		desc = "start_desc"
+		date = 50.1.1.12
+	picture = "start-1"
+		default_country = "CSA"
+		default = yes
+		GME = {
+			ideology = fascism
+			history = GME_history
+		}
+		CSA = {
+			ideology = fascism
+			history = CSA_history
+		}
+		FGE = {
+			ideology = democratic
+			history = FGE_history
+		}
+		JPN = {
+			ideology = neutrality
+			history = JPN_history
+		}
+		ESP = {
+			ideology = neutrality
+			history = ESP_history
+		}
+		TRL = {
+			ideology = fascism
+			history = TRL_history
+		}
+		ZAP = {
+			ideology = democratic
+			history = ZAP_history
+		}
+		ILY = {
+			ideology = fascism
+			history = ILY_history
+		}
+	}
+}
+

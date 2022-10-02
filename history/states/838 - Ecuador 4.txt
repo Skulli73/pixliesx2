@@ -1,0 +1,26 @@
+
+state={
+	id=838
+	name="Southern Coastal Ecuador"
+	manpower = 0# = 70020
+	
+	state_category = pastoral
+
+	history={
+		owner = FGE
+		add_core_of = FGE
+		add_core_of = ECD
+		buildings = {
+			#infrastructure = 2
+			#industrial_complex = 1
+			#air_base = 1
+		}
+		# = PRU
+	}
+
+	provinces={
+		5051 11020 5120
+	}
+
+	local_supplies=6.0 
+}

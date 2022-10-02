@@ -1,0 +1,333 @@
+ideas = {
+	country = {
+		inefficient_government_1 = {
+			name = "Inefficient Government"
+			picture = prc_low_popular_support3
+			modifier = {
+				political_power_factor = -0.75
+				political_advisor_cost_factor = 3
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+			}
+		}
+		inefficient_government_2 = {
+			name = "Inefficient Government"
+			picture = prc_low_popular_support2
+			modifier = {
+				political_power_factor = -0.5
+				political_advisor_cost_factor = 2
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+			}
+		}
+		inefficient_government_3 = {
+			name = "Inefficient Government"
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_factor = -0.25
+				political_advisor_cost_factor = 1
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.15
+			}
+		}
+		FGE_isolate_the_empire = {
+			name = FGE_isolate_the_empire
+			picture = generic_democratic_opposition
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.5
+				opinion_gain_monthly_factor = 2.5
+				opinion_gain_monthly_same_ideology_factor = 2.5
+				diplomatic_pressure_mission_factor = 2
+				boost_ideology_mission_factor = 2
+			}
+		}
+		FGE_every_man_his_own_farm = {
+			name = FGE_every_man_his_own_farm
+			picture = LIT_invested_in_farms
+			modifier = {
+				local_resources_factor = 0.6
+				monthly_population = 0.5
+			}
+		}
+		FGE_automized_gun_production = {
+			name = FGE_automized_gun_production
+			picture = generic_infantry_equipment_manufacturer_2
+			modifier = {
+				conscription_factor = 0.3
+				production_factory_efficiency_gain_factor = 0.3
+			}
+		}
+		FGE_keep_old_doctrines = {
+			name = FGE_keep_old_doctrines
+			picture = generic_fortify_city
+			modifier = {
+				defence = 0.3
+				production_speed_bunker_factor = 1
+			}
+		}
+		FGE_destroy_the_southern_union = {
+			name = FGE_destroy_the_southern_union
+			picture = SPR_anti_fascist_crusade
+			modifier = {
+				
+			}
+			targeted_modifier = {
+				tag = CSA
+				attack_bonus_against = 0.3
+			}
+		}
+
+		FGE_rebuild_the_country = {
+			name = FGE_rebuild_the_country
+			picture = generic_production_bonus
+			modifier = {
+				industry_repair_factor = 0.3
+				industry_free_repair_factor = 0.2
+			}
+		}
+		FGE_ensure_germanic_dominance = {
+			name = FGE_ensure_germanic_dominance
+			picture = generic_infantry_equipment_manufacturer_2
+			modifier = {
+				justify_war_goal_time = -0.5
+			}
+		}
+
+
+		fge_germania_recognition1 = {
+			name = germania_recognition1
+			picture = germania_recognition1
+			available = {
+				check_variable = {
+					global.recognizes_fge_percentage > 0.64
+				}
+				GME = {
+					exists = yes
+				}
+			}
+			on_remove = {
+				add_ideas = fge_germania_recognition2
+			}
+			modifier = {
+				political_power_factor = 0.3
+				conscription_factor = 0.3
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+			}
+			targeted_modifier = {
+				tag =  GME
+				attack_bonus_against = 0.3
+				defense_bonus_against = 0.3
+			}
+		}
+		fge_germania_recognition2 = {
+			name = germania_recognition2
+			picture = germania_recognition2
+			available = {
+				check_variable = {
+					global.recognizes_fge_percentage < 0.65
+				}
+				OR = {
+					check_variable = {
+						global.recognizes_fge_percentage > 0.5
+					}
+					check_variable = {
+						global.recognizes_fge_percentage > global.recognizes_gme_percentage
+					}
+				}
+				GME = {
+					exists = yes
+				}
+			}
+			on_remove = {
+				IF = {
+					limit = {
+						check_variable = {
+							global.recognizes_fge_percentage > 0.64
+						}
+						GME = {
+							exists = yes
+						}
+					}
+					add_ideas = fge_germania_recognition1
+					ELSE_IF = {
+						limit = {
+							GME = {
+								exists = yes
+							}
+						}
+						add_ideas = fge_germania_recognition2
+					}
+				}
+			}
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+			targeted_modifier = {
+				tag =  GME
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		fge_germania_recognition3 = {
+			name = germania_recognition3
+			picture = germania_recognition3
+			available = {
+				NOT = {
+					check_variable = {
+						global.recognizes_fge_percentage > 0.50
+					}
+					check_variable = {
+						global.recognizes_fge_percentage > global.recognizes_gme_percentage
+					}
+				}
+				GME = {
+					exists = yes
+				}
+			}
+			on_remove = {
+				add_ideas = fge_germania_recognition2
+			}
+			modifier = {
+				political_power_factor = -0.3
+				conscription_factor = -0.3
+				army_core_attack_factor = -0.15
+				army_core_defence_factor = -0.15
+			}
+			targeted_modifier = {
+				tag =  GME
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+		}
+
+
+
+
+		gme_germania_recognition1 = {
+			name = germania_recognition1
+			picture = germania_recognition1
+			available = {
+				check_variable = {
+					global.recognizes_gme_percentage > 0.64
+				}
+				FGE = {
+					exists = yes
+				}
+			}
+			on_remove = {
+				add_ideas = gme_germania_recognition2
+			}
+			modifier = {
+				political_power_factor = 0.3
+				conscription_factor = 0.3
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+			}
+			targeted_modifier = {
+				tag =  GME
+				attack_bonus_against = 0.3
+				defense_bonus_against = 0.3
+			}
+		}
+		gme_germania_recognition2 = {
+			name = germania_recognition2
+			picture = germania_recognition2
+			available = {
+				check_variable = {
+					global.recognizes_gme_percentage < 0.65
+				}
+				OR = {
+					check_variable = {
+						global.recognizes_gme_percentage > 0.5
+					}
+					check_variable = {
+						global.recognizes_gme_percentage > global.recognizes_fge_percentage
+					}
+				}
+				FGE = {
+					exists = yes
+				}
+			}
+			on_remove = {
+				IF = {
+					limit = {
+						check_variable = {
+							global.recognizes_gme_percentage > 0.64
+						}
+						GME = {
+							exists = yes
+						}
+					}
+					add_ideas = gme_germania_recognition1
+					ELSE_IF = {
+						limit = {
+							FGE = {
+								exists = yes
+							}
+						}
+						add_ideas = gme_germania_recognition3
+					}
+				}
+			}
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+			targeted_modifier = {
+				tag =  GME
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		gme_germania_recognition3 = {
+			name = germania_recognition3
+			picture = germania_recognition3
+			available = {
+				NOT = {
+					check_variable = {
+						global.recognizes_gme_percentage > 0.50
+					}
+					check_variable = {
+						global.recognizes_gme_percentage > global.recognizes_fge_percentage
+					}
+				}
+				FGE = {
+					exists = yes
+				}
+			}
+			on_remove = {
+				add_ideas = gme_germania_recognition2
+			}
+			modifier = {
+				political_power_factor = -0.3
+				conscription_factor = -0.3
+				army_core_attack_factor = -0.15
+				army_core_defence_factor = -0.15
+			}
+			targeted_modifier = {
+				tag =  GME
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+		}
+		FGE_intervene_in_uk = {
+			name = FGE_intervene_in_uk
+			picture = generic_infantry_equipment_manufacturer_2
+			available = {
+				BRT = {
+					has_civil_war = yes
+				}
+			}
+			modifier = {
+				send_volunteer_size = 5
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+	}
+}

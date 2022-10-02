@@ -1,0 +1,33 @@
+state=
+{
+	id=69
+	name="STATE_69"
+	manpower = 0# = 2830000
+	
+	state_category = town
+	
+	resources={
+		steel=4 # was: 8
+	}
+	
+	history={
+		owner = SVK
+		add_core_of = ZAP
+		buildings = {
+			#infrastructure = 4
+			#industrial_complex = 2
+			#anti_air_building = 1
+		# = CZE
+		}
+		1938.9.30 = {
+			owner = WIL# = GER
+			controller = WIL# = GER
+		}
+	}
+	provinces=
+	{
+424 469 543 557 3418 3585 5283 6470 7857 9555 11401 11414 11432 11525 	}
+
+	local_supplies=0.0 
+
+}

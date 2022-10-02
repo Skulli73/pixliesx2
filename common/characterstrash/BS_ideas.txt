@@ -1,0 +1,194 @@
+characters = {	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/rEXpahkG-149854.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = {fascist_demagogue  dictator}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/XoxQbkCu-149856.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = { democratic_reformer}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/mtMzqWPy-149857.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = { underage_monarch ambitious_negotiator_neutrality}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/QndizPEK-149865.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = { veteran_communist communist_theorist communist_revolutionary}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/urvQisSR-149874.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = { captain_of_industry}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/RsiDWKHt-149875.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = { silent_workhorse}
+		}
+	}
+	industrial_buildup = {
+		name = industrial_buildup
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/mtMzqWPy-149904.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = industrial_buildup
+			allowed = {
+				original_tag = BS
+			}
+			traits = {underage_monarch inexperienced_monarch  military_theorist}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/FpXtJBso-149909.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = { guerilla_warfare_expert army_chief_defensive_2 army_chief_offensive_3 army_chief_reform_1 army_chief_drill_1 army_chief_organizational_2 army_chief_morale_1}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/RsiDWKHt-149888.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = {navy_capital_ship_2  atlantic_fleet_naval_manufacturer navy_fleet_logistics_1}
+		}
+	}
+	qdin = {
+		name = qdin
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/lnpVYgBL-150391.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = qdin
+			allowed = {
+				original_tag = BS
+			}
+			traits = { air_air_superiority_2 air_chief_safety_2 air_close_air_support_2}
+		}
+	}
+	qdin = {
+		name = qdin
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/mtMzqWPy-149902.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = qdin
+			allowed = {
+				original_tag = BS
+			}
+			traits = { underage_monarch inexperienced_monarch army_chief_offensive_1 army_chief_defensive_1 army_chief_planning_3}
+		}
+	}
+	magneten1 = {
+		name = magneten1
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/FpXtJBso-149920.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = magneten1
+			allowed = {
+				original_tag = BS
+			}
+			traits = { guerilla_warfare_expert army_chief_defensive_2 army_chief_offensive_3 army_chief_reform_1 army_chief_drill_1 army_chief_organizational_2}
+		}
+	}
+}

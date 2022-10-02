@@ -1,0 +1,24 @@
+
+state={
+	id=420
+	name="STATE_420"
+	manpower = 0# = 1314948
+	
+	state_category = rural
+
+	history={
+		owner = ARM
+		add_core_of = ARM
+		buildings = {
+			#infrastructure = 2
+		}
+		# = PER
+		# = AZR
+	}
+
+	provinces={
+		4553 4609 4637 4901 7969 10454 10523 
+	}
+
+	local_supplies=3.0 
+}

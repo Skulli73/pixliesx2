@@ -1,0 +1,26 @@
+﻿oob = "GENERIC"
+capital = 126
+set_research_slots = 0
+set_stability = 0
+set_war_support = 0
+set_convoys = 0
+
+
+add_ideas = {
+	disarmed_nation
+	civilian_economy
+}
+
+
+
+#Politics for 50.1.1
+set_politics = {
+	ruling_party = neutrality
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}
+inherit_technology = CSA

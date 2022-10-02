@@ -1,0 +1,86 @@
+characters = {
+#Create country leader - Physic_
+physic_ = {
+	name = physic_
+	portraits = {
+		civilian = {
+			#Custom image for Physic_
+			large = "/gfx/leaders/VEN/jRTruBQf-155096.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = centrism
+		traits = {  }
+	}
+}
+
+#Create country leader - UnlockedBeast48
+unlockedbeast48 = {
+	name = unlockedbeast48
+	portraits = {
+		civilian = {
+			#Custom image for UnlockedBeast48
+			large = "/gfx/leaders/VEN/rhRqbAUB-155097.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {  }
+	}
+}
+
+#Create country leader - MaxaMillion224
+maxamillion224 = {
+	name = maxamillion224
+	portraits = {
+		civilian = {
+			#Custom image for MaxaMillion224
+			large = "/gfx/leaders/VEN/MawoGAsm-155101.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  }
+	}
+}
+
+#Create country leader - Blitzdontcare
+blitzdontcare = {
+	name = blitzdontcare
+	portraits = {
+		civilian = {
+			#Custom image for Blitzdontcare
+			large = "/gfx/leaders/VEN/xPuCgoie-155093.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = { dictator anti_communist  }
+	}
+}
+
+#Create military leader - BlitzDontCare
+	VfQbvFGN = {
+		name = "VfQbvFGN"
+		portraits = {
+			army = {
+				#Custom images for BlitzDontCare
+				large = "/gfx/leaders/VEN/VfQbvFGN-160887.dds"
+				small = "/gfx/interface/ideas/VEN/VfQbvFGN-160887.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected inspirational_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		legacy_id = 152330170
+		}
+	}
+}

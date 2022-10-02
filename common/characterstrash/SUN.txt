@@ -1,0 +1,127 @@
+characters = {
+#Create country leader - holymolysmokes
+holymolysmokes = {
+	name = holymolysmokes
+	portraits = {
+		civilian = {
+			#Custom image for holymolysmokes
+			large = "/gfx/leaders/SUN/HYoCFucl-153609.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = anarchism
+		traits = {  }
+	}
+}
+
+#Create country leader - donkey12358
+donkey12358 = {
+	name = donkey12358
+	portraits = {
+		civilian = {
+			#Custom image for donkey12358
+			large = "/gfx/leaders/SUN/dufKhbIP-153611.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = leninism
+		traits = {  }
+	}
+}
+
+#Create country leader - KIngGipper
+kinggipper = {
+	name = kinggipper
+	portraits = {
+		civilian = {
+			#Custom image for KIngGipper
+			large = "/gfx/leaders/SUN/gHNOfBul-153607.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {  }
+	}
+}
+
+#Create country leader - KingGipper
+kinggipper = {
+	name = kinggipper
+	portraits = {
+		civilian = {
+			#Custom image for KingGipper
+			large = "/gfx/leaders/SUN/EjxZCOiS-153607.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {  }
+	}
+}
+
+#Create military leader - holymolysmokes
+	cUxzaIYV = {
+		name = "cUxzaIYV"
+		portraits = {
+			army = {
+				#Custom images for holymolysmokes
+				large = "/gfx/leaders/SUN/cUxzaIYV-155604.dds"
+				small = "/gfx/interface/ideas/SUN/cUxzaIYV-155604.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer infantry_expert }
+			skill = 10
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		legacy_id = 172330210
+		}
+	}
+
+#Create military leader - KingGipper
+	nlvrtexw = {
+		name = "nlvrtexw"
+		portraits = {
+			army = {
+				#Custom images for KingGipper
+				large = "/gfx/leaders/SUN/nlvrtexw-155606.dds"
+				small = "/gfx/interface/ideas/SUN/nlvrtexw-155606.dds"
+			}
+		}
+		field_marshal = {
+			traits = { defensive_doctrine brilliant_strategist }
+			skill = 1
+			attack_skill = -4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		legacy_id = 172330211
+		}
+	}
+
+	ctExaomb = {
+		name = "ctExaomb"
+		portraits = {
+			army = {
+				#Custom images for donkey12358
+				large = "/gfx/leaders/SUN/ctExaomb-155610.dds"
+				small = "/gfx/interface/ideas/SUN/ctExaomb-155610.dds"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly naval_lineage battleship_adherent }
+			skill = 10
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+			legacy_id = 372330210
+		}
+	}
+}

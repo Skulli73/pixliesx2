@@ -1,0 +1,38 @@
+﻿oob = "GENERIC"
+capital = 59
+set_research_slots = 3
+set_stability = 0.25
+set_war_support = 0.3
+set_convoys = 0
+
+
+add_ideas = {
+	extensive_conscription
+	partial_economic_mobilisation
+	A_disunited_Italy_1
+}
+
+
+
+#Politics for 50.1.1
+set_politics = {
+	ruling_party = fascism
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 50
+	democratic = 20
+	neutrality = 30
+}
+create_country_leader = {
+	name = "Nikiblago08"
+	ideology = fascism_ideology
+	picture = "niki.dds"
+	traits = {
+		constitutional_monarch
+		exile_king
+	}
+}
+inherit_technology = CSA

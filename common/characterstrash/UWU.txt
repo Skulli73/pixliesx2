@@ -1,0 +1,107 @@
+characters = {
+#Create country leader - Agreyv
+agreyv = {
+	name = agreyv
+	portraits = {
+		civilian = {
+			#Custom image for Agreyv
+			large = "/gfx/leaders/UWU/AXJfMYLj-160937.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {  }
+	}
+}
+
+#Create country leader - WinterDontCare
+winterdontcare = {
+	name = winterdontcare
+	portraits = {
+		civilian = {
+			#Custom image for WinterDontCare
+			large = "/gfx/leaders/UWU/TeUSCvJu-160936.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  }
+	}
+}
+
+#Create country leader - Chomkii
+chomkii = {
+	name = chomkii
+	portraits = {
+		civilian = {
+			#Custom image for Chomkii
+			large = "/gfx/leaders/UWU/NCXxrkzS-160933.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = falangism
+		traits = {  }
+	}
+}
+
+#Create country leader - Xolx
+xolx = {
+	name = xolx
+	portraits = {
+		civilian = {
+			#Custom image for Xolx
+			large = "/gfx/leaders/UWU/PTRLskaZ-160935.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = oligarchism
+		traits = {  }
+	}
+}
+
+#Create military leader - Xolx
+	PmsbKjvN = {
+		name = "PmsbKjvN"
+		portraits = {
+			army = {
+				#Custom images for Xolx
+				large = "/gfx/leaders/UWU/PmsbKjvN-160939.dds"
+				small = "/gfx/interface/ideas/UWU/PmsbKjvN-160939.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected defensive_doctrine }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		legacy_id = 136330190
+		}
+	}
+
+#Create military leader - Chomkii
+	sKHkojVY = {
+		name = "sKHkojVY"
+		portraits = {
+			army = {
+				#Custom images for Chomkii
+				large = "/gfx/leaders/UWU/sKHkojVY-160940.dds"
+				small = "/gfx/interface/ideas/UWU/sKHkojVY-160940.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected infantry_leader infantry_officer infantry_expert }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+		legacy_id = 136330191
+		}
+	}
+}

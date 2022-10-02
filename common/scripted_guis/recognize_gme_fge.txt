@@ -1,0 +1,53 @@
+scripted_gui = {
+	recognize_fge_gme_gui = {
+		context_type = decision_category
+		window_name = "recognize_fge_gme_interface"
+		dynamic_lists = {
+			recognizes_ns_flag_gridbox = {
+				array = global.recognizes_gme
+				entry_container = recognizes_ns_list_entry
+				change_scope = yes
+				
+			}
+			recognizes_exiles_flag_gridbox = {
+				array = global.recognizes_fge
+				entry_container = recognizes_exiles_list_entry
+				change_scope = yes
+				
+			}
+			recognizes_neither_both_flag_gridbox = {
+				array = global.recognizes_fge_and_gme
+				entry_container = recognizes_neither_both_list_entry
+				change_scope = yes
+				
+			}
+		}
+		properties = {
+			ns_germania_flag = {
+				image = [GME.GetFlag]
+			}
+			recognizes_ns_flag = {
+				image = [THIS.GetFlag]
+			}
+			exile_germania_flag = {
+				image = [FGE.GetFlag]
+			}
+			recognizes_exiles_flag = {
+				image = [THIS.GetFlag]
+			}
+			recognizes_neither_both_flag = {
+				image = [THIS.GetFlag]
+			}
+		}
+		
+		visible = {
+		}
+		
+		effects = {
+		}
+		
+		triggers = {
+		}
+	}
+}
+

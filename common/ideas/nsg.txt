@@ -1,0 +1,281 @@
+ideas = {
+	country = {
+		GME_interrupted_quotas = {
+			name = GME_interrupted_quotas
+			picture = chi_war_of_resistance
+			modifier = {
+				cic_to_overlord_factor = 0.15
+				mic_to_overlord_factor = 0.15
+				extra_trade_to_overlord_factor = 0.15
+				consumer_goods_factor = 0.05
+			}
+			available = {
+				is_subject_of = CSA
+			}
+		}
+		GME_harsh_quotas = {
+			name = GME_harsh_quotas
+			picture = generic_central_management
+			modifier = {
+				cic_to_overlord_factor = 0.3
+				mic_to_overlord_factor = 0.3
+				extra_trade_to_overlord_factor = 0.3
+				consumer_goods_factor = 0.1
+			}
+			available = {
+				is_subject_of = CSA
+			}
+		}
+		GME_furfilled_quotas = {
+			name = GME_furfilled_quotas
+			picture = generic_central_management
+			modifier = {
+				cic_to_overlord_factor = 0.5
+				mic_to_overlord_factor = 0.5
+				extra_trade_to_overlord_factor = 0.5
+				consumer_goods_factor = 0.15
+				autonomy_gain = 0.5
+			}
+			available = {
+				is_subject_of = CSA
+			}
+		}
+		GME_placate_the_su = {
+			name = GME_placate_the_su
+			picture = chi_wargaming_division
+			available = {
+				is_subject_of = CSA
+			}
+			modifier = {
+				autonomy_gain = 1
+				autonomy_gain_trade_factor = 1
+				autonomy_gain_ll_to_overlord_factor = 1
+				autonomy_manpower_share = 0.5
+				cic_to_overlord_factor = 0.3
+				mic_to_overlord_factor = 0.3
+				extra_trade_to_overlord_factor = 0.3
+			}
+		}
+		GME_help_in_construction_of_atlanta = {
+			name = GME_help_in_construction_of_atlanta
+			picture = generic_production_bonus
+			available = {
+				is_subject_of = CSA
+			}
+			modifier = {
+				autonomy_gain = 0.5
+				consumer_goods_factor = 0.1
+			}
+		}
+
+
+		GME_su_distrust = {
+			name = GME_su_distrust
+			picture = gme_trust3
+			available = {
+				is_subject_of = CSA
+				check_variable = {
+					csa_trust < 0.5
+				}
+			}
+			modifier = {
+				autonomy_gain = -1
+				cic_to_overlord_factor = 0.3
+				mic_to_overlord_factor = 0.3
+				political_power_factor = -0.25
+			}
+			on_remove = {
+				add_ideas = GME_su_slight_distrust
+			}
+		}
+		GME_su_slight_distrust = {
+			name = GME_su_slight_distrust
+			picture = gme_trust2
+			available = {
+				is_subject_of = CSA
+				check_variable = {
+					csa_trust > 0.49
+				}
+				check_variable = {
+					csa_trust < 0.75
+				}
+			}
+			modifier = {
+			}
+			on_remove = {
+				IF = {
+					limit = {
+						NOT = {
+							is_subject_of = CSA
+						}
+					}
+					ELSE_IF = {
+						limit = {
+							check_variable = {
+								csa_trust < 0.5
+							}
+						}
+						add_ideas = GME_su_distrust
+						ELSE = {
+							add_ideas = GME_su_trust
+						}
+					}
+				}
+			}
+		}
+		GME_su_trust = {
+			name = GME_su_trust
+			picture = gme_trust1
+			available = {
+				is_subject_of = CSA
+				check_variable = {
+					csa_trust > 0.74
+				}
+			}
+			modifier = {
+				autonomy_gain = 0.5
+				political_power_factor = 0.25
+			}
+			on_remove = {
+				add_ideas = GME_su_slight_distrust
+			}
+		}
+
+		GME_very_low_authority = {
+			name = GME_very_low_authority
+			picture = chi_war_of_resistance3
+			available = {
+				check_variable = {
+					authority < 0.2
+				}
+			}
+			modifier = {
+				political_power_factor = -0.5
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+				resistance_activity = 0.5
+				resistance_target = 0.5
+				custom_modifier_tooltip = fge_take_states_cost
+			}
+			on_add = {
+				FGE = {
+					set_variable = {
+						take_states_cost = 50
+					}
+				}
+			}
+			on_remove = {
+				add_ideas = GME_low_authority
+			}
+		}
+		GME_low_authority = {
+			name = GME_low_authority
+			picture = generic_democratic_opposition
+			available = {
+				check_variable = {
+					authority < 0.5
+				}
+				check_variable = {
+					authority > 0.19
+				}
+			}
+			modifier = {
+				political_power_factor = -0.25
+				stability_weekly = -0.0025
+				war_support_weekly = -0.0025
+				resistance_activity = 0.125
+				resistance_target = 0.125
+				custom_modifier_tooltip = fge_take_states_cost
+			}
+			on_add = {
+				FGE = {
+					set_variable = {
+						take_states_cost = 100
+					}
+				}
+			}
+			on_remove = {
+				IF = {
+					limit = {
+						check_variable = {
+							authority < 0.2
+						}
+					}
+					add_ideas = GME_very_low_authority
+					ELSE = {
+						add_ideas = GME_medium_authority
+					}
+				}
+			}
+		}
+		GME_medium_authority = {
+			name = GME_medium_authority
+			picture = HUN_treaty_of_triannon
+			available = {
+				check_variable = {
+					authority > 0.49
+				}
+				check_variable = {
+					authority < 0.75
+				}
+			}
+			modifier = {
+				custom_modifier_tooltip = fge_take_states_cost
+			}
+			on_add = {
+				FGE = {
+					set_variable = {
+						take_states_cost = 150
+					}
+				}
+			}
+			on_remove = {
+				IF = {
+					limit = {
+						NOT = {
+							is_subject_of = CSA
+						}
+					}
+					ELSE_IF = {
+						limit = {
+							check_variable = {
+								authority < 0.5
+							}
+						}
+						add_ideas = GME_low_authority
+						ELSE = {
+							add_ideas = GME_large_authority
+						}
+					}
+				}
+			}
+		}
+		GME_large_authority = {
+			name = GME_large_authority
+			picture = hol_the_foundations_of_defense
+			available = {
+				check_variable = {
+					authority > 0.74
+				}
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				political_power_factor = 0.25
+				resistance_activity = -0.25
+				resistance_target = -0.25
+				custom_modifier_tooltip = fge_take_states_cost
+			}
+			on_add = {
+				FGE = {
+					set_variable = {
+						take_states_cost = 200
+					}
+				}
+			}
+			on_remove = {
+				add_ideas = GME_medium_authority
+			}
+		}
+	}
+}

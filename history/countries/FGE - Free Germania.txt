@@ -1,0 +1,50 @@
+﻿oob = "GENERIC"
+capital = 673
+set_research_slots = 5
+set_stability = 0.05
+set_war_support = 0.4
+set_convoys = 0
+
+
+add_ideas = {
+	partial_economic_mobilisation
+	extensive_conscription
+	inefficient_government_1
+	fge_germania_recognition3
+}
+
+
+
+#Politics for 50.1.1
+set_politics = {  
+	ruling_party = democratic
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 75
+	neutrality = 25
+}
+create_country_leader = {
+	name = "Vacant Prime Ministry"
+	ideology = liberalism
+	picture = "gfx/leaders/GME/National Assembly.dds"
+	traits = {
+		cabinet_crisis
+	}
+}
+recruit_character = skulli73
+recruit_character = katz
+promote_character = katz
+add_ideas = katz_head_of_state
+recruit_character = sam
+add_ideas = sam_minister_of_internal_affairs
+promote_character = skulli73
+recruit_character = ace
+add_ideas = ace_minister_of_foreign_affairs
+recruit_character = atalius
+recruit_character = fortressia
+recruit_character = phantom
+inherit_technology = CSA
+recruit_character = geo_temp_1

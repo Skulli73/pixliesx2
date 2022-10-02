@@ -1,0 +1,141 @@
+﻿add_namespace = brt 
+
+# collapse of britain
+country_event = {
+	id = brt.1
+	title = brt.1.t
+	desc = brt.1.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = brt.1.a	
+		set_cosmetic_tag = ENG_england
+		every_owned_state = {
+			limit = {
+				NOT = {
+					region = 1
+					region = 2
+				}
+			}
+			set_temp_variable = {
+				neg_population = state_population
+			}
+			multiply_temp_variable = {
+				neg_population = -1
+			}
+			add_manpower = neg_population
+			transfer_state_to = WIL
+		}
+		recognize_fge_effect = yes
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.6
+		}
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = fascism
+			size = 0.5
+			recognize_gme_effect = yes
+		}
+		FGE = {
+			country_event = {
+				id = brt.2
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = brt.1.b	
+		set_cosmetic_tag = ENG_england
+		every_owned_state = {
+			limit = {
+				NOT = {
+					region = 1
+					region = 2
+				}
+			}
+			set_temp_variable = {
+				neg_population = state_population
+			}
+			multiply_temp_variable = {
+				neg_population = -1
+			}
+			add_manpower = neg_population
+			WIL = {
+				transfer_state = PREV
+			}
+		}
+		recognize_gme_effect = yes 
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.6
+		}
+		start_civil_war = {
+			ideology = democratic
+			ruling_party = fascism
+			size = 0.5
+			recognize_fge_effect = yes
+		}
+		FGE = {
+			country_event = {
+				id = brt.2
+				days = 5
+			}
+		}
+	}
+}
+country_event = {
+	id = brt.2
+	title = brt.2.t
+	desc = brt.2.d
+	is_triggered_only = yes
+	option = {
+		name = brt.2.a
+		every_state = {
+			limit = {
+				is_core_of = BRT
+				OR = {
+					region = 20
+					state = 23
+				}
+			}
+			transfer_state_to = ROOT 
+		}
+		GME = {
+			country_event = {
+				id = brt.3
+				days = 5
+			}
+		}
+	}
+}
+country_event = {
+	id = brt.3
+	title = brt.3.t
+	desc = brt.3.d
+	is_triggered_only = yes
+	option = {
+		name = brt.3.a
+		every_state = {
+			limit = {
+				OR = {
+					AND = {
+						is_core_of = BRT
+						OR = {
+							region = 19
+							region = 208
+						}
+						NOT = {
+							is_owned_by = FGE
+						}
+					}
+					state = 144
+					state = 143
+				}
+			}
+			transfer_state_to = ROOT 
+		}
+	}
+}

@@ -1,0 +1,137 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_CSA_CONGRESS}
+
+focus_tree = {
+	id = ILY_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ILY
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+
+	focus = {
+		id = ILY_Recover_From_The_War
+		icon = GFX_focus_focus_fra_maquis
+		x = 17
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 4000
+		#}
+		available = {
+			is_ai = no
+		}
+		available_if_capitulated = yes
+
+		bypass = { always = no
+		}
+
+		completion_reward = {
+			add_ideas = A_disunited_Italy_1
+			add_political_power = 100
+			 
+			
+		}
+	}
+    focus = {
+		id = ILY_With_The_Union
+		icon = GFX_focus_POL_beck_ribbentrop
+		cost = 10
+		x = 15
+		y = 1
+		prerequisite = {
+			focus = ILY_Recover_From_The_War
+		}
+		mutually_exclusive = {
+			focus = ILY_For_The_Independence
+		}
+		completion_reward = {
+			add_stability = 0.5
+			ILY = {
+				country_event = {
+					id = ily.29
+					hours = 6
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILY_For_The_Independence
+		icon = GFX_focus_generic_italy_first
+		cost = 10
+		x = 19
+		y = 1
+		prerequisite = {
+			focus = ILY_Recover_From_The_War
+		}
+		mutually_exclusive = {
+			focus = ILY_With_The_Union
+		}
+		completion_reward = {
+			add_stability = 0.5
+			ILY = {
+				country_event = {
+					id = ily.32
+					hours = 6
+				}
+			}
+		}
+	}
+	focus = {
+		id = ILY_A_Imminent_Civil_War
+		icon = GFX_focus_generic_italy_first
+		cost = 10
+		x = 19
+		y = 3
+		prerequisite = {
+			focus = ILY_For_The_Independence
+		}
+		completion_reward = {
+			add_stability = 0.5
+			ILY = {
+				country_event = {
+					id = ily.33
+					hours = 6
+				}
+				start_civil_war = {
+                    ideology = fascism
+                    size = 0.3
+                    capital = 158
+                     states = {
+						158 735
+                    }
+                }
+            }
+		}	
+	}
+    focus = {
+		id = ILY_Fascism_is_getting_out_of_hand
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		x = 15
+		y = 3
+		prerequisite = {
+			focus = ILY_With_The_Union
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.7
+			}
+		}
+	}
+	
+	

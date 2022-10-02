@@ -1,0 +1,441 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			GME = {
+				set_cosmetic_tag = GME_REPUBLIC
+			}
+
+
+
+			#stuff for automatic factories etc.
+			JPN = {
+				set_variable = {
+					population_auto = 25
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.3
+				}
+			}
+			ARM = {
+				set_variable = {
+					population_auto = 14
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.15
+				}
+			}
+			BYZ = {
+				set_variable = {
+					population_auto = 15
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.1
+				}
+			}
+			ESP = {
+				set_variable = {
+					population_auto = 18
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.1
+				}
+			}
+			TRL = {
+				set_variable = {
+					population_auto = 27
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.7
+				}
+			}
+			BRT = {
+				set_variable = {
+					population_auto = 17
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.15
+				}
+			}
+			RUS = {
+				set_variable = {
+					population_auto = 20
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.15
+				}
+			}
+			VNZ = {
+				set_variable = {
+					population_auto = 10
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.35
+				}
+			}
+			ZAP = {
+				set_variable = {
+					population_auto = 21
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.25
+				}
+			}
+			ILY = {
+				set_variable = {
+					population_auto = 5
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.15
+				}
+			}
+			PRT = {
+				set_variable = {
+					population_auto = 8
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.2
+				}
+			}
+			FIJ = {
+				set_variable = {
+					population_auto = 4
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.4
+				}
+			}
+			IND = {
+				set_variable = {
+					population_auto = 5
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.3
+				}
+			}
+			FNL = {
+				set_variable = {
+					population_auto = 10
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.3
+				}
+			}
+			SVK = {
+				set_variable = {
+					population_auto = 7
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.6
+				}
+			}
+			ECD = {
+				set_variable = {
+					population_auto = 5
+				}
+				set_variable = {
+					mil_fac_ratio_auto = 0.5
+				}
+			}
+
+			every_country = {
+				limit = {
+					has_variable = population_auto
+				}
+				set_variable = {
+					amount_civs_auto = 1
+				}
+				subtract_from_variable = {
+					amount_civs_auto = mil_fac_ratio_auto
+				}
+				multiply_variable = {
+					amount_civs_auto = population_auto
+				}
+				round_variable = amount_civs_auto
+
+				set_variable = {
+					amount_mils_auto = mil_fac_ratio_auto
+				}
+				multiply_variable = {
+					amount_mils_auto = population_auto
+				}
+				round_variable = amount_mils_auto
+
+
+				set_variable = {
+					civs_in_capital = amount_civs_auto
+				}
+				divide_variable = {
+					civs_in_capital = 2
+				}
+				round_variable = civs_in_capital
+				set_variable = {capital_population = civs_in_capital}
+				CAPITAL_SCOPE = {
+					add_extra_state_shared_building_slots = PREV.civs_in_capital
+					add_building_construction = {
+						type = industrial_complex
+						level = PREV.civs_in_capital
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+					add_manpower = PREV.capital_population
+				}
+				set_variable = {n = 0}
+				while_loop_effect = {
+					break = a
+					limit = {check_variable = {civs_in_capital > n}}
+					add_to_variable = {n = 1}
+					random_owned_state = {
+						limit = {
+							is_in_home_area = yes
+						}
+						add_manpower = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+
+				set_variable = {
+					mils_in_capital = amount_mils_auto
+				}
+				divide_variable = {
+					mils_in_capital = 2
+				}
+				round_variable = mils_in_capital
+				set_variable = {capital_population = mils_in_capital}
+				CAPITAL_SCOPE = {
+					add_extra_state_shared_building_slots = PREV.mils_in_capital
+					add_building_construction = {
+						type = arms_factory
+						level = PREV.mils_in_capital
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+					add_manpower = PREV.capital_population
+				}
+				set_variable = {n = 0}
+				while_loop_effect = {
+					break = a
+					limit = {check_variable = {mils_in_capital > n}}
+					add_to_variable = {n = 1}
+					random_owned_state = {
+						limit = {
+							is_in_home_area = yes
+						}
+						add_manpower = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					arms_factory > 0
+				}
+				set_variable = {n = 0}
+				while_loop_effect = {
+					break = a
+					limit = {check_variable = {building_level@arms_factory > n}}
+					add_to_variable = {n = 1}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8 start_manpower_factor = 0.5"
+						owner = this.owner
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = GME
+				}
+				add_core_of = FGE
+			}
+			FGE = {
+				country_event = {
+					id = gge.1
+					days = 15
+				}
+			}
+
+
+			GME = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							steel > 10
+							oil > 0
+							aluminium > 10
+							tungsten > 0
+							chromium > 0
+						}
+					}
+					GME = {
+						give_resource_rights = {
+							receiver = CSA
+							state = PREV
+						}
+					}
+					set_state_flag = CSA_resource_rights
+				}
+			}
+
+
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = GME
+						tag = VNZ
+						tag = JPN
+					}
+				}
+				add_to_array = {
+					array = global.recognizes_gme
+					value = THIS
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = FGE
+						tag = ESP
+						tag = ZAP
+						tag = BYZ
+						tag = ARM
+						tag = PRT
+						tag = BGA
+					}
+				}
+				add_to_array = {
+					array = global.recognizes_fge
+					value = THIS
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						is_in_array = {
+							array = global.recognizes_fge
+							value = THIS
+						}
+						is_in_array = {
+							array = global.recognizes_gme
+							value = THIS
+						}
+						original_tag = WIL
+					}
+				}
+				add_to_array = {
+					array = global.recognizes_fge_and_gme
+					value = THIS
+				}
+			}
+
+
+
+			every_state = {
+                limit = {
+                    NOT = {
+                        is_owned_by = WIL
+                    }
+                }
+                add_to_temp_variable = {
+                    global.total_states = 1
+                }
+            }
+            every_state = { 
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_fge
+                        value = OWNER
+                    }
+                }
+                add_to_temp_variable = {
+                    global.fge_states = 1
+                }
+            }
+            set_variable = {
+                global.recognizes_fge_percentage = global.fge_states
+            }
+            divide_variable = {
+                global.recognizes_fge_percentage = global.total_states
+            }
+            every_state = { 
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_gme
+                        value = OWNER
+                    }
+                }
+                add_to_temp_variable = {
+                    global.gme_states = 1
+                }
+            }
+            set_variable = {
+                global.recognizes_gme_percentage = global.gme_states
+            }
+            divide_variable = {
+                global.recognizes_gme_percentage = global.total_states
+            }
+
+            set_variable = {
+                global.recognizes_gme_amount = 0
+            }
+            every_country = {
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_gme
+                        value = THIS
+                    }
+                }
+                add_to_variable = {
+                    global.recognizes_gme_amount = 1
+                }
+            }
+            set_variable = {
+                global.recognizes_fge_amount = 0
+            }
+            every_country = {
+                limit = {
+                    is_in_array = {
+                        array = global.recognizes_fge
+                        value = THIS
+                    }
+                }
+                add_to_variable = {
+                    global.recognizes_fge_amount = 1
+                }
+            }
+
+			GME = {
+				set_variable = {
+					csa_trust = 0.25
+				}
+				set_variable = {
+					authority = 0.35
+				}
+			}
+		} #effect bracket close
+	}
+}

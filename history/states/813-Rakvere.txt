@@ -1,0 +1,27 @@
+
+state={
+	id=813
+	name="STATE_813"
+
+	history={
+		owner = ZAP
+		add_core_of = ZAP
+		buildings = {
+			#infrastructure = 3 #was: 5
+			4640 = {
+				naval_base = 1
+
+			}
+
+		}
+		# = EST
+
+	}
+
+	provinces={
+		4640 6099 9079 11057 11127 11443 13127 
+	}
+	manpower = 0#=150560
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

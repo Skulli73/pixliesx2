@@ -1,0 +1,169 @@
+characters = {
+#Create country leader - Monochromicality 
+monochromicality_ = {
+	name = monochromicality_
+	portraits = {
+		civilian = {
+			#Custom image for Monochromicality 
+			large = "/gfx/leaders/BS/lLwrdWjG-149350.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {  }
+	}
+}
+
+#Create country leader - Krakabom
+krakabom = {
+	name = krakabom
+	portraits = {
+		civilian = {
+			#Custom image for Krakabom
+			large = "/gfx/leaders/BS/xCAhtzyw-149348.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  }
+	}
+}
+
+#Create country leader - Magneten1 
+magneten1_ = {
+	name = magneten1_
+	portraits = {
+		civilian = {
+			#Custom image for Magneten1 
+			large = "/gfx/leaders/BS/ECuHJPMN-149346.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {  dictator headstrong fascist_militia_leader fascist_sympathies anti_communist national_integralist imperial_connections }
+	}
+}
+
+#Create country leader - Liborso
+liborso = {
+	name = liborso
+	portraits = {
+		civilian = {
+			#Custom image for Liborso
+			large = "/gfx/leaders/BS/UajMmDHf-149332.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = { dictator legitimate_heir  anti_communist }
+	}
+}
+
+#Create military leader - Krakabom
+	EWakFYOn = {
+		name = "EWakFYOn"
+		portraits = {
+			army = {
+				#Custom images for Krakabom
+				large = "/gfx/leaders/BS/EWakFYOn-149368.dds"
+				small = "/gfx/interface/ideas/BS/EWakFYOn-149368.dds"
+			}
+		}
+		corps_commander = {
+			traits = {politically_connected unyielding_defender armor_officer  trait_reckless }
+			skill = 10
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+		legacy_id = 163321170
+		}
+	}
+
+#Create military leader - Monochromicality
+	monochromicality = {
+		name = "monochromicality"
+		portraits = {
+			army = {
+				#Custom images for Monochromicality
+				large = "/gfx/leaders/BS/monochromicality-149369.dds"
+				small = "/gfx/interface/ideas/BS/monochromicality-149369.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected infantry_officer logistics_wizard offensive_doctrine }
+			skill = 10
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		legacy_id = 163321171
+		}
+	}
+
+#Create military leader - Magneten1
+	NSVQlzyR = {
+		name = "NSVQlzyR"
+		portraits = {
+			army = {
+				#Custom images for Magneten1
+				large = "/gfx/leaders/BS/NSVQlzyR-149370.dds"
+				small = "/gfx/interface/ideas/BS/NSVQlzyR-149370.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected trait_cautious cavalry_officer fast_planner }
+			skill = 10
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		legacy_id = 163321172
+		}
+	}
+
+#Create military leader - Qdin04
+	qdin04 = {
+		name = "qdin04"
+		portraits = {
+			army = {
+				#Custom images for Qdin04
+				large = "/gfx/leaders/BS/qdin04-149371.dds"
+				small = "/gfx/interface/ideas/BS/qdin04-149371.dds"
+			}
+		}
+		corps_commander = {
+			traits = { dive_bomber trait_cautious defensive_doctrine aggressive_assaulter }
+			skill = 10
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = 2
+		legacy_id = 163321173
+		}
+	}
+
+	thefinaluptake = {
+		name = "thefinaluptake"
+		portraits = {
+			army = {
+				#Custom images for thefinaluptake
+				large = "/gfx/leaders/BS/thefinaluptake-149373.dds"
+				small = "/gfx/interface/ideas/BS/thefinaluptake-149373.dds"
+			}
+		}
+		navy_leader = {
+			traits = { brilliant_strategist adaptable commando fleet_protector }
+			skill = 10
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+			legacy_id = 363321170
+		}
+	}
+}

@@ -1,0 +1,20 @@
+
+state={
+	id=352
+	name="STATE_352" # Van
+	manpower = 0# = 262095
+
+	state_category = rural
+
+	history={
+		owner = BYZ
+		add_core_of = BYZ
+	}
+
+	provinces={
+		864 1463 7530 10497 11739 12318 12476
+	}
+
+	local_supplies=0.0 
+}
+

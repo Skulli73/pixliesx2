@@ -1,0 +1,106 @@
+characters = {
+#Create country leader - Sanya
+sanya = {
+	name = sanya
+	portraits = {
+		civilian = {
+			#Custom image for Sanya
+			large = "/gfx/leaders/CAR/OevFMamj-154008.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {  exiled_revolutionary staunch_stalinist }
+	}
+}
+
+#Create country leader - Floyd
+floyd = {
+	name = floyd
+	portraits = {
+		civilian = {
+			#Custom image for Floyd
+			large = "/gfx/leaders/CAR/ifENBHjv-154047.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {  political_manipulator economic_reformer industry_reformer prince_of_terror }
+	}
+}
+
+#Create country leader - XanaxDoctor
+xanaxdoctor = {
+	name = xanaxdoctor
+	portraits = {
+		civilian = {
+			#Custom image for XanaxDoctor
+			large = "/gfx/leaders/CAR/yfhqnvBO-154001.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  collaborator_king constitutional_monarch }
+	}
+}
+
+#Create country leader - XanaxDoctor
+xanaxdoctor = {
+	name = xanaxdoctor
+	portraits = {
+		civilian = {
+			#Custom image for XanaxDoctor
+			large = "/gfx/leaders/CAR/rolOXAJx-154001.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {  dictator autocratic_imperialist warmonger }
+	}
+}
+
+#Create military leader - Awestar
+	awestar = {
+		name = "awestar"
+		portraits = {
+			army = {
+				#Custom images for Awestar
+				large = "/gfx/leaders/CAR/awestar-154868.dds"
+				small = "/gfx/interface/ideas/CAR/awestar-154868.dds"
+			}
+		}
+		corps_commander = {
+			traits = { war_hero brilliant_strategist infantry_officer fast_planner offensive_doctrine aggressive_assaulter infantry_leader commando infantry_expert lone_wolf }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		legacy_id = 131332570
+		}
+	}
+
+	SphKOevk = {
+		name = "SphKOevk"
+		portraits = {
+			army = {
+				#Custom images for Horthy
+				large = "/gfx/leaders/CAR/SphKOevk-10022.dds"
+				small = "/gfx/interface/ideas/CAR/SphKOevk-10022.dds"
+			}
+		}
+		navy_leader = {
+			traits = {war_hero politically_connected media_personality seawolf fleet_protector superior_tactician cruiser_captain old_guard_navy  }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			maneuvering_skill = 4
+			coordination_skill = 5
+			legacy_id = 331332570
+		}
+	}
+}

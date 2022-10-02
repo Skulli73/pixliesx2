@@ -1,0 +1,82 @@
+characters = {	kinggipper = {
+		name = kinggipper
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/COoxwgvd-156275.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = kinggipper
+			allowed = {
+				original_tag = SUN
+			}
+			traits = { fascist_demagogue}
+		}
+	}
+	kinggipper = {
+		name = kinggipper
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/COoxwgvd-156277.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = kinggipper
+			allowed = {
+				original_tag = SUN
+			}
+			traits = { democratic_reformer}
+		}
+	}
+	kinggipper = {
+		name = kinggipper
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/ywvjDsAr-156278.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = kinggipper
+			allowed = {
+				original_tag = SUN
+			}
+			traits = { communist_theorist communist_revolutionary}
+		}
+	}
+	kinggipper = {
+		name = kinggipper
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/yEOXRdsD-156279.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = kinggipper
+			allowed = {
+				original_tag = SUN
+			}
+			traits = { ambitious_negotiator_neutrality}
+		}
+	}
+	kinggipper = {
+		name = kinggipper
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/nsRlyUtQ-157813.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = kinggipper
+			allowed = {
+				original_tag = SUN
+			}
+			traits = { dictator fascist_militia_leader}
+		}
+	}
+}

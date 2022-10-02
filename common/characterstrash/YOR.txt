@@ -1,0 +1,86 @@
+characters = {
+#Create country leader - Calculord
+calculord = {
+	name = calculord
+	portraits = {
+		civilian = {
+			#Custom image for Calculord
+			large = "/gfx/leaders/YOR/winCufFN-228691.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = leninism
+		traits = {  }
+	}
+}
+
+#Create country leader - Calculord
+calculord = {
+	name = calculord
+	portraits = {
+		civilian = {
+			#Custom image for Calculord
+			large = "/gfx/leaders/YOR/VnmuNJbr-228689.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {  }
+	}
+}
+
+#Create country leader - SixDin0 
+sixdin0_ = {
+	name = sixdin0_
+	portraits = {
+		civilian = {
+			#Custom image for SixDin0 
+			large = "/gfx/leaders/YOR/aGmtjlzV-228688.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  }
+	}
+}
+
+#Create country leader - SixDin0
+sixdin0 = {
+	name = sixdin0
+	portraits = {
+		civilian = {
+			#Custom image for SixDin0
+			large = "/gfx/leaders/YOR/HsStgFaW-228692.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  }
+	}
+}
+
+#Create military leader - SixDin0
+	OYudFKRk = {
+		name = "OYudFKRk"
+		portraits = {
+			army = {
+				#Custom images for SixDin0
+				large = "/gfx/leaders/YOR/OYudFKRk-228704.dds"
+				small = "/gfx/interface/ideas/YOR/OYudFKRk-228704.dds"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		legacy_id = 117311210
+		}
+	}
+}

@@ -1,0 +1,464 @@
+characters = {
+	skulli73 = {
+		name = "Skulli73"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/skulli.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/skulli.dds"
+				small = "gfx/interface/ideas/GME/skulli.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = skulli_head_of_state
+			name = "Skulli73"
+			cost = 75
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = skulli_head_of_state
+			}
+			traits = {
+				exiled_revolutionary
+				staunch_constitutionalist
+				figurehead_president
+			}
+		}
+		advisor = {
+			slot = minister_of_internal_affairs
+			idea_token = skulli_minister_of_internal_affairs
+			name = "Skulli73"
+			cost = 75
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = skulli_head_of_state
+			}
+			traits = {
+				staunch_constitutionalist
+				democratic_crusader
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = {
+				exiled_revolutionary
+				exiled
+				
+				economic_reformer
+				staunch_constitutionalist
+				great_war_hero
+				democratic_crusader
+				liberal_democratic_paragon
+			}
+			desc = SKULLI_LEADER_DESC
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				OR = {
+					has_country_leader = {
+						character = skulli73
+					}
+					has_idea = skulli_head_of_state
+				}
+			}
+		}
+	}
+	katz = {
+		name = "Kätz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/katz.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/katz.dds"
+				small = "gfx/interface/ideas/GME/katz.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = katz_head_of_state
+			name = "Emperor Kätz"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = katz_head_of_state
+			}
+			traits = {
+				constitutional_monarch
+				staunch_monarchist
+				exile_king
+				great_war_hero
+			}
+		}
+		country_leader = {
+			ideology = centrism
+			traits = {
+				constitutional_monarch
+				staunch_monarchist
+				exile_king
+				great_war_hero
+			}
+			desc = KATZ_LEADER_DESC
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				OR = {
+					has_country_leader = {
+						character = katz
+					}
+					has_idea = katz_head_of_state
+				}
+			}
+		}
+	}
+	alternis = {
+		name = "Alternis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/alternis.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/alternis.dds"
+				small = "gfx/interface/ideas/GME/alternis.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = alternis_head_of_state
+			name = "Alternis"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+				}
+			}
+			available = {
+				has_idea = alternis_head_of_state
+			}
+			traits = {
+				the_foreign_connection
+				fascist_orchestrator
+			}
+		}
+	}
+	needless = {
+		name = "NeedlessMeming"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CSA/needless.dds"
+			}
+			army = {
+				large = "gfx/leaders/CSA/needless.dds"
+				small = "gfx/interface/ideas/CSA/needless.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = needless_head_of_state
+			name = "NeedlessMeming"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = CSA
+				}
+			}
+			available = {
+				has_idea = needless_head_of_state
+			}
+			traits = {
+				the_foreign_connection
+				incompetent_leader
+			}
+		}
+	}
+	ace = {
+		name = "Ace"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/ace.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/ace.dds"
+				small = "gfx/interface/ideas/GME/ace.dds"
+			}
+		}
+		advisor = {
+			slot = minister_of_foreign_affairs
+			idea_token = ace_minister_of_foreign_affairs
+			name = "Ace"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = ace_minister_of_foreign_affairs
+			}
+			traits = {
+				tenacious_negotiator
+				liberal_democratic_paragon
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = ace_head_of_state
+			name = "Ace"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = ace_head_of_state
+			}
+			traits = {
+				tenacious_negotiator
+				liberal_democratic_paragon
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = {
+				
+			}
+		}
+	}
+	atalius = {
+		name = "Atalius"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/atalius.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/atalius.dds"
+				small = "gfx/interface/ideas/GME/atalius.dds"
+			}
+		}
+		advisor = {
+			slot = minister_of_defense
+			idea_token = atalius_minister_of_defense
+			name = "Atalius"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = atalius_minister_of_defense
+			}
+			traits = {
+				conservative_nationalist
+			}
+		}
+		advisor = {
+			slot = minister_of_foreign_affairs
+			idea_token = atalius_minister_of_foreign_affairs
+			name = "Atalius"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = atalius_minister_of_foreign_affairs
+			}
+			traits = {
+				conservative_nationalist
+			}
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		country_leader = {
+			ideology = centrism
+			traits = {
+				conservative_nationalist
+			}
+		}
+	}
+	sam = {
+		name = "ItzSam"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/sam.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/sam.dds"
+				small = "gfx/interface/ideas/GME/sam.dds"
+			}
+		}
+		advisor = {
+			slot = minister_of_internal_affairs
+			idea_token = sam_minister_of_internal_affairs
+			name = "ItzSam"
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				OR = {
+					original_tag = GME
+					original_tag = FGE
+				}
+			}
+			available = {
+				has_idea = sam_minister_of_internal_affairs
+			}
+			traits = {
+				silent_workhorse
+			}
+			
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = {
+				silent_workhorse
+				exiled_revolutionary
+				imperial_connections
+				staunch_constitutionalist
+				great_war_hero
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	fortressia = {
+		name = "Fortressia"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/fortressia.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/fortressia.dds"
+				small = "gfx/interface/ideas/GME/fortressia.dds"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = {
+				staunch_monarchist
+				monarchist_puppet
+			}
+		}
+		advisor = {
+			slot = head_of_state
+			idea_token = fortressia_head_of_state
+			traits = {
+				staunch_monarchist
+				monarchist_puppet
+			}
+			available = {
+				ROOT = {
+					has_idea = fortressia_head_of_state
+				}
+			}
+		}
+	}
+	phantom = {
+		name = "Mr. Phat0m"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/phantom.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/phantom.dds"
+				small = "gfx/interface/ideas/GME/phantom.dds"
+			}
+		}
+		advisor = {
+			slot = minister_of_economy
+			idea_token = phantom_minister_of_economy
+			traits = {
+				technocrat
+				german_technological_patron
+			}
+		}
+	}
+
+
+	#national state
+	gryn = {
+		name = "Gryn"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GME/gryn.dds"
+			}
+			army = {
+				large = "gfx/leaders/GME/gryn.dds"
+				small = "gfx/interface/ideas/GME/gryn.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			traits = {
+				eager_collaborator
+				anti_democrat
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = {
+				resistance_artist
+				anti_democrat
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

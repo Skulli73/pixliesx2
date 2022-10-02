@@ -1,0 +1,31 @@
+﻿oob = "ZAP"
+capital = 10
+set_research_slots = 4
+set_stability = 0.5
+set_war_support = 0.3
+set_convoys = 0
+add_manpower = 50
+
+
+add_ideas = {
+	volunteer_only
+	low_economic_mobilisation
+}
+
+
+declare_war_on = {
+	target = SVK
+	type = annex_everything
+}
+#Politics for 50.1.1
+set_politics = {
+	ruling_party = democratic
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 50
+	neutrality = 50
+}
+inherit_technology = CSA

@@ -1,0 +1,59 @@
+﻿oob = "GENERIC"
+capital = 365
+set_research_slots = 5
+set_stability = 0.31
+set_war_support = 0.78
+set_convoys = 0
+
+
+add_ideas = {
+	extensive_conscription
+	partial_economic_mobilisation
+}
+
+
+
+#Politics for 50.1.1
+set_politics = {
+	ruling_party = fascism
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	fascism = 60
+	neutrality = 25
+}
+create_country_leader = {
+	name = "MattCobra"
+	ideology = nazism
+	picture = "matt.dds"
+	traits = {
+		dictator
+		political_manipulator
+		propaganda_expert
+		great_war_hero
+		autocratic_imperialist
+	}
+}
+puppet = GME
+set_autonomy = {
+	target = GME
+	autonomy_state = autonomy_reichsprotectorate
+}
+puppet = ILY
+set_autonomy = {
+	target = ILY
+	autonomy_state = autonomy_reichsprotectorate
+}
+puppet = IND
+set_autonomy = {
+	target = IND
+	autonomy_state = autonomy_satellite
+}
+create_faction = "Fascist Unity Pact"
+add_to_faction = TRL
+add_to_faction = FIJ
+recruit_character = geo
+promote_character = geo

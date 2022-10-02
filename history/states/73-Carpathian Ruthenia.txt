@@ -1,0 +1,26 @@
+state={
+	id=73
+	name="STATE_73"
+	manpower = 0# = 854300
+	
+	state_category = rural
+	
+	history={
+		owner = TRL
+		add_core_of = TRL
+
+		1939.3.14 = {
+			owner = WIL# = HUN
+			controller = WIL# = HUN
+			remove_claim_by = HUN
+			# = HUN
+			# = SLO
+		}
+	}
+
+	provinces={
+		3548 6571 9563 11536 11691 
+	}
+
+	local_supplies=0.0 
+}

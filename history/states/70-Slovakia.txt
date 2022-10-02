@@ -1,0 +1,35 @@
+state={
+	id=70
+	name="STATE_70"
+	manpower = 0# = 1230500
+	
+	state_category = city
+	
+	resources={
+		tungsten=1 # was: 2
+	}
+
+	history={
+		owner = TRL
+		add_core_of = TRL
+		buildings = {
+			#infrastructure = 3
+			#industrial_complex = 3
+			#arms_factory = 2
+			#air_base = 3
+		}
+		# = CZE
+
+		1939.3.14 = {
+			owner = WIL# = SLO
+			controller = WIL# = SLO
+			# = SLO
+		}
+	}
+
+	provinces={
+		541 3484 3537 9539 9692 11522 11539 
+	}
+
+	local_supplies=3.0 
+}

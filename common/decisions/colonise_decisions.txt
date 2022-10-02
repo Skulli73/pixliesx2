@@ -1,0 +1,234 @@
+colonise = {
+	colonize_state = {
+		available = {
+			date > 50.01.20
+			has_political_power > colonize_cost
+			custom_trigger_tooltip = {
+				tooltip = has_x_population
+				check_variable = {
+					total_population > ROOT.num_owned_states
+				}
+			}
+			NOT = {
+				tag = WIL
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		allowed = {
+			NOT = {
+				tag = WIL
+			}
+		}
+		visible = {
+			NOT = {
+				tag = WIL
+			}
+			FROM = {
+				is_owned_by = WIL
+				OR = {
+					is_coastal = yes
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+		}
+		available = {
+			IF = {
+				limit = {
+					original_tag = ECD
+				}
+				OR = {
+					all_core_state = {
+						is_owned_by = ECD
+					}
+					ECD = {
+						has_war_with = FGE
+					}
+				}
+			}
+			ROOT = {
+				NOT = {
+					has_country_flag = recently_colonized
+				}
+			}
+		}
+		complete_effect = {
+			ROOT = {
+				set_country_flag = {
+					flag = recently_colonized
+					value = 1
+					days = 25
+				}
+			}
+			transfer_state = FROM
+			set_temp_variable = {
+				colonize_cost_negative = colonize_cost
+			}
+			multiply_temp_variable = {
+				colonize_cost_negative = -1
+			}
+			add_political_power = colonize_cost_negative
+			hidden_effect = {
+				FROM = {
+					remove_core_of = WIL
+					add_claim_by = WIL
+				}
+				every_country = {
+					set_variable = {
+						total_population = 0
+					}
+					every_owned_state = {
+						PREV = {
+							add_to_variable = {
+								total_population = PREV.state_population
+							}
+						}
+					}
+	
+					set_variable = {
+						colonize_cost = num_owned_states
+					}
+					multiply_variable = {
+						colonize_cost = num_owned_states
+					}
+					multiply_variable = {
+						colonize_cost = 0.15
+					}
+					round_variable = colonize_cost
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10000
+			# modifier = {
+			# 	factor = 0.0001
+			# 	check_variable = {
+			# 		num_owned_states > 40
+			# 	}
+			# 	FROM = {
+			# 		NOT = {
+			# 			region = 19
+			# 			region = 20
+			# 			region = 208
+			# 		}
+			# 	}
+			# }
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = {
+						any_neighbor_state = {
+							is_owned_by = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					OR = {
+						original_tag = CSA
+						original_tag = VNZ
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					original_tag = TEX
+				}
+				FROM = {
+					NOT = {
+						state = 373
+						state = 383
+						state = 382
+						state = 376
+						state = 377
+						state = 380
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					original_tag = VIR
+				}
+				FROM = {
+					NOT = {
+						region = 117
+						region = 197
+						region = 213
+					}
+				}
+			}
+		}
+	}
+	cheat_population = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			random_owned_state = {
+				add_manpower = 100
+			}
+		}
+	}
+	build_up_state_infrastructure = {
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+				is_claimed_by = WIL
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					has_state_flag = built_infrastructure
+				}
+			}
+		}
+		allowed = {
+			NOT = {
+				tag = WIL
+			}
+		}
+		cost = 100
+		complete_effect = {
+			FROM = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+				add_core_of = ROOT
+			remove_claim_by = WIL
+			}
+		}
+	}
+	advertise_for_members_in_state = {
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 100
+		available = {
+			FROM = {
+				OR = {
+					industrial_complex > var:FROM.state_population
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+			}
+		}
+		complete_effect = {
+			FROM = {
+				add_manpower = 1
+			}
+		}
+	}
+}

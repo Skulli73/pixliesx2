@@ -1,0 +1,31 @@
+state={
+	id=35
+	name="STATE_35"
+
+	history={
+		owner = GME
+		add_core_of = GME
+		# = HOL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		victory_points = {
+			6496 25
+		}
+		victory_points = {
+			11456 10
+		}
+
+	}
+
+	provinces={
+		480 3262 6496 6500 9431 11456 11562 9498 3211
+	}
+	manpower = 5
+	buildings_max_level_factor=1.000
+	state_category=city
+
+	local_supplies=0.0 
+}

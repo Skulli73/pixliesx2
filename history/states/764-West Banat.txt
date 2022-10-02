@@ -1,0 +1,25 @@
+
+state={
+	id=764
+	name="STATE_764"
+	manpower = 0# = 585579
+	state_category = rural
+
+	history={
+		owner = TRL
+		add_core_of = TRL
+
+		buildings = {
+			#infrastructure = 3 #was: 6
+		}
+		# = YUG
+		# = SER
+		# = TRA
+	}
+
+	provinces={
+		614 3614 6643 11787
+	}
+
+	local_supplies=2.0 
+}

@@ -1,0 +1,30 @@
+
+state = {
+	id = 835
+	name = "Stettin"
+	manpower = 0# = 183748
+	
+	state_category = rural
+
+	history = {
+		owner = GME
+		add_core_of = GME
+		buildings = {
+		
+			#infrastructure = 2
+			
+		}
+		# = ZAP
+		50.1.1 = {
+			buildings = {
+				#industrial_complex = 2
+			}
+		}
+	}
+
+	provinces = {
+		6282
+	}
+
+	local_supplies = 6.0 
+}

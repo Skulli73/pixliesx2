@@ -1,0 +1,26 @@
+state={
+	id=97
+	name="STATE_97"
+
+	history={
+		owner = ZAP
+		add_core_of = ZAP
+		buildings = {
+			#infrastructure = 3
+			#industrial_complex = 1
+			#air_base = 3
+
+		}
+		# = POL
+
+	}
+
+	provinces={
+		290 347 400 3254 11247 11274 11301 11329 11357 
+	}
+	manpower = 0#=1157200
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=5.0 
+}

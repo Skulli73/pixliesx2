@@ -1,0 +1,115 @@
+demo = {
+	TRL_wargoal_CSA = {
+		available = {
+			date > 53.01.26
+		}
+		allowed = {
+			tag = TRL
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100000
+		}
+		days_remove = 100
+		war_with_on_remove = CSA
+		war_with_on_remove = GME
+		complete_effect = {
+			create_wargoal = {
+				target = GME
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CSA
+				type = puppet_wargoal_focus
+			}
+			add_threat = 50
+		}
+	}
+	TRL_wargoal_ILY = {
+		available = {
+			ILY = {
+				is_in_faction = no
+				is_subject = no
+			}
+		}
+		allowed = {
+			tag = TRL
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		days_remove = 25
+		war_with_on_remove = ILY
+		remove_effect = {
+			create_wargoal = {
+				target = ILY
+				type = annex_everything
+			}
+		}
+	}
+	WIL_cause_geo_info = {
+		visible = {
+			tag = WIL
+		}
+		available = {
+			FGE = {
+				network_strength = {
+					target = CSA
+					value > 50 
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000000
+		}
+		fire_only_once = yes
+		days_remove = 5
+		remove_effect = { 
+			# CSA = {
+			# 	random_character = {
+			# 		limit = { is_character = geo }
+			# 		set_nationality = FGE
+			# 		operative_leader_event = {
+			# 			id = gge.100
+			# 			hours = 2
+			# 		}
+			# 	}
+			# }
+			FGE = {
+				country_event = {
+					id = gge.100
+					hours = 2
+				}
+			}
+		}
+	}
+	INS_surrender = {
+		allowed = {
+			original_tag = INS
+		}
+		visible = {
+			has_war_with = FGE
+		}
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				GME = {
+					exists = yes
+				}
+			}
+		}
+		complete_effect = {
+			every_core_state = {
+				remove_core_of = ROOT
+			}
+			FGE = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+		}
+	} 
+}

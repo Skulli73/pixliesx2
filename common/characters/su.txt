@@ -1,0 +1,58 @@
+characters = {
+	geo = {
+		name = "GeoDoesGames"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CSA/geo.dds"
+			}
+			army = {
+				large = "gfx/leaders/CSA/geo.dds"
+				small = "gfx/interface/ideas/CSA/geo.dds"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+				snuggler
+				socdem_reformist
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = {
+				snuggler
+				social_revolutionary
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				substance_abuser
+			}
+		}
+	}
+	geo_temp_1 = {
+		name = "GeoDoesGames"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CSA/geo.dds"
+			}
+			army = {
+				large = "gfx/leaders/CSA/geo.dds"
+				small = "gfx/interface/ideas/CSA/geo.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = {
+				snuggler
+				social_revolutionary
+			}
+		}
+		
+	}
+}

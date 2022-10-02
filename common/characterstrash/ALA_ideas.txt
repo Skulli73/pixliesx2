@@ -1,0 +1,97 @@
+characters = {	nasaspaceshuttle = {
+		name = nasaspaceshuttle
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/bYFUQduJ-227645.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = nasaspaceshuttle
+			allowed = {
+				original_tag = ALA
+			}
+			traits = { silent_workhorse}
+		}
+	}
+	air_warfare = {
+		name = air_warfare
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/TFldSEcZ-1251.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = air_warfare
+			allowed = {
+				original_tag = ALA
+			}
+			traits = { air_warfare_theorist}
+		}
+	}
+	air_warfare = {
+		name = air_warfare
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/bYFUQduJ-227647.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = air_warfare
+			allowed = {
+				original_tag = ALA
+			}
+			traits = { army_chief_organizational_2}
+		}
+	}
+	air_warfare = {
+		name = air_warfare
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/bYFUQduJ-227649.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = air_warfare
+			allowed = {
+				original_tag = ALA
+			}
+			traits = { navy_chief_commerce_raiding_2}
+		}
+	}
+	air_warfare = {
+		name = air_warfare
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/bYFUQduJ-227651.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = air_warfare
+			allowed = {
+				original_tag = ALA
+			}
+			traits = { air_chief_reform_2}
+		}
+	}
+	air_warfare = {
+		name = air_warfare
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/bYFUQduJ-227652.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = air_warfare
+			allowed = {
+				original_tag = ALA
+			}
+			traits = { army_infantry_2}
+		}
+	}
+}

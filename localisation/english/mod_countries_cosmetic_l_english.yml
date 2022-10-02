@@ -1,0 +1,13 @@
+﻿l_english:
+
+ #America-Europe
+ CSA_EAU:0 "America-Europe"
+ CSA_EAU_DEF:0 "the American-European Republic
+ CSA_EAU_democratic:0 "American-European Commonweath"
+ CSA_EAU_democratic_DEF:0 "the Trans-Atlantic American-European Commonweath"
+ CSA_EAU_neutrality:0 "American-European State"
+ CSA_EAU_neutrality_DEF:0 "the American-European State"
+ CSA_EAU_fascist:0 "National Republic of America-Europe"
+ CSA_EAU_fascist_DEF:0 "the National Republic of America-Europe"
+ CSA_EAU_communist:0 "American-European Communal State"
+ CSA_EAU_communist_DEF:0 "the American-European Communal State"

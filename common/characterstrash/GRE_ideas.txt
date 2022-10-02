@@ -1,0 +1,129 @@
+characters = {	qtvnickbro = {
+		name = qtvnickbro
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/VmxpCtdX-231957.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = qtvnickbro
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { fascist_demagogue}
+		}
+	}
+	qtvnickbro = {
+		name = qtvnickbro
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/LXsIxhdC-231958.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = qtvnickbro
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { democratic_reformer}
+		}
+	}
+	bbalchamp = {
+		name = bbalchamp
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/mdVzPhHx-231959.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = bbalchamp
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { war_industrialist}
+		}
+	}
+	minepro3004 = {
+		name = minepro3004
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/vjwoSbfg-231960.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = minepro3004
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { naval_theorist}
+		}
+	}
+	minepro3004 = {
+		name = minepro3004
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/VmxpCtdX-231962.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = minepro3004
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { army_chief_drill_1}
+		}
+	}
+	minepro3004 = {
+		name = minepro3004
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/CjYtzbsQ-231963.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = minepro3004
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { navy_chief_commerce_raiding_1}
+		}
+	}
+	bing = {
+		name = bing
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/sEModgfu-231965.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = bing
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { air_chief_all_weather_1}
+		}
+	}
+	bing = {
+		name = bing
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/VmxpCtdX-231966.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = bing
+			allowed = {
+				original_tag = GRE
+			}
+			traits = { army_infantry_2}
+		}
+	}
+}

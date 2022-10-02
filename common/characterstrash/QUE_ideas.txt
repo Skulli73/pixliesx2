@@ -1,0 +1,145 @@
+characters = {	wujii = {
+		name = wujii
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/wghCJtTV-228717.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = wujii
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { fascist_demagogue}
+		}
+	}
+	wujii = {
+		name = wujii
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/rQMtvOeJ-228720.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = wujii
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { captain_of_industry}
+		}
+	}
+	le_general_dan = {
+		name = le_general_dan
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/MbcSnpdt-228725.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = le_general_dan
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { military_theorist}
+		}
+	}
+	le_general_dan = {
+		name = le_general_dan
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/wghCJtTV-228728.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = le_general_dan
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { army_chief_offensive_1}
+		}
+	}
+	le_general_dan = {
+		name = le_general_dan
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/LXOfKIGF-228730.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = le_general_dan
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { navy_chief_decisive_battle_1}
+		}
+	}
+	le_general_dan = {
+		name = le_general_dan
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/rQMtvOeJ-228733.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = le_general_dan
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { air_chief_night_operations_1}
+		}
+	}
+	le_general_dan = {
+		name = le_general_dan
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/wghCJtTV-228763.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = le_general_dan
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { army_logistics_1}
+		}
+	}
+	le_general_dan = {
+		name = le_general_dan
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/LXOfKIGF-228766.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = le_general_dan
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { air_naval_strike_1}
+		}
+	}
+	le_general_dan = {
+		name = le_general_dan
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/rQMtvOeJ-228768.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = le_general_dan
+			allowed = {
+				original_tag = QUE
+			}
+			traits = { air_air_superiority_1}
+		}
+	}
+}

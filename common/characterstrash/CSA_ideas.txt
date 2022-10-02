@@ -1,0 +1,34 @@
+characters = {	confused_cyborg = {
+		name = confused_cyborg
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/BRephnqU-166525.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = confused_cyborg
+			allowed = {
+				original_tag = CSA
+			}
+			traits = { conservative_nationalist}
+		}
+	}
+	confused_cyborg = {
+		name = confused_cyborg
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/IaheQTBG-166524.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = confused_cyborg
+			allowed = {
+				original_tag = CSA
+			}
+			traits = { army_chief_drill_2 army_chief_reform_2 army_chief_offensive_2}
+		}
+	}
+}

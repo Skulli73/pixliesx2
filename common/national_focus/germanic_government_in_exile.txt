@@ -1,0 +1,1938 @@
+focus_tree = {
+	id = germanic_government_in_exile_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			original_tag = FGE
+		}
+	}
+	focus = {
+		id = FGE_bypass_the_national_assembly
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 10
+		x = 5
+		y = 0
+		allow_branch = {
+			NOT = {
+				has_global_flag = FGE_returned_home
+			}
+		}
+		available = {
+			has_country_flag = FGE_smaller_ministries_denied
+		}
+		mutually_exclusive = {
+			focus = FGE_new_pm
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FGE_royal_prerogative
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FGE_bypass_the_national_assembly
+		prerequisite = {
+			focus = FGE_bypass_the_national_assembly
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+			FGE_decrease_inefficient_government = yes
+			set_global_flag = GME_skulli
+		}
+	}
+	focus = {
+		id = FGE_assemble_an_emergency_committee
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = FGE_bypass_the_national_assembly
+		}
+		relative_position_id = FGE_bypass_the_national_assembly
+		completion_reward = {
+			FGE_decrease_inefficient_government = yes
+		}
+	}
+	focus = {
+		id = FGE_cabinet_skulli_three
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = FGE_assemble_an_emergency_committee
+		}
+		prerequisite = {
+			focus = FGE_royal_prerogative
+		}
+		relative_position_id = FGE_bypass_the_national_assembly
+		completion_reward = {
+			add_political_power = 200
+			add_stability = 0.2
+		}
+	}
+	focus = {
+		id = FGE_rule_by_decree
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = FGE_cabinet_skulli_three
+		}
+		relative_position_id = FGE_bypass_the_national_assembly
+		completion_reward = {
+			FGE_decrease_inefficient_government = yes
+			add_country_leader_trait = emergency_powers
+			remove_country_leader_trait = cabinet_crisis
+		}
+	}
+
+	focus = {
+		id = FGE_new_pm
+		icon = GFX_goal_generic_propaganda
+		cost = 2
+		x = 25
+		y = 0
+		allow_branch = {
+			NOT = {
+				has_global_flag = FGE_returned_home
+			}
+		}
+		available = {
+			NOT = {
+				has_country_leader = {
+					character = skulli73
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Vacant Prime Ministry"
+					ruling_only = yes
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FGE_bypass_the_national_assembly
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = .05
+			}
+			set_global_flag = GME_new_pm
+		}
+	}
+	focus = {
+		id = FGE_imperial_cooperation
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = FGE_new_pm
+		}
+		mutually_exclusive = {
+			focus = FGE_abolish_the_monarchy
+		}
+		available = {
+			OR = {
+				has_country_leader = {
+					character = fortressia
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = katz
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ace
+					ruling_only = yes
+				}
+			}
+		}
+		relative_position_id = FGE_new_pm
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = .1
+			}
+			add_stability = .1
+		}
+	}
+	focus = {
+		id = FGE_abolish_the_monarchy
+		icon = GFX_focus_rom_abdicate
+		cost = 10
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = FGE_new_pm
+		}
+		available = {
+			has_country_leader = {
+				character = sam
+				ruling_only = yes
+			}
+		}
+		relative_position_id = FGE_new_pm
+		mutually_exclusive = {
+			focus = FGE_imperial_cooperation
+		}
+		completion_reward = {
+			remove_ideas = katz_head_of_state
+			set_cosmetic_tag = GME_REPUBLIC
+			add_popularity = {
+				ideology = neutrality
+				popularity = -.3
+			}
+			hidden_effect = {
+				news_event = {
+					id = gge.15
+					hours = 6
+				}
+			}
+			custom_effect_tooltip = FGE_warning_do_not_choose_tt
+		}
+		ai_will_do = {
+			factor = -100
+		}
+	}
+	focus = {
+		id = FGE_empower_the_emperor
+		icon = GFX_focus_generic_monarchy_2
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+			has_country_leader = {
+				character = fortressia
+				ruling_only = yes
+			}
+		}
+		prerequisite = {
+			focus = FGE_imperial_cooperation
+		}
+		prerequisite = {
+			focus = FGE_cabinet_new_pm
+		}
+		mutually_exclusive = {
+			focus = FGE_repeal_emergency_powers
+		}
+		relative_position_id = FGE_imperial_cooperation
+		completion_reward = {
+			remove_country_leader_role = {
+				character = fortressia
+				ideology = conservatism
+			}
+			add_advisor_role = {
+				character = fortressia
+				advisor = {
+					slot = head_of_state
+					idea_token = fortressia2_head_of_state
+					cost = 50
+					traits = {
+						staunch_monarchist
+						elected_monarchist_puppet
+					}
+				}
+			}
+			add_ideas = fortressia2_head_of_state
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			FGE_decrease_inefficient_government = yes
+			custom_effect_tooltip = FGE_warning_do_not_choose_tt
+		}
+		ai_will_do = {
+			factor = -100
+		}
+	}
+	focus = {
+		id = FGE_cabinet_new_pm
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = FGE_new_pm
+		prerequisite = {
+			focus = FGE_new_pm
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					has_country_leader = {
+						character = ace
+						ruling_only = yes
+					}
+				}
+				add_ideas = atalius_minister_of_foreign_affairs
+			}
+			add_ideas = atalius_minister_of_defense
+			add_ideas = phantom_minister_of_economy
+			add_political_power = 200
+			add_stability = .2
+			FGE_decrease_inefficient_government = yes
+		}
+	}
+	focus = {
+		id = FGE_repeal_emergency_powers
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 7.5
+		x = -1
+		y = 1
+		relative_position_id = FGE_cabinet_new_pm
+		prerequisite = {
+			focus = FGE_cabinet_new_pm
+		}
+		mutually_exclusive = {
+			focus = FGE_empower_the_emperor
+		}
+		available = {
+			NOT = {
+				OR = {
+					has_country_leader = {
+						character = fortressia
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = katz
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = .2
+			}
+		}
+	}
+	focus = {
+		id = FGE_abolish_unnecessary_bureaocracy
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 7.5
+		x = 1
+		y = 1
+		relative_position_id = FGE_repeal_emergency_powers
+		prerequisite = {
+			focus = FGE_repeal_emergency_powers
+		}
+		completion_reward = {
+			FGE_decrease_inefficient_government = yes
+		}
+	}
+	focus = {
+		id = FGE_efficient_law_making_progress
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FGE_abolish_unnecessary_bureaocracy
+		prerequisite = {
+			focus = FGE_abolish_unnecessary_bureaocracy
+			focus = FGE_empower_the_emperor
+		}
+		completion_reward = {
+			FGE_decrease_inefficient_government = yes
+		}
+	}
+	focus = {
+		id = FGE_coordinate_resistance
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = FGE_bypass_the_national_assembly
+			focus = FGE_new_pm
+		}
+		available = {
+			NOT = {
+				OR = {
+					has_idea = inefficient_government_1
+					has_idea = inefficient_government_2
+					has_idea = inefficient_government_3
+				}
+			}
+		}
+		relative_position_id = FGE_bypass_the_national_assembly
+		completion_reward = {
+			unlock_decision_category_tooltip = FGE_GME_resistance
+		}
+	}
+	focus = {
+		id = FGE_isolate_the_empire
+		icon = GFX_goal_generic_defence
+		cost = 7.5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = FGE_coordinate_resistance
+		}
+		relative_position_id = FGE_coordinate_resistance
+		completion_reward = {
+			add_ideas = FGE_isolate_the_empire
+		}
+	}
+	focus = {
+		id = FGE_restore_the_ofn
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = FGE_coordinate_resistance
+		prerequisite = {
+			focus = FGE_coordinate_resistance
+		}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "Organization of Free Nations"
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	focus = {
+		id = FGE_middle_eastern_and_caucasian_connections
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 7.5
+		x = 0
+		y = 1
+		relative_position_id = FGE_restore_the_ofn
+		prerequisite = {
+			focus = FGE_restore_the_ofn
+		}
+		completion_reward = {
+			ARM = {
+				country_event = {
+					id = generic.5
+					hours = 12
+				}
+			}
+			BYZ = {
+				country_event = {
+					id = generic.5
+					hours = 12
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_ally_zapadoslavia
+		icon = GFX_focus_generic_polish_deal
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = FGE_restore_the_ofn
+		prerequisite = {
+			focus = FGE_restore_the_ofn
+		}
+		available = {
+			NOT = {
+				has_global_flag = FGE_TRL_pact
+			}
+		}
+		completion_reward = {
+			ZAP = {
+				country_event = {
+					id = generic.5
+					hours = 12
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_gather_spanish_support
+		icon = GFX_focus_intervention_spain_republic
+		cost = 7.5
+		x = 0
+		y = 1
+		relative_position_id = FGE_ally_zapadoslavia
+		prerequisite = {
+			focus = FGE_ally_zapadoslavia
+		}
+		prerequisite = {
+			focus = FGE_middle_eastern_and_caucasian_connections
+		}
+		mutually_exclusive = {
+			focus = FGE_deal_with_the_devil
+		}
+		available = {
+			ESP = {
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			ESP = {
+				country_event = {
+					id = generic.5
+					hours = 12
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_deal_with_the_devil
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_middle_eastern_and_caucasian_connections
+		prerequisite = {
+			focus = FGE_middle_eastern_and_caucasian_connections
+		}
+		mutually_exclusive = {
+			focus = FGE_gather_spanish_support
+		}
+		completion_reward = {
+			TRL = {
+				country_event = {
+					id = gge.16
+					hours = 12
+				}
+			}
+			custom_effect_tooltip = may_anger_zap_tt
+		}
+	}
+	focus = {
+		id = FGE_deal_with_japan
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FGE_isolate_the_empire
+		prerequisite = {
+			focus = FGE_isolate_the_empire
+		}
+		available = {
+			JPN = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+				NOT = {
+					has_war_with = JPN
+				}
+		}
+		completion_reward = {
+			JPN = {
+				country_event = {
+					id = gge.18
+					hours = 6
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_guarantee_fijian_neutrality
+		icon = GFX_focus_secret_rearmament
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FGE_isolate_the_empire
+		prerequisite = {
+			focus = FGE_isolate_the_empire
+		}
+		available = {
+			NOT = {
+				has_war_with = FIJ
+			}
+		}
+		available = {
+			OR = {
+				FIJ = {
+					has_opinion = {
+						target = ROOT
+						value > 60
+					}
+				}
+				AND = {
+					owns_state = 284
+					owns_state = 635
+					owns_state = 726
+					owns_state = 643
+				}
+			}
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					FIJ = {
+						has_opinion = {
+							target = ROOT
+							value > 60
+						}
+					}
+				}
+				FIJ = {
+					country_event = {
+						id = gge.21
+						hours = 6
+					}
+				}
+				else_if = {
+					limit = {
+						owns_state = 284
+						owns_state = 635
+						owns_state = 726
+						owns_state = 643
+					}
+					FIJ = {
+						country_event = {
+							id = gge.22
+							hours = 6
+						}
+					}
+					else = {
+						FIJ = {
+							leave_faction = yes
+							set_politics = {
+								ruling_party = neutrality
+							}
+							add_popularity = {
+								popularity = 1
+								ideology = neutrality
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_deal_with_italy
+		icon = GFX_focus_befriend_italy
+		cost = 7.5
+		x = 0
+		y = 2
+		relative_position_id = FGE_isolate_the_empire
+		prerequisite = {
+			focus = FGE_isolate_the_empire
+		}
+		available = {
+			NOT = {
+				has_war_with = ILY
+			}
+		}
+		completion_reward = {
+			ILY = {
+				country_event = {
+					id = gge.24
+					hours = 8
+				}
+			}
+			custom_effect_tooltip = FGE_deal_with_italy_tt
+			effect_tooltip = {
+				ILY = {
+					OVERLORD = {
+						end_puppet = ILY
+					}
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = yes
+					}
+					declare_war_on = {
+						target = OVERLORD
+					}
+					declare_war_on = {
+						target = GME
+					}
+					every_owned_state = {
+						remove_core_of = FGE
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_operation_broken_star
+		icon = GFX_focus_liberate_germania
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = FGE_coordinate_resistance
+		prerequisite = {
+			focus = FGE_coordinate_resistance
+		}
+		completion_reward = {
+			effect_tooltip = {
+				activate_decision = FGE_invade_national_state
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	focus = {
+		id = FGE_behind_enemy_lines
+		icon = GFX_goal_generic_demand_territory
+		cost = 7.5
+		x = 0
+		y = 1
+		relative_position_id = FGE_operation_broken_star
+		prerequisite = {
+			focus = FGE_operation_broken_star
+		}
+		completion_reward = {
+			custom_effect_tooltip = FGE_1_unit_rebel_tt
+		}
+	}
+	focus = {
+		id = FGE_promise_pardons
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 7.5
+		x = 0
+		y = 1
+		relative_position_id = FGE_behind_enemy_lines
+		prerequisite = {
+			focus = FGE_behind_enemy_lines
+		}
+		completion_reward = {
+			custom_effect_tooltip = FGE_2_unit_rebel_tt
+		}
+	}
+	focus = {
+		id = FGE_fortify_france
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = FGE_operation_broken_star
+		prerequisite = {
+			focus = FGE_operation_broken_star
+		}
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = GME
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_guarantee_supplies
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		x = 4
+		y = 1
+		relative_position_id = FGE_operation_broken_star
+		prerequisite = {
+			focus = FGE_operation_broken_star
+		}
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = BRT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = FGE_build_up_a_new_factory
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		x = 35
+		y = 0
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_expand_the_factories
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = FGE_build_up_a_new_factory
+		prerequisite = {
+			focus = FGE_build_up_a_new_factory
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_every_man_his_own_farm
+		icon = GFX_focus_generic_industry_1
+		cost = 7
+		x = 2
+		y = 1
+		relative_position_id = FGE_build_up_a_new_factory
+		prerequisite = {
+			focus = FGE_build_up_a_new_factory
+		}
+		completion_reward = {
+			add_ideas = FGE_every_man_his_own_farm
+		}
+	}
+	focus = {
+		id = FGE_expand_mining
+		icon = GFX_focus_generic_steel
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = FGE_every_man_his_own_farm
+		prerequisite = {
+			focus = FGE_every_man_his_own_farm
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FGE_expand_mining
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+	focus = {
+		id = FGE_synthetic_research
+		icon = GFX_goal_generic_oil_refinery
+		cost = 7
+		x = 2
+		y = 1
+		relative_position_id = FGE_every_man_his_own_farm
+		prerequisite = {
+			focus = FGE_every_man_his_own_farm
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FGE_synthetic_research
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		id = FGE_nuclear_reactors
+		icon = GFX_focus_wonderweapons
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = FGE_expand_mining
+		prerequisite = {
+			focus = FGE_expand_mining
+			focus = FGE_synthetic_research
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FGE_nuclear_reactors
+				bonus = 1
+				uses = 3
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = FGE_expand_arms_production
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = FGE_expand_the_factories
+		prerequisite = {
+			focus = FGE_expand_the_factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_automized_gun_production
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FGE_expand_arms_production
+		prerequisite = {
+			focus = FGE_expand_arms_production
+		}
+		mutually_exclusive = {
+			focus = FGE_massive_arms_production
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = FGE_automized_gun_production
+		}
+	}
+	focus = {
+		id = FGE_massive_arms_production
+		icon = GFX_goal_generic_construction2
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = FGE_expand_arms_production
+		prerequisite = {
+			focus = FGE_expand_arms_production
+		}
+		mutually_exclusive = {
+			focus = FGE_automized_gun_production
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_expand_construction
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = FGE_expand_the_factories
+		prerequisite = {
+			focus = FGE_expand_the_factories
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_centralize_industry
+		icon = GFX_focus_generic_industry_3
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FGE_expand_construction
+		prerequisite = {
+			focus = FGE_expand_construction
+		}
+		mutually_exclusive = {
+			focus = FGE_decentralize_industry
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FGE_centralize_industry
+				bonus = 0.75
+				uses = 3
+				category = concentrated_industry_category
+			}
+		}
+	}
+	focus = {
+		id = FGE_decentralize_industry
+		icon = GFX_focus_generic_industry_3
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = FGE_expand_construction
+		prerequisite = {
+			focus = FGE_expand_construction
+		}
+		mutually_exclusive = {
+			focus = FGE_centralize_industry
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FGE_decentralize_industry
+				bonus = 0.75
+				uses = 3
+				category = dispersed_industry_category
+			}
+		}
+	}
+
+	focus = {
+		id = FGE_new_army_doctrine
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		x = 42
+		y = 0
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+	focus = {
+		id = FGE_keep_old_doctrines
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = FGE_new_army_doctrine
+		prerequisite = {
+			focus = FGE_new_army_doctrine
+		}
+		mutually_exclusive = {
+			focus = FGE_adopt_new_doctrines
+		}
+		completion_reward = {
+			add_ideas = FGE_keep_old_doctrines
+		}
+	}
+	focus = {
+		id = FGE_adopt_new_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FGE_new_army_doctrine
+		prerequisite = {
+			focus = FGE_new_army_doctrine
+		}
+		mutually_exclusive = {
+			focus = FGE_keep_old_doctrines
+		}
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				name = FGE_adopt_new_doctrines
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+
+	focus = {
+		id = FGE_destroy_the_southern_union
+		icon = GFX_focus_liberate_germania
+		cost = 10
+		x = 4
+		y = 0
+		allow_branch = {
+			has_global_flag = FGE_returned_home
+			NOT = {
+				has_global_flag = skulli_suicide
+			}
+		}
+		mutually_exclusive = {
+			focus = FGE_force_su_to_sue_for_peace
+		}
+		completion_reward = {
+			add_ideas = FGE_destroy_the_southern_union
+			unlock_decision_category_tooltip = FGE_destroy_CSA
+		}
+	}
+	focus = {
+		id = FGE_force_su_to_sue_for_peace
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		x = 6
+		y = 0
+		allow_branch = {
+			has_global_flag = FGE_returned_home
+			NOT = {
+				has_global_flag = skulli_suicide
+			}
+		}
+		mutually_exclusive = {
+			focus = FGE_destroy_the_southern_union
+		}
+		completion_reward = {
+			CSA = {
+				country_event = {
+					id = gge.29
+					hours = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100000
+		}
+	}
+	focus = {
+		id = FGE_oppose_the_turuls
+		icon = GFX_goal_support_democracy
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FGE_destroy_the_southern_union
+		prerequisite = {
+			focus = FGE_destroy_the_southern_union
+			focus = FGE_force_su_to_sue_for_peace
+		}
+		available = {
+			NOT = {
+				has_war_with = CSA
+			}
+		}
+		completion_reward = {
+			TRL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+			add_opinion_modifier = {
+				target = TRL
+				modifier = large_decrease
+			}
+			IF = {
+				limit = {
+					has_non_aggression_pact_with = TRL
+				}
+				diplomatic_relation = {
+					country = TRL
+					relation = non_aggression_pact
+					active = no
+				}
+				TRL = {
+					diplomatic_relation = {
+						country = ROOT
+						relation = non_aggression_pact
+						active = no
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_invite_zapadoslavia
+		icon = GFX_focus_POL_plan_west
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = FGE_oppose_the_turuls
+		prerequisite = {
+			focus = FGE_oppose_the_turuls
+		}
+		allow_branch = {
+			OR = {
+				ZAP = {
+					is_in_faction = no
+				}
+				has_completed_focus = FGE_invite_zapadoslavia
+			}
+			has_global_flag = FGE_returned_home
+			NOT = {
+				has_global_flag = skulli_suicide
+			}
+		}
+		completion_reward = {
+			ZAP = {
+				country_event = {
+					id = generic.5
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_invite_spain
+		icon = GFX_focus_intervention_spain_republic
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = FGE_oppose_the_turuls
+		prerequisite = {
+			focus = FGE_oppose_the_turuls
+		}
+		allow_branch = {
+			NOT = {
+				has_global_flag = skulli_suicide
+			}
+			OR = {
+				ESP = {
+					is_in_faction = no
+				}
+				has_completed_focus = FGE_invite_spain
+			}
+			has_global_flag = FGE_returned_home
+		}
+		completion_reward = {
+			ESP = {
+				country_event = {
+					id = generic.5
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_invite_soviets
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = FGE_oppose_the_turuls
+		prerequisite = {
+			focus = FGE_oppose_the_turuls
+		}
+		bypass = {
+			RUS = {
+				is_in_faction = yes
+			}
+		}
+		completion_reward = {
+			RUS = {
+				country_event = {
+					id = generic.5
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_demand_territorial_concessions
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10
+		x = 0
+		y = 1
+		will_lead_to_war_with = TRL
+		relative_position_id = FGE_invite_soviets
+		prerequisite = {
+			focus = FGE_invite_soviets
+		}
+		completion_reward = {
+			TRL = {
+				IF = {
+					limit = {
+						ILY = {
+							is_in_faction_with = ROOT
+						}
+					}
+					every_owned_state = {
+						limit = {
+							OR = {
+								region = 21
+								region = 23
+								region = 169
+								state = 736
+							}
+						}
+						add_core_of = ILY
+					}
+					ELSE = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									region = 21
+									region = 23
+									region = 169
+									state = 102
+									state = 736
+								}
+								NOT = {
+									state = 156
+									state = 115
+									state = 117
+								}
+							}
+							add_claim_by = FGE
+						}
+						every_owned_state = {
+							limit = {
+								OR = {
+									state = 156
+									state = 115
+									state = 117
+								}
+							}
+							add_claim_by = BYZ
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							region = 25
+							region = 202
+							state = 211
+							state = 212
+							state = 48
+							state = 801
+							state = 77
+							state = 106
+							state = 803
+							state = 802
+							state = 108
+							state = 805
+							state = 44
+							state = 105
+						}
+					}
+					add_core_of = BYZ
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							region = 22
+							state = 73
+						}
+					}
+					add_core_of = ZAP
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							region = 130
+							state = 194
+						}
+					}
+					add_core_of = RUS
+				}
+				country_event = {
+					id = gge.33
+					hours = 6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FGE_rebuild_the_country
+		icon = GFX_goal_continuous_repairments
+		cost = 5
+		allow_branch = {
+			has_global_flag = FGE_returned_home
+		}
+		x = 15
+		y = 0
+		relative_position_id = FGE_destroy_the_southern_union
+		completion_reward = {
+			add_timed_idea = {
+				idea = FGE_rebuild_the_country
+				days = 730
+			}
+		}
+	}
+	focus = {
+		id = FGE_migrate_our_industry
+		icon = GFX_goal_continuous_repairments
+		cost = 10
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = FGE_rebuild_the_country
+		}
+		relative_position_id = FGE_rebuild_the_country
+		completion_reward = {
+			custom_effect_tooltip = FGE_migrate_our_industry_tt
+			hidden_effect = {
+				set_temp_variable = {amount_loops_civ = INS.num_of_civilian_factories}
+				divide_temp_variable = {amount_loops_civ = 2}
+				round_variable = amount_loops_civ
+				while_loop_effect = {
+					limit = {
+						check_variable = {
+							amount_loops_civ > 0
+						}
+					}
+
+					add_to_temp_variable = {
+						amount_loops_civ = -1
+					}
+					INS = {
+						random_owned_controlled_state = {
+							limit = {
+								industrial_complex > 0
+							}
+							remove_building = {
+								type = industrial_complex
+								level = 1
+							}
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							is_on_continent = europe
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+
+				set_temp_variable = {amount_loops_mil = INS.num_of_military_factories}
+				divide_temp_variable = {amount_loops_mil = 2}
+				round_variable = amount_loops_mil
+				while_loop_effect = {
+					limit = {
+						check_variable = {
+							amount_loops_mil > 0
+						}
+					}
+
+					add_to_temp_variable = {
+						amount_loops_mil = -1
+					}
+					INS = {
+						random_owned_controlled_state = {
+							limit = {
+								industrial_complex > 0
+							}
+							remove_building = {
+								type = industrial_complex
+								level = 1
+							}
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							is_on_continent = europe
+						}
+						add_extra_state_shared_building_slots = yes
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_migrate_our_population
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FGE_rebuild_the_country
+		prerequisite = {
+			focus = FGE_rebuild_the_country
+		}
+		completion_reward = {
+			custom_effect_tooltip = FGE_migrate_our_population_tt
+			hidden_effect = {
+				set_temp_variable = {amount_loops_pop = INS.total_population}
+				divide_temp_variable = {amount_loops_pop = 2}
+				round_variable = amount_loops_pop
+				while_loop_effect = {
+					limit = {
+						check_variable = {
+							amount_loops_pop > 0
+						}
+					}
+
+					add_to_temp_variable = {
+						amount_loops_pop = -1
+					}
+					INS = {
+						random_owned_controlled_state = {
+							limit = {
+								state_population > 0
+							}
+							add_manpower = -1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							is_on_continent = europe
+						}
+						add_manpower = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FGE_rebuild_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = FGE_rebuild_the_country
+		prerequisite = {
+			focus = FGE_rebuild_the_country
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_on_continent = europe
+					is_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_federal_election
+		icon = GFX_focus_generic_election
+		x = 7
+		y = 0
+		cost = 314159265359
+		available = {
+			always = no
+		}
+		allow_branch = {
+			has_global_flag = skulli_suicide
+		}
+	}
+	focus = {
+		id = FGE_republican_agenda
+		icon = GFX_goal_support_democracy
+		x = -4
+		y = 1
+		cost = 2
+		relative_position_id = FGE_federal_election
+		prerequisite = {
+			focus = FGE_federal_election
+		}
+		mutually_exclusive = {
+			focus = FGE_conservative_agenda
+		}
+		available = {
+			has_country_leader = {
+				character = sam
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.2
+				ideology = democratic
+			}
+		}
+	}
+	focus = {
+		id = FGE_reaffirm_existing_alliances
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = FGE_federal_election
+		prerequisite = {
+			focus = FGE_conservative_agenda
+			focus = FGE_republican_agenda
+		}
+		available = {
+			NOT = {
+				has_global_flag = FGE_civil_war
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_country_flag = ofn_state_temp
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = large_increase
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_restore_the_ofn_2
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_reaffirm_existing_alliances
+		prerequisite = {
+			focus = FGE_reaffirm_existing_alliances
+		}
+		prerequisite = {
+			focus = FGE_elect_a_president
+			focus = FGE_legitimize_the_emperor
+		}
+		available = {
+			NOT = {
+				has_global_flag = FGE_civil_war
+			}
+		}
+		mutually_exclusive = {
+			focus = FGE_form_eu
+			focus = FGE_ensure_germanic_dominance
+		}
+		completion_reward = {
+			create_faction = "Organization of Free Nations"
+			every_country = {
+				limit = {
+					has_country_flag = ofn_state_temp
+				}
+				country_event = {
+					id = generic.5
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_war_with_japan
+		icon = GFX_focus_attack_japan
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_restore_the_ofn_2
+		prerequisite = {
+			focus = FGE_restore_the_ofn_2
+		}
+		available = {
+			NOT = {
+				has_global_flag = FGE_civil_war
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = JPN
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = FGE_elect_a_president
+		icon = GFX_focus_generic_election
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = FGE_republican_agenda
+		prerequisite = {
+			focus = FGE_republican_agenda
+		}
+		available = {
+			NOT = {
+				has_global_flag = FGE_civil_war
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+			add_ideas = ace_head_of_state
+		}
+	}
+	focus = {
+		id = FGE_form_eu
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_elect_a_president
+		prerequisite = {
+			focus = FGE_elect_a_president
+		}
+		prerequisite = {
+			focus = FGE_reaffirm_existing_alliances
+		}
+		mutually_exclusive = {
+			focus = FGE_restore_the_ofn_2
+			focus = FGE_ensure_germanic_dominance
+		}
+		available = {
+			NOT = {
+				has_global_flag = FGE_civil_war
+			}
+		}
+		completion_reward = {
+			create_faction = "European Union"
+			unlock_decision_category_tooltip = FGE_eu_decisions
+		}
+	}
+	focus = {
+		id = FGE_enforce_republicanism
+		icon = GFX_focus_rom_abdicate
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_form_eu
+		prerequisite = {
+			focus = FGE_form_eu
+		}
+		available = {
+			NOT = {
+				has_global_flag = FGE_civil_war
+			}
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = FGE_enforce_republicanism
+		}
+	}
+	focus = {
+		id = FGE_unite_eu
+		icon = GFX_goal_anschluss
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_enforce_republicanism
+		prerequisite = {
+			focus = FGE_enforce_republicanism
+		}
+		available = {
+			OR = {
+				10 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+				797 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+				219 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				add_core_of = ROOT
+			}
+			set_cosmetic_tag = EUR_UNIFIED
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					CAPITAL_SCOPE = {
+						is_on_continent = europe
+					}
+				}
+				country_event = {
+					id = gge.500
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_conservative_agenda
+		icon = GFX_goal_generic_neutrality_focus
+		x = 4
+		y = 1
+		cost = 2
+		relative_position_id = FGE_federal_election
+		prerequisite = {
+			focus = FGE_federal_election
+		}
+		mutually_exclusive = {
+			focus = FGE_republican_agenda
+		}
+		available = {
+			has_country_leader = {
+				character = atalius
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.2
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = FGE_legitimize_the_emperor
+		icon = GFX_focus_generic_monarchy_2
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = FGE_conservative_agenda
+		prerequisite = {
+			focus = FGE_conservative_agenda
+		}
+		available = {
+			has_country_leader = {
+				character = atalius
+			}
+			NOT = {
+				has_global_flag = FGE_civil_war
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.2
+				ideology = neutrality
+			}
+		}
+	}
+	focus = {
+		id = FGE_ensure_germanic_dominance
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_legitimize_the_emperor
+		prerequisite = {
+			focus = FGE_legitimize_the_emperor
+		}
+		mutually_exclusive = {
+			focus = FGE_restore_the_ofn_2
+			focus = FGE_form_eu
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			create_faction = "Germanic Sphere"
+			add_ideas = FGE_ensure_germanic_dominance
+		}
+	}
+	focus = {
+		id = FGE_demand_eastern_land
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = FGE_ensure_germanic_dominance
+		prerequisite = {
+			focus = FGE_ensure_germanic_dominance
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 9
+						state = 75
+						state = 74
+						state = 69
+						state = 67
+						state = 66
+						state = 762
+						state = 68
+						state = 86
+						state = 63
+						state = 807
+						state = 85
+						state = 5
+						state = 763
+						state = 72
+					}
+				}
+				add_claim_by = ROOT
+			}
+			ZAP = {
+				country_event = {
+					id = gge.502
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = FGE_dei_gratia
+		icon = GFX_focus_POL_habsburg
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = FGE_ensure_germanic_dominance
+		prerequisite = {
+			focus = FGE_ensure_germanic_dominance
+			focus = FGE_restore_the_ofn_2
+		}
+		prerequisite = {
+			focus = FGE_conservative_agenda
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_global_flag = FGE_kept_france
+					}
+				}
+				set_cosmetic_tag = FGE_FRANKISH_EMPIRE
+				every_state = {
+					limit = {
+						OR = {
+							region = 19
+							region = 20
+							region = 208
+						}
+						OR = {
+							is_controlled_by = ROOT
+							is_owned_by = ROOT
+						}
+					}
+					add_core_of = ROOT
+				}
+				ELSE = {
+					set_cosmetic_tag = HRE_UNIFIED
+					every_owned_state = {
+						limit = {
+							region = 23
+							region = 21
+						}
+						add_core_of = ROOT
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+characters = {
+#Create country leader - Playre3
+playre3 = {
+	name = playre3
+	portraits = {
+		civilian = {
+			#Custom image for Playre3
+			large = "/gfx/leaders/NFA/uTdxSGHz-155800.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {  }
+	}
+}
+
+#Create country leader - Pickhead
+pickhead = {
+	name = pickhead
+	portraits = {
+		civilian = {
+			#Custom image for Pickhead
+			large = "/gfx/leaders/NFA/tgzdeQmk-155872.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  }
+	}
+}
+
+#Create country leader - Phinkleforb
+phinkleforb = {
+	name = phinkleforb
+	portraits = {
+		civilian = {
+			#Custom image for Phinkleforb
+			large = "/gfx/leaders/NFA/UokCKzeW-155870.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {  }
+	}
+}
+
+#Create country leader - KronosViikk
+kronosviikk = {
+	name = kronosviikk
+	portraits = {
+		civilian = {
+			#Custom image for KronosViikk
+			large = "/gfx/leaders/NFA/cXqBKeRn-155690.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {  }
+	}
+}
+
+#Create military leader - KronosViikk
+	TBabfrGx = {
+		name = "TBabfrGx"
+		portraits = {
+			army = {
+				#Custom images for KronosViikk
+				large = "/gfx/leaders/NFA/TBabfrGx-155690.dds"
+				small = "/gfx/interface/ideas/NFA/TBabfrGx-155690.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected  infantry_expert }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 0
+			planning_skill = 1
+			logistics_skill = 1
+		legacy_id = 179321040
+		}
+	}
+
+	gOAmqPDt = {
+		name = "gOAmqPDt"
+		portraits = {
+			army = {
+				#Custom images for Pickhead
+				large = "/gfx/leaders/NFA/gOAmqPDt-155872.dds"
+				small = "/gfx/interface/ideas/NFA/gOAmqPDt-155872.dds"
+			}
+		}
+		navy_leader = {
+			traits = { fleet_protector }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+			legacy_id = 379321040
+		}
+	}
+}

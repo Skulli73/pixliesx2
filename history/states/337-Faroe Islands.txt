@@ -1,0 +1,24 @@
+state=
+{
+	id=337
+	name="STATE_337"
+	manpower = 0# = 25900
+	
+	state_category = small_island
+	
+	history=
+	{
+		owner = BRT
+		add_core_of = BRT
+		buildings = {
+			#infrastructure = 2
+			13003 = {
+				naval_base = 1
+			}
+		}
+		# = DEN
+	}
+	provinces= { 13003 }
+
+	local_supplies=0.0 
+}

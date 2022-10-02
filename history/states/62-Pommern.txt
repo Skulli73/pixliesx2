@@ -1,0 +1,26 @@
+
+state={
+	id=62
+	name="STATE_62"
+	manpower = 0# = 1006221
+	
+	
+	state_category = town
+
+	history={
+		owner = GME
+		add_core_of = GME
+
+		1939.1.1 = {
+			buildings = {
+				#air_base = 8
+			}
+		}
+	}
+
+	provinces={
+		349 3207 3258 3312 3340 9388 
+	}
+
+	local_supplies=3.0 
+}

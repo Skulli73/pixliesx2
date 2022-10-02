@@ -1,0 +1,15 @@
+version="0.1 Beta"
+tags={
+	"National Focuses"
+	"Gameplay"
+	"Events"
+	"Military"
+	"Map"
+}
+name="Pixlies X Hoi4 Mod II"
+replace_path="gfx/loadingscreens"
+replace_path="history/states"
+replace_path="history/units"
+replace_path="history/countries"
+supported_version="1.11.*"
+remote_file_id="2857952950"

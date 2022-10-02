@@ -1,0 +1,145 @@
+characters = {	calculord = {
+		name = calculord
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/swXUkeIc-228695.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = calculord
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { silent_workhorse}
+		}
+	}
+	democratic_movement = {
+		name = democratic_movement
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/omLhWQJR-122106.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = democratic_movement
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { democratic_reformer}
+		}
+	}
+	democratic_movement = {
+		name = democratic_movement
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/BTwOYoGK-228696.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = democratic_movement
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { fascist_demagogue propaganda_expert}
+		}
+	}
+	our_oil = {
+		name = our_oil
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/BTwOYoGK-228697.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = our_oil
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { military_theorist}
+		}
+	}
+	our_oil = {
+		name = our_oil
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/swXUkeIc-228698.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = our_oil
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { sanation_militarist}
+		}
+	}
+	our_oil = {
+		name = our_oil
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/swXUkeIc-228699.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = our_oil
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { army_chief_defensive_1}
+		}
+	}
+	our_oil = {
+		name = our_oil
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/swXUkeIc-228700.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = our_oil
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { navy_chief_maneuver_1}
+		}
+	}
+	our_oil = {
+		name = our_oil
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/BTwOYoGK-228701.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = our_oil
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { air_chief_ground_support_1}
+		}
+	}
+	our_oil = {
+		name = our_oil
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/BTwOYoGK-228702.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = our_oil
+			allowed = {
+				original_tag = YOR
+			}
+			traits = { air_air_superiority_1}
+		}
+	}
+}

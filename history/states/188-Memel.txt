@@ -1,0 +1,32 @@
+state=
+{
+	id=188
+	name="STATE_188"
+	manpower = 0# = 150000
+	
+	
+	state_category = rural
+	
+	history = {
+		owner = ZAP
+		add_core_of = ZAP
+		buildings = {
+			#infrastructure = 3 #was: 5
+			#industrial_complex = 1
+			3288 = {
+				naval_base = 1
+			}
+		}
+		# = LIT
+
+		1939.3.22 = {
+			owner = WIL# = GER
+			controller = WIL# = GER
+		}
+	}
+	provinces={
+		3288 	
+	}
+
+	local_supplies=0.0 
+}

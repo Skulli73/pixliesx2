@@ -1,0 +1,95 @@
+brt_collapse = {
+	priority = 100
+}
+demo = {
+	priority = 50
+}
+FGE_GME_resistance = {
+	priority = 75
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			original_tag = FGE
+			original_tag = GME
+		}
+	}
+	visible = {
+		has_completed_focus = FGE_coordinate_resistance
+	}
+}
+FGE_return_home = {
+	priority = 200
+	allowed = {
+		tag = FGE
+	}
+}
+FGE_destroy_CSA = {
+	priority = 150
+	allowed = {
+		tag = FGE
+	}
+	visible = {
+		has_completed_focus = FGE_destroy_the_southern_union
+	}
+}
+FGE_eu_decisions = {
+	priority = 100
+	allowed = {
+		original_tag = FGE
+	}
+	visible = {
+		has_completed_focus = FGE_form_eu
+	}
+}
+FGE_enforce_republicanism = {
+	priority = 80
+	allowed = {
+		original_tag = FGE
+	}
+	visible = {
+		has_completed_focus = FGE_enforce_republicanism
+	}
+}
+FGE_debug = {
+	priority = -10
+	allowed = {
+		original_tag = FGE
+		is_debug = yes
+	}
+}
+FGE_GME_recognition = {
+	priority = 250
+	visible = {
+		AND = {
+			FGE = {
+				exists = yes
+			}
+			GME = {
+				exists = yes
+			}
+		}
+	}
+	visible_when_empty = yes
+	scripted_gui = recognize_fge_gme_gui
+}
+FGE_ecuador_conflict = {
+	priority = 70
+	allowed = {
+		OR = {
+			original_tag = FGE
+			original_tag = ECD
+		}
+	}
+	visible = {
+	}
+}
+GME_state_of_the_national_state = {
+	priority = 200
+	visible_when_empty = yes
+	allowed = {
+		original_tag = GME
+	}
+	visible = {
+		is_subject_of = CSA
+	}
+}

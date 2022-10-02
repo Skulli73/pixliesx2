@@ -1,0 +1,26 @@
+state={
+	id=90
+	name="STATE_90" # Kielce
+	manpower = 0# = 1835700
+	
+	state_category = town
+	
+	resources={
+		steel=8 # was: 12
+	}
+
+	history={
+		owner = ZAP
+		add_core_of = ZAP
+		buildings = {
+			#infrastructure = 3
+		}
+		# = POL
+	}
+
+	provinces={
+		562 3458 3497 3586 6416 11430 11532 
+	}
+
+	local_supplies=0.0 
+}

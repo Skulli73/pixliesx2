@@ -1,0 +1,86 @@
+characters = {
+#Create country leader - Alex_Horne
+alex_horne = {
+	name = alex_horne
+	portraits = {
+		civilian = {
+			#Custom image for Alex_Horne
+			large = "/gfx/leaders/CAN/YHnQisId-229997.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {  }
+	}
+}
+
+#Create country leader - Beaverwhale115
+beaverwhale115 = {
+	name = beaverwhale115
+	portraits = {
+		civilian = {
+			#Custom image for Beaverwhale115
+			large = "/gfx/leaders/CAN/IsfQnpjY-229996.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {  }
+	}
+}
+
+#Create country leader - Alex_Horne
+alex_horne = {
+	name = alex_horne
+	portraits = {
+		civilian = {
+			#Custom image for Alex_Horne
+			large = "/gfx/leaders/CAN/PkaInpoN-229995.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = socialism
+		traits = {  }
+	}
+}
+
+#Create country leader - Beaverwhale115
+beaverwhale115 = {
+	name = beaverwhale115
+	portraits = {
+		civilian = {
+			#Custom image for Beaverwhale115
+			large = "/gfx/leaders/CAN/SrXvVFEI-229998.dds"
+		}
+	}
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {  }
+	}
+}
+
+#Create military leader - Beaverwhale115
+	sQPJTjyZ = {
+		name = "sQPJTjyZ"
+		portraits = {
+			army = {
+				#Custom images for Beaverwhale115
+				large = "/gfx/leaders/CAN/sQPJTjyZ-230007.dds"
+				small = "/gfx/interface/ideas/CAN/sQPJTjyZ-230007.dds"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		legacy_id = 155315200
+		}
+	}
+}

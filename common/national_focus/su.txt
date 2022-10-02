@@ -1,0 +1,117 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_CSA_CONGRESS}
+
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_CSA_CONGRESS}
+
+focus_tree = {
+	id = CSA_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CSA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	### STARTING FOCUS ###
+
+	focus = {
+		id = CSA_atEveryone_AtlantaIsBuild
+		icon = GFX_goal_generic_amphibious_assault
+		bypass = { has_country_flag = matt_failed_assasination }
+		x = 10
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		bypass = {	
+		}
+
+		prerequisite = { }
+		cost = 10
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_political_power = 100
+			 
+		
+		}
+	}
+	focus = {
+		id = CSA_GetHot_KeepMoving
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = CSA_atEveryone_AtlantaIsBuild
+		prerequisite = {
+			focus = CSA_atEveryone_AtlantaIsBuild
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CSA_TrollingInAtlanta
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = CSA_GetHot_KeepMoving
+		prerequisite = {
+			focus = CSA_GetHot_KeepMoving
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CSA_KeepCalmAnd
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = CSA_TrollingInAtlanta
+		prerequisite = {
+			focus = CSA_TrollingInAtlanta
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CSA_BlameItOnTheGerms
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = CSA_TrollingInAtlanta
+		prerequisite = {
+			focus = CSA_TrollingInAtlanta
+		}
+		available = {
+			if = { 	has_completed_focus = CSA_KeepCalmAnd }
+		}
+		
+		completion_reward = {
+		}
+	}
+}

@@ -1,0 +1,152 @@
+on_actions = {
+	on_capitulation_immediate = {
+		effect = {
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = TRL
+					}
+					FROM = {
+						is_in_faction_with = FGE
+					}
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = FGE
+					}
+					every_state = {
+						limit = {
+							is_owned_by = ROOT
+							OR = {
+								is_core_of = PREV
+								is_claimed_by = PREV
+							}
+						}
+						transfer_state_to = PREV
+					}
+				}
+				IF = {
+					limit = {
+						FGE = {
+							has_country_leader = {
+								character = skulli73
+							}
+						}
+						NOT = {
+							has_global_flag = fge_trl_win
+						}
+					}
+					FGE = {
+						country_event = {
+							id = gge.36
+							days = 2
+						}
+					}
+					set_global_flag = fge_trl_win
+					ELSE_IF = {
+						limit = {
+							NOT = {
+								has_cosmetic_tag = FGE_REPUBLIC
+								has_government = neutrality
+							}
+						}
+						set_global_flag = fge_trl_win
+						set_global_flag = skulli_suicide
+						FGE = {
+							country_event = {
+								id = gge.42
+								days = 15
+							}
+						}
+						mark_focus_tree_layout_dirty = yes
+					}
+				}
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = FGE
+						has_government = neutrality
+					}
+					FROM = {
+						original_tag = FGE
+						has_government = democratic
+					}
+					has_global_flag = FGE_civil_war
+				}
+				ROOT = {
+					country_event = {
+						id = gge.400
+					}
+				}
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = FGE
+						has_government = fascism
+					}
+					FROM = {
+						original_tag = FGE
+					}
+					has_global_flag = FGE_civil_war
+				}
+				ROOT = {
+					country_event = {
+						id = gge.401
+					}
+				}
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = ILY
+					}
+					FROM = {
+						original_tag = FGE
+					}
+					has_global_flag = FGE_civil_war
+				}
+				ROOT = {
+					country_event = {
+						id = gge.402
+					}
+				}
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = FGE
+						has_government = democratic
+					}
+					FROM = {
+						original_tag = FGE
+						has_government = neutrality
+					}
+					has_global_flag = FGE_civil_war
+				}
+				ROOT = {
+					country_event = {
+						id = gge.403
+					}
+				}
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = SVK
+					}
+					FROM  = {
+						original_tag = ZAP
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ZAP
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+}

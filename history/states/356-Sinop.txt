@@ -1,0 +1,25 @@
+
+state={
+	id=356
+	name="STATE_356" # Kastamonu
+	manpower = 0# = 860589
+	state_category = rural
+
+	history={
+		owner = BYZ
+		add_core_of = BYZ
+		buildings = {
+			#infrastructure = 2
+			6995 = {
+				naval_base = 1
+			}
+		}
+		# = TUR
+	}
+
+	provinces={
+		979 3967 3982 6920 6938 6978 6995 9844 9871 11839 11897 
+	}
+
+	local_supplies=0.0 
+}

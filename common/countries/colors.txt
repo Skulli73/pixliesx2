@@ -1,0 +1,114 @@
+
+#Custom colours start here
+WIL = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
+GME = {
+	color = rgb { 70 70 70 }
+	color_ui = rgb { 70 70 70 }
+}
+CSA = {
+	color = rgb {180 180 180}
+	color_ui = rgb {180 180 180}
+}
+FGE = {
+	color = rgb { 150 139 84 }
+	color_ui = rgb { 150 139 84 }
+}
+ESP = {
+	color = rgb { 188 157 0 }
+	color_ui = rgb { 188 157 0 }
+}
+TRL = {
+	color = rgb {127 0	0}
+	color_ui = rgb {127 0 0}
+}
+ZAP = {
+	color = rgb {255 127 127}
+	color_ui = rgb {255 127 127}
+}
+BRT = {
+	color = rgb {33 0 127}
+	color_ui = rgb {33 0 127}
+}
+ILY = {
+	color = rgb {22 76 0}
+	color_ui = rgb {22 76 0}
+}
+JPN = {
+	color = rgb {255 170 128}
+	color_ui = rgb {255 170 128}
+}
+RUS = {
+	color = rgb {198 43 43}
+	color_ui = rgb {198 43 43}
+}
+ARM = {
+	color = rgb {104 82 39}
+	color_ui = rgb {104 82 39}
+}
+BYZ = {
+	color = rgb {109 31 145}
+	color_ui = rgb {109 31 145}
+}
+VNZ = {
+	color = rgb {255 204 66}
+	color_ui = rgb {255 204 66}
+}
+PRT = {
+	color = rgb {55 127 55}
+	color_ui = rgb {55 127 55}
+}
+FIJ = {
+	color = rgb {104 147 255}
+	color_ui = rgb {104 147 255}
+}
+IND = {
+	color = rgb {105 173 112}
+	color_ui = rgb {105 173 112}
+}
+FNL = {
+	color = rgb {255 255 255}
+	color_ui = rgb {255 255 255}
+}
+VIR = {
+	color = rgb {0 0 170}
+	color_ui = rgb {0 0 170}
+}
+GRG = {
+	color = rgb {252 140 3}
+	color_ui = rgb {252 140 3}
+}
+TEX = {
+	color = rgb {150 0 0}
+	color_ui = rgb {150 0 0}
+}
+GEN= {
+	color = rgb {108 255 118}
+	color_ui = rgb {108 255 118}
+}
+BGA = {
+	color = rgb {109 31 145}
+	color_ui = rgb {109 31 145}
+}
+INS = {
+	color = rgb {40 99 13}
+	color_ui = rgb {40 99 13}
+}
+FRA = {
+	color = rgb {13 27 99}
+	color_ui = rgb {13 27 99}
+}
+ECD = {
+	color = rgb {225 136 75}
+	color_ui = rgb {225 136 75}
+}
+SVK = {
+	color = rgb {83 89 124}
+	color_ui = rgb {83 89 124}
+}
+HON = {
+	color = rgb {255 204 0}
+	color_ui = rgb {255 204 0}
+}

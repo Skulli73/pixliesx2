@@ -1,0 +1,97 @@
+characters = {	blitzdontcare = {
+		name = blitzdontcare
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/DSNPBlxM-155095.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = blitzdontcare
+			allowed = {
+				original_tag = VEN
+			}
+			traits = { dictator anti_communist}
+		}
+	}
+	phyzic_ = {
+		name = phyzic_
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/HjdqDtEf-155096.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = phyzic_
+			allowed = {
+				original_tag = VEN
+			}
+			traits = {military_theorist }
+		}
+	}
+	phyzic_ = {
+		name = phyzic_
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/DSNPBlxM-155095.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = phyzic_
+			allowed = {
+				original_tag = VEN
+			}
+			traits = { dictator anti_communist}
+		}
+	}
+	phyzic_ = {
+		name = phyzic_
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/HjdqDtEf-155096.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = phyzic_
+			allowed = {
+				original_tag = VEN
+			}
+			traits = { navy_amphibious_assault_1}
+		}
+	}
+	phyzic_ = {
+		name = phyzic_
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/AIjoKwOb-155101.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = phyzic_
+			allowed = {
+				original_tag = VEN
+			}
+			traits = {air_air_combat_training_1 }
+		}
+	}
+	phyzic_ = {
+		name = phyzic_
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/DSNPBlxM-155095.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = phyzic_
+			allowed = {
+				original_tag = VEN
+			}
+			traits = { dictator anti_communist}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+characters = {	alex_horne = {
+		name = alex_horne
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/ZGADrQyP-229999.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = alex_horne
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { the_king_of_the_castle}
+		}
+	}
+	alex_horne = {
+		name = alex_horne
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/FeaVjfAB-230000.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = alex_horne
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { fascist_demagogue}
+		}
+	}
+	factory34 = {
+		name = factory34
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/FeaVjfAB-230001.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = factory34
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { military_theorist}
+		}
+	}
+	factory34 = {
+		name = factory34
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/ZGADrQyP-230002.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = factory34
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { army_chief_defensive_1}
+		}
+	}
+	factory34 = {
+		name = factory34
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/ZGADrQyP-230003.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = factory34
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { navy_chief_old_guard}
+		}
+	}
+	factory34 = {
+		name = factory34
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/FeaVjfAB-230004.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = factory34
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { air_chief_reform_1}
+		}
+	}
+	factory34 = {
+		name = factory34
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/FeaVjfAB-230006.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = factory34
+			allowed = {
+				original_tag = CAN
+			}
+			traits = { army_infantry_2}
+		}
+	}
+}

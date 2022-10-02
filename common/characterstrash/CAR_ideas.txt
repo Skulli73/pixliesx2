@@ -1,0 +1,81 @@
+characters = {	horthy = {
+		name = horthy
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/VYaLOXlH-122236.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = horthy
+			allowed = {
+				original_tag = CAR
+			}
+			traits = { anti_communist popular_figurehead2 silent_workhorse}
+		}
+	}
+	gb = {
+		name = gb
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/GIZgbhEk-154049.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = gb
+			allowed = {
+				original_tag = CAR
+			}
+			traits = {captain_of_industry }
+		}
+	}
+	mando = {
+		name = mando
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/NbslCpwW-154042.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = mando
+			allowed = {
+				original_tag = CAR
+			}
+			traits = {war_industrialist }
+		}
+	}
+	mando = {
+		name = mando
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/NbslCpwW-154041.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = mando
+			allowed = {
+				original_tag = CAR
+			}
+			traits = { army_infantry_3}
+		}
+	}
+	horthy = {
+		name = horthy
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/VYaLOXlH-122236.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = horthy
+			allowed = {
+				original_tag = CAR
+			}
+			traits = { navy_chief_naval_aviation_3 navy_chief_decisive_battle_3 navy_chief_commerce_raiding_3}
+		}
+	}
+}

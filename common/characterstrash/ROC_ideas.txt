@@ -1,0 +1,129 @@
+characters = {	destroyer1181 = {
+		name = destroyer1181
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/LxSFeisB-227683.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = destroyer1181
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { captain_of_industry}
+		}
+	}
+	destroyer1181 = {
+		name = destroyer1181
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/xFyaKkYq-227685.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = destroyer1181
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { monarchist_media_mogul}
+		}
+	}
+	industry = {
+		name = industry
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/LxSFeisB-227686.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = industry
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { close_air_support_proponent}
+		}
+	}
+	industry = {
+		name = industry
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/LxSFeisB-227689.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = industry
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { army_chief_organizational_2}
+		}
+	}
+	industry = {
+		name = industry
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/xFyaKkYq-227690.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = industry
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { army_chief_offensive_1}
+		}
+	}
+	industry = {
+		name = industry
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/LxSFeisB-227692.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = industry
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { navy_chief_decisive_battle_1}
+		}
+	}
+	industry = {
+		name = industry
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/xFyaKkYq-227693.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = industry
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { air_chief_ground_support_1}
+		}
+	}
+	industry = {
+		name = industry
+		portraits = {
+			army = {
+			small = "gfx/interface/ideas/xFyaKkYq-227696.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = industry
+			allowed = {
+				original_tag = ROC
+			}
+			traits = { army_infantry_1}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+		A_disunited_Italy_1 = {
+			name = "A Disunited Italy"
+			picture = spr_anti_fascist_crusade
+			modifier = {
+				industry_air_damage_factor = -0.40
+				production_speed_buildings_factor= -0.45
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+﻿oob = "GENERIC"
+capital = 282
+set_research_slots = 4
+set_stability = 0.75
+set_war_support = 0.1
+set_convoys = 0
+
+
+add_ideas = {
+	volunteer_only
+	low_economic_mobilisation
+}
+
+
+
+#Politics for 50.1.1
+set_politics = {
+	ruling_party = neutrality
+	last_election = "49.10.25"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 30
+	democratic = 20
+	neutrality = 50
+}
+inherit_technology = CSA

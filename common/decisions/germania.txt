@@ -1,0 +1,1674 @@
+FGE_GME_resistance = {
+	contact_rebels = {
+		cost = ROOT.take_states_cost
+		state_target = yes
+		visible = {
+			FROM = {
+				is_owned_by = GME
+				is_core_of = GME
+				is_core_of = FGE
+			}
+			has_completed_focus = FGE_coordinate_resistance
+			NOT = {
+				has_war_with = GME
+			}
+		}
+		allowed = {
+			tag = FGE
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				set_demilitarized_zone = yes
+				remove_core_of = OWNER
+				start_resistance = FGE
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		on_map_mode = map_only
+	}
+	support_rebels = {
+		cost = 25
+		state_target = yes
+		visible = {
+			FROM = {
+				is_owned_by = GME
+				NOT = {is_core_of = GME}
+				is_core_of = FGE
+			}
+			has_completed_focus = FGE_coordinate_resistance
+		}
+		allowed = {
+			tag = FGE
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 500
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					set_demilitarized_zone = yes
+				}
+				add_resistance = 5
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			FROM = {
+				add_resistance = .05
+			}
+		}
+	}
+	fight_rebels = {
+		cost = 50
+		state_target = yes
+		visible = {
+			FROM = {
+				is_owned_by = GME
+				NOT = {is_core_of = GME}
+				is_core_of = FGE
+			}
+		}
+		allowed = {
+			tag = GME
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 200
+			}
+			FROM = {
+				compliance > .5
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				set_demilitarized_zone = no
+				add_core_of = ROOT
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+FGE_return_home = {
+	
+	FGE_growing_discontent = {
+		days_mission_timeout = 100
+		activation = {
+			original_tag = FGE
+			has_war_with = GME
+			NOT = {
+				GME = {
+					has_capitulated = yes
+				}
+			}
+		}
+		is_good = no
+		available = {
+			OR = {
+				NOT = {
+					has_war_with = GME
+				}
+				GME = {
+					has_capitulated = yes
+				}
+			}
+		}
+		timeout_effect = {
+			add_war_support = -0.05
+			add_stability = -0.05
+			every_country = {
+				custom_effect_tooltip = shift_towards_ns_tt
+				set_temp_variable = {
+					random_temp = random
+				}
+				divide_variable = {
+					random_temp = -2
+				}
+				add_to_variable = {
+					germania_opinion = var:random_temp
+				}
+			}
+			IF = {
+				limit = {
+					OR = {
+						has_stability < 0.05
+						has_war_support < 0.05
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_on_continent = asia
+							state = 298
+							state = 490
+						}
+						NOT = {
+							state = 668
+							state = 724
+							state = 336
+						}
+					}
+					set_state_owner_to = INS
+					set_state_controller_to = INS
+				}
+				every_core_state = {
+					limit = {
+						NOT = {
+							is_on_continent = europe
+						}
+					}
+					add_core_of = INS
+				}
+				declare_war_on = {
+					target = INS
+					type = civil_war
+				}
+				transfer_units_fraction = {
+					target = INS
+					size = 0.75
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
+				}
+			}
+			custom_effect_tooltip = FGE_growing_discontent_tt
+		}
+	}
+	
+	FGE_invade_national_state = {
+		fire_only_once = yes
+		allowed = {
+			tag = FGE
+		}
+		visible = {
+			has_completed_focus = FGE_operation_broken_star
+		}
+		days_remove = 25
+		war_with_on_remove = FGE
+		remove_effect = {
+			declare_war_on = {
+				target = GME
+				type = annex_everything
+			}
+			add_threat = 70
+		}
+		ai_will_do = {
+			factor = 100000
+			modifier = {
+				factor = 0
+				NOT = {
+					TRL = {
+						OR = {
+							has_war_with = GME
+							has_war_with = CSA
+						}
+					}
+				}
+			}
+		}
+	}
+	FGE_return_home_decision = {
+		fire_only_once = yes
+		available = {
+			OR = {
+				GME = {
+					exists = no
+				}
+				GME = {
+					has_capitulated = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100000
+		}
+		complete_effect = {
+			IF = {
+				limit = {
+					NOT = {
+						has_cosmetic_tag = GME_REPUBLIC
+					}
+				}
+				set_cosmetic_tag = GME
+			}
+			hidden_effect = {
+				every_core_state = {
+					remove_core_of = GME
+				}
+				IF = {
+					limit = {
+						has_war_with = GME
+					}
+					GME = {
+						every_state = {
+							limit = {
+								AND = {
+									NOT = {is_controlled_by = FGE}
+									is_owned_by = GME
+								}
+							}
+							set_state_owner_to = FGE
+							set_state_controller_to = CSA
+						}
+						every_state = {
+							limit = {
+								OR = {
+									is_controlled_by = GME
+									AND = {
+										NOT = {is_controlled_by = FGE}
+										is_owned_by = GME
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			add_political_power = 300
+			set_global_flag = FGE_returned_home
+			IF = {
+				limit = {
+					NOT = {
+						has_global_flag = FGE_TRL_pact
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = GME
+						is_controlled_by = TRL
+					}
+					transfer_state_to = TRL
+				}
+				ELSE_IF = {
+					limit = {
+						TRL = {
+							has_war_with = GME
+						}
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 153
+								state = 152
+								state =52
+								state = 53
+								state = 54
+								state = 151
+								state = 3
+								state =50
+							}
+						}
+						transfer_state_to = TRL
+					}
+				}
+			}
+			annex_country = {
+				target = GME
+				transfer_troops = yes
+			}
+			set_capital = {
+				state = 51
+			}
+			news_event = {
+				id = gge.27
+				hours = 1
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						ILY = {
+							has_government = fascism
+							is_in_faction_with = ROOT
+						}
+					}
+					country_event = {
+						id = gge.28
+						days = 10
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+				country_event = {
+					id = gge.300
+					days = 5
+				}
+			}
+		}
+	}
+}
+FGE_destroy_CSA = {
+	FGE_expand_south_american_claims = {
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 10000
+		}
+		days_remove = 15
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 489
+						state = 493
+						state = 306
+						state = 695
+					}
+					is_owned_by = WIL
+				}
+				transfer_state_to = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1000000
+		}
+	}
+	FGE_claim_central_america = {
+		fire_only_once = yes
+		cost = 800
+		ai_will_do = {
+			factor = 1000000
+		}
+		days_remove = 365
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = WIL
+					OR = {
+						region = 34
+						region = 205
+						region = 123
+						region = 204
+					}
+				}
+				transfer_state_to = ROOT
+				add_core_of = HON
+			}
+			release_puppet = HON
+			set_autonomy = {
+				target = HON
+				autonomy_state = autonomy_colony
+			}
+		}
+	}
+	FGE_go_through_VNZ = {
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 100000
+		}
+		targets = {
+			VNZ
+		}
+		days_remove = 50
+		war_with_on_remove = FROM
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+		available = {
+			any_owned_state = {
+				any_neighbor_state = {
+					is_owned_by = FROM
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000000
+		}
+	}
+	FGE_force_CSA_surrender = {
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10000
+		}
+		targets = {
+			CSA
+		}
+		complete_effect = {
+			373 = {
+				transfer_state_to = WIL
+			}
+			FROM = {
+				release = VIR
+				release = GRG
+				release = TEX
+				every_country = {
+					limit = {
+						is_in_faction_with = FROM
+					}
+					leave_faction = yes
+				}
+				IF = {
+					limit = {
+						has_war_with = TRL
+					}
+					TRL = {
+						puppet = TEX
+						set_autonomy = {
+							target = TEX
+							autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					ELSE = {
+						ROOT = {
+							puppet = TEX
+							set_autonomy = {
+								target = TEX
+								autonomy_state = autonomy_integrated_puppet
+							} 
+						}
+					}
+				}
+			}
+			puppet = VIR
+			set_autonomy = {
+				target = VIR
+				autonomy_state = autonomy_integrated_puppet
+			}	
+			VIR = {
+				set_cosmetic_tag = VIR_KAT
+			}
+			IF = {
+				limit = {
+					NOT = {
+						GRG = {
+							exists = yes
+							has_character = geo
+						}
+					}
+				}
+				puppet = GRG
+				set_autonomy = {
+					target = GRG
+					autonomy_state = autonomy_colony
+				}
+				GRG = {
+					set_cosmetic_tag = GRG_SHE
+				}
+				ELSE = {
+					every_state = {
+						limit = {
+							is_owned_by = CSA
+							OR = {
+								is_core_of = GRG
+								region = 170
+								region = 53
+							}
+						}
+						add_core_of = GRG
+						transfer_state_to = GRG
+					}
+				}
+			}
+			annex_country = {
+				target = FROM
+			}		
+			IF = {
+				limit = {
+					NOT = {
+						GRG = {
+							exists = yes
+							has_character = geo
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							region = 170
+							region = 53
+						}
+					}
+					add_core_of = CUB
+				}
+				release_puppet = CUB
+				set_autonomy = {
+					target = CUB
+					autonomy_state = autonomy_integrated_puppet
+				}
+			}
+			
+			IF = {
+				limit = {
+					IND = {
+						has_war_with = ROOT
+					}
+				}
+				white_peace = IND
+				puppet = IND
+				set_autonomy = {
+					target = IND
+					autonomy_state = autonomy_supervised_state
+				}
+			}
+			IF = {
+				limit = {
+					FIJ = {
+						has_capitulated = yes
+					}
+				}
+				annex_country = {
+					target = FIJ
+				}
+				ELSE = {
+					white_peace = FIJ
+				}
+			}
+			news_event = {
+				id = gge.32
+				hours = 6
+			}
+		}
+		available = {
+			FROM = {
+				surrender_progress > .8
+			}
+			365 = {
+				CONTROLLER = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		visible = {
+			has_war_with = FROM
+		}
+	}
+	FGE_establish_counter_government = {
+		ai_will_do = {
+			factor = 10000
+		}
+		available = {
+			OR = {
+				315 = {
+					is_controlled_by = ROOT
+				}
+				365 = {
+					is_controlled_by = ROOT
+				}
+			}
+			has_character = geo
+		}
+		allowed = {
+			tag = FGE
+		}
+		fire_only_once = yes
+		days_remove = 10
+		remove_effect = {
+			every_controlled_state = {
+				limit = {
+					is_owned_by = CSA
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+					NOT = {
+						is_core_of = VIR
+						is_core_of = TEX
+					}
+				}
+				transfer_state_to = GRG
+				add_core_of = GRG
+			}
+			puppet = GRG
+			set_autonomy = {
+				target = GRG
+				autonomy_state = autonomy_dominion
+			}
+			random_character = {
+				limit = {
+					is_character = geo
+				}
+				set_nationality = GRG
+			}
+			GRG = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				promote_character = {
+					character = geo
+					ideology = socialism
+				}
+				promote_character = {
+					character = geo
+					ideology = marxism
+				}
+				set_cosmetic_tag = CSA
+				division_template = {
+					name = "Democratic Partisans"
+					regiments = {
+						infantry = {x = 0 y = 0}
+						infantry = {x = 0 y = 1}
+						infantry = {x = 0 y = 3}
+						infantry = {x = 0 y = 4}
+					}
+					is_locked = yes
+				}
+			}
+		}
+	}
+	FGE_support_democratic_su_rebels = {
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			OR = {
+				GRG = {
+					has_character = geo
+				}
+				has_global_flag = debug_grg_has_geo
+			}
+			GRG = {
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			FROM = {
+				is_owned_by = CSA
+				is_controlled_by = CSA
+				state_population < 4
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		allowed = {
+			tag = FGE
+		}
+		days_remove = 15
+		state_target = yes
+		cost = 100
+		on_map_mode = map_and_decisions_view
+		remove_effect = {
+			hidden_effect = {
+				GRG = {
+					set_state_controller = FROM
+				}
+			}
+			FROM = {
+				create_unit = {
+					division = "name = \"Democratic [FROM.GetName]n Partisans\" division_template = \"Democratic Partisans\" start_experience_factor = 0.05"
+					owner = GRG
+				}
+				create_unit = {
+					division = "name = \"Democratic [FROM.GetName]n Partisans\" division_template = \"Democratic Partisans\" start_experience_factor = 0.05"
+					owner = GRG
+				}
+				create_unit = {
+					division = "name = \"Democratic [FROM.GetName]n Partisans\" division_template = \"Democratic Partisans\" start_experience_factor = 0.05"
+					owner = GRG
+				}
+			}
+			hidden_effect = {
+				CSA = {
+					set_state_controller = FROM
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+	}
+}
+
+FGE_eu_decisions = {
+	FGE_invite_nation = {
+		cost = 75
+		target_trigger = {
+			NOT = {
+				tag = WIL
+			}
+			FROM = {
+				CAPITAL_SCOPE = {
+					is_on_continent = europe
+				}
+				OR = {
+					has_government = democratic
+					AND = {
+						OR = {
+							tag = ESP
+							tag = PRT
+						}
+						has_government = neutrality
+					}
+				}
+				NOT = {
+					AND = {
+						tag = ZAP
+						NOT = {
+							has_country_flag = ZAP_republic
+						}
+					}
+				}
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = generic.5
+					days = 1
+				}
+			}
+		}
+	}
+}
+FGE_enforce_republicanism = {
+	FGE_enforce_republicanism_decision = {
+		cost = 75
+		days_remove = 25
+		target_trigger = {
+			NOT = {
+				tag = WIL
+			}
+			FROM = {
+				CAPITAL_SCOPE = {
+					is_on_continent = europe
+				}
+				OR = {
+					NOT = {
+						has_government = democratic
+						AND = {
+							OR = {
+								tag = ESP
+								tag = PRT
+							}
+							has_government = neutrality
+						}
+					}
+					AND = {
+						tag = ZAP
+						NOT = {
+							has_country_flag = ZAP_republic
+						}
+					}
+				}
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		war_with_on_remove = FROM
+		visible = {
+			FROM = {
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+			NOT = {
+				has_wargoal_against = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					any_controlled_state = {
+						any_neighbor_state = {
+							is_owned_by = FROM
+						}
+					}
+				}
+			}
+		}
+		remove_effect = {
+			create_wargoal = {
+				target = FROM
+				type = topple_government
+			}
+		}
+	}
+}
+FGE_debug = {
+	FGE_add_katz = {
+		complete_effect = {
+			add_ideas = katz_head_of_state
+		}
+	}
+	FGE_make_recognize_us = {
+		target_trigger = {
+			always = yes
+		}
+		complete_effect = {
+			FROM = {
+				recognize_fge_effect = yes
+			}
+		}
+	}
+}
+FGE_GME_recognition = {
+	recognize_FGE = {
+		visible = {
+			NOT = {
+				is_in_array = {
+					array = global.recognizes_fge
+					value = ROOT
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = FGE
+				is_in_faction_with = GME
+				original_tag = GME
+				is_subject = yes
+			}
+		}
+		targets = {
+			FGE
+		}
+		complete_effect = {
+			ROOT = {
+				recognize_fge_effect = yes
+				set_variable = {
+					germania_opinion = -0.5
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				recognize_fge_effect = yes
+			}		
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				is_in_array = {
+					array = global.recognizes_fge_and_gme
+					value = ROOT
+				}
+				check_variable = {
+					germania_opinion > 1
+				}
+			}
+		}
+	}
+	recognize_GME = {
+		visible = {
+			NOT = {
+				is_in_array = {
+					array = global.recognizes_gme
+					value = ROOT
+				}
+				
+			}
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = FGE
+				has_war_with = GME
+				original_tag = FGE
+			}
+			is_subject = no
+		}
+		targets = {
+			GME
+		}
+		complete_effect = {
+			ROOT = {
+				recognize_gme_effect = yes
+				set_variable = {
+					germania_opinion = 0.5
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				recognize_gme_effect = yes
+			}	
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				is_in_array = {
+					array = global.recognizes_fge_and_gme
+					value = ROOT
+				}
+				check_variable = {
+					germania_opinion < -1
+				}
+			}
+		}
+	}
+	become_neutral = {
+		visible = {
+			NOT = {
+				is_in_array = {
+					array = global.recognizes_fge_and_gme
+					value = ROOT
+				}
+				is_subject = yes
+				
+			}
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = FGE
+				has_war_with = GME
+				original_tag = FGE
+				has_war_with = FGE
+				is_in_faction_with = GME
+				original_tag = GME
+			}
+		}
+		complete_effect = {
+			ROOT = {
+				recognize_fge_and_gme_effect = yes
+				set_variable = {
+					germania_opinion = 0
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				recognize_fge_and_gme_effect = yes
+			}	
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				is_in_array = {
+					array = global.recognizes_fge
+					value = ROOT
+				}
+				check_variable = {
+					germania_opinion < -1
+				}
+			}
+			modifier = {
+				add = 1000
+				is_in_array = {
+					array = global.recognizes_gme
+					value = ROOT
+				}
+				check_variable = {
+					germania_opinion > 1
+				}
+			}
+		}
+	}
+
+	switch_sides_to_fge = {
+		visible = {
+			has_war_with = FGE
+			is_in_faction_with = GME
+			NOT = {
+				original_tag = CSA
+				original_tag = GME
+				capital_scope = {
+					is_on_continent = europe
+				}
+			}
+		}
+		complete_effect = {
+			leave_faction = yes
+			white_peace = FGE
+			IF = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					end_puppet = ROOT
+				}
+			}
+			FGE = {
+				puppet = ROOT
+			}
+			add_to_war = {
+				targeted_alliance = FGE
+				enemy = GME
+			}
+			recognize_fge_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				check_variable = {
+					germania_opinion > 2
+				}
+				is_major = no
+			}
+		}
+	}
+	switch_sides_to_gme = {
+		visible = {
+			has_war_with = GME
+			is_in_faction_with = FGE
+			NOT = {
+				original_tag = FGE
+				original_tag = GME
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_claimed_by = GME
+						is_core_of = GME
+					}
+				}
+				set_state_owner_to = GME
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = GME
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ROOT
+						OR = {
+							is_core_of = PREV
+							is_claimed_by = PREV
+						}
+					}
+					set_state_owner_to = PREV
+				}
+			}
+			leave_faction = yes
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = GME
+						original_tag = GME
+					}
+				}
+				white_peace = ROOT
+			}
+			IF = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					end_puppet = ROOT
+				}
+			}
+			IF = {
+				limit = {
+					GME = {
+						is_subject = yes
+					}
+				}
+				GME = {
+					OVERLORD = {
+						puppet = ROOT
+					}
+				}
+				ELSE = {
+					GME = {
+						puppet = ROOT
+					}
+				}
+			}
+			add_to_war = {
+				targeted_alliance = GME
+				enemy = FGE
+			}
+			set_variable = {
+				germania_opinion = 0
+			}
+			recognize_gme_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				surrender_progress > 0.6
+				is_major = no
+			}
+		}
+	}
+
+
+	GME_claim_prussia = {
+		targets = {
+			ZAP
+		}
+		allowed = {
+			original_tag = GME
+		}
+		available = {
+			FROM = {
+				is_in_faction_with = FGE
+			}
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_owned_by = FROM
+					OR = {
+						state = 66
+						state = 67
+						state = 762
+						state = 68
+						state = 86
+						state = 63
+						state = 807
+						state = 85
+						state = 5
+						state = 763
+						state = 188
+						state = 74
+						state = 75
+						state = 9
+						state = 69
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+
+	CSA_occupy_gme = {
+		visible = {
+			GME = {
+				has_war_with = FGE
+				surrender_progress > 0.4
+				exists = yes
+				is_subject_of = CSA
+			}
+			original_tag = CSA
+		}
+		available = {
+			GME = {
+				has_war_with = FGE
+				surrender_progress > 0.65
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 100
+				surrender_progress > 0.74
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = GME
+				}
+				set_state_province_controller = {
+					controller = CSA
+					limit = {
+						original_tag = GME
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_controlled_by = GME
+				}
+				transfer_state_to = FGE
+				set_state_province_controller = {
+					controller = CSA
+				}
+			}
+			GME = {
+				transfer_units_fraction = {
+					target = CSA
+					size = 1
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+
+	FGE_intervene_in_uk = {
+		ai_will_do = {
+			factor = 1000
+		}
+		fire_only_once = yes
+		allowed = {
+			tag = FGE
+		}
+		visible = {
+			BRT = {
+				has_civil_war = yes
+			}
+		}
+		complete_effect = {
+			add_ideas = FGE_intervene_in_uk
+		}
+	}
+}
+FGE_ecuador_conflict = {
+	FGE_take_state = {
+		allowed = {
+			original_tag = FGE
+		}
+		available = {
+			NOT = {
+				has_country_flag = FGE_ECD_border_war_prep
+			}
+		}
+		cost = 50
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ECD
+				any_neighbor_state = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_country_flag = FGE_returned_home
+			}
+		}
+		days_remove = 50
+		complete_effect = {
+			ROOT = {
+				set_country_flag = {
+					flag = FGE_ECD_border_war_prep
+					value = 1
+					days = 50
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				random_neighbor_state = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+					}
+					start_border_war = {
+						change_state_after_war = no
+						attacker = {
+							state = THIS
+							num_provinces = 4
+							on_win = wtt_border_conflict_won_attacker.1
+							on_lose = wtt_border_conflict_lost_attacker.1
+							on_cancel = wtt_border_conflict_canceled_attacker.1
+						}
+						defender = {
+							state = FROM
+							num_provinces = 4
+							on_win = wtt_border_conflict_won_defender.1
+							on_lose = wtt_border_conflict_lost_defender.1
+							on_cancel = wtt_border_conflict_canceled_defender.1
+						}
+					}
+				}
+			}
+		}
+	}
+	ECD_take_state = {
+		allowed = {
+			original_tag = ECD
+		}
+		available = {
+			NOT = {
+				has_country_flag = FGE_ECD_border_war_prep
+			}
+		}
+		cost = 50
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = FGE
+				any_neighbor_state = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				FGE = {
+					has_war = yes
+				}
+			}
+		}
+		days_remove = 50
+		complete_effect = {
+			ROOT = {
+				set_country_flag = {
+					flag = FGE_ECD_border_war_prep
+					value = 1
+					days = 50
+				}
+			}
+		}
+		remove_effect = {
+			ROOT = {
+				clr_country_flag = FGE_ECD_border_war_prep
+			}
+			FROM = {
+				random_neighbor_state = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+					}
+					start_border_war = {
+						change_state_after_war = no
+						attacker = {
+							state = THIS
+							num_provinces = 4
+							on_win = wtt_border_conflict_won_attacker.1
+							on_lose = wtt_border_conflict_lost_attacker.1
+							on_cancel = wtt_border_conflict_canceled_attacker.1
+						}
+						defender = {
+							state = FROM
+							num_provinces = 4
+							on_win = wtt_border_conflict_won_defender.1
+							on_lose = wtt_border_conflict_lost_defender.1
+							on_cancel = wtt_border_conflict_canceled_defender.1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+GME_state_of_the_national_state = {
+	GME_factory_strike = {
+		state_target = yes
+		cost = 25
+		days_remove = 25
+		target_array = owned_controlled_states
+		modifier = {
+			local_factories = -1
+		}
+		allowed = {
+			original_tag = GME
+		}
+		visible = {
+			is_subject_of = CSA
+			has_completed_focus = GME_strike_in_the_factories
+		}
+		available = {
+			OR = {
+				FROM = {
+					industrial_complex > 0
+				}
+				FROM = {
+					arms_factory > 0
+				}
+				
+			}
+			FROM = {
+				state_population > 0
+			}
+		}
+		on_map_mode = map_only
+		remove_effect = {
+			random_list = {
+				2 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.0025
+					}
+					GME_remove_5_authority = yes
+				}
+				2 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.0025
+					}
+					GME_remove_5_csa_trust = yes
+					GME_remove_5_authority = yes
+				}
+				4 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.0013
+					}
+					FROM = {
+						add_manpower = -1
+					}
+				}
+			}
+		}
+	}
+	GME_refuse_resource_extraction = {
+		state_target = yes
+		cost = 25
+		days_remove = 25
+		target_array = owned_controlled_states
+		modifier = {
+			local_factories = -1
+		}
+		allowed = { 
+			original_tag = GME
+		}
+		visible = {
+			is_subject_of = CSA
+			has_completed_focus = GME_refuse_extraction_collaboration
+				
+					
+		}
+		available = {
+			
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_resources_amount = {
+						resource = oil
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = aluminium
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = chromium
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = rubber
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = tungsten
+						amount > 0 
+						delivered = no
+					} 
+				}
+				has_state_flag = CSA_resource_rights
+			}
+		}
+		on_map_mode = map_only
+		remove_effect = {
+			random_list = {
+				2 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.0025
+					}
+					GME_remove_5_authority = yes
+				}
+				2 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.0025
+					}
+					GME_remove_5_csa_trust = yes
+					GME_remove_5_authority = yes
+				}
+				4 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.0013
+					}
+					FROM = {
+						add_manpower = -1
+					}
+				}
+			}
+		}
+	}
+	GME_take_control_over_resources = {
+		state_target = yes
+		cost = 50
+		days_remove = 25
+		target_array = owned_controlled_states
+		allowed = { 
+			original_tag = GME
+		}
+		visible = {
+			is_subject_of = CSA
+			has_completed_focus = GME_take_control_over_resources
+				
+					
+		}
+		available = {
+			
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_resources_amount = {
+						resource = oil
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = aluminium
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = chromium
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = rubber
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+						delivered = no
+					}
+					has_resources_amount = {
+						resource = tungsten
+						amount > 0 
+						delivered = no
+					} 
+				}
+				has_state_flag = CSA_resource_rights
+			}
+		}
+		on_map_mode = map_only
+		remove_effect = {
+			random_list = {
+				2 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.10
+					}
+					GME_remove_5_csa_trust = yes
+					GME_remove_15_authority = yes
+					CSA = {
+						remove_resource_rights = FROM
+					}
+					FROM = {
+						clr_state_flag = CSA_resource_rights
+					}
+				}
+				2 = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.05
+					}
+					GME_remove_5_csa_trust = yes
+					GME_remove_10_authority = yes
+					CSA = {
+						remove_resource_rights = FROM
+					}
+					FROM = {
+						clr_state_flag = CSA_resource_rights
+					}
+				}
+				4 = {
+					GME_remove_10_csa_trust = yes
+					GME_remove_5_authority = yes
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.025
+					}
+					FROM = {
+						add_manpower = -1
+					}
+				}
+			}
+		}
+	}
+}

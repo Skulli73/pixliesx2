@@ -1,0 +1,231 @@
+TRL_war_CSA = {
+	allowed = {
+		tag = TRL
+	}
+	enable = {
+		date > 53.01.26
+		NOT = {
+			NOT = { country_exists = CSA }
+			CSA = {
+				is_subject_of = TRL
+			}
+			is_subject_of = CSA
+			is_in_faction_with = CSA
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = CSA }
+			CSA = {
+				is_subject_of = TRL
+			}
+			is_subject_of = CSA
+			is_in_faction_with = CSA
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "GME"			
+		value = 200000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "GME"			
+		value = 200000
+	}
+	ai_strategy = {
+		type = invade
+		id = "GME"			
+		value = 200000 
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GME"			
+		value = 200000 
+	}
+}
+FGE_war_TRL = {
+	allowed = {
+		tag = FGE
+	}
+	enable = {
+		has_wargoal_against = TRL
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "TRL"			
+		value = 10000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "TRL"			
+		value = 10000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "TRL"			
+		value = 10000
+	}
+}
+TRL_war_ILY = {
+	allowed = {
+		tag = TRL
+	}
+	enable = {
+		has_wargoal_against = ILY
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "ILY"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ILY"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "ILY"			
+		value = 1000
+	}
+}
+FGE_focus_europe = {
+	allowed = {
+		tag = FGE
+	}
+	enable = {
+		GME = {
+			exists = yes
+		}
+		any_owned_state = {
+			is_on_continent = europe
+		}
+	}
+	abort = {
+		GME = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GME
+		value = 100
+	}
+}
+FGE_invade_GME = {
+	allowed = {
+		tag = FGE
+	}
+	enable = {
+		has_war_with = GME
+		has_war_support < 0.25
+	}
+	abort = {
+		NOT = {
+			has_war_with = GME
+		}
+	}
+	ai_strategy = {
+		type = invade
+		id = GME
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = GME
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+		manual_attack = yes
+	}
+}
+FGE_invade_CSA = {
+	allowed = {
+		tag = FGE
+	}
+	enable = {
+		NOT = {
+			has_war_with = FGE
+		}
+		has_war_with = CSA
+	}
+	abort = {
+		NOT = {
+			has_war_with = CSA
+		}
+	}
+	ai_strategy = {
+		type = invade
+		id = CSA
+		value = 1000
+	}
+}
+ECD_join_CSA = {
+	allowed = {
+		tag = ECD
+	}
+	enable = {
+		CSA = {
+			has_war_with = FGE
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = CSA
+		value = 10000
+	}
+	ai_strategy = {
+		type = befriend
+		id = CSA
+		value = 10000
+	}
+}
+BRT_join_CSA = {
+	allowed = {
+		original_tag = BRT
+	}
+	enable = {
+		CSA = {
+			has_war_with = FGE
+		}
+		has_government = fascism
+	}
+	ai_strategy = {
+		type = alliance
+		id = CSA
+		value = 10000
+	}
+	ai_strategy = {
+		type = befriend
+		id = CSA
+		value = 10000
+	}
+}
+BRT_join_FGE = {
+	allowed = {
+		original_tag = BRT
+	}
+	enable = {
+		FGE = {
+			has_war_with = CSA
+		}
+		has_government = democratic
+	}
+	ai_strategy = {
+		type = alliance
+		id = FGE
+		value = 10000
+	}
+	ai_strategy = {
+		type = befriend
+		id = FGE
+		value = 10000
+	}
+}

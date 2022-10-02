@@ -1,0 +1,40 @@
+add_namespace = ily
+country_event = {
+	id = ily.29
+	title = ily.29.t
+	desc = ily.29.d
+	is_triggered_only = yes
+	option = {
+		name = ily.29.a
+		diplomatic_relation = {
+				country = CSA
+				relation = guarantee
+				active = yes
+			
+			}
+		}
+	}
+country_event = {
+	id = ily.32
+	title = ily.32.t
+	desc = ily.32.d
+	is_triggered_only = yes
+	option = {
+		name = ily.32.a
+		diplomatic_relation = {
+				release_puppet = ILY
+				remove_from_faction = ILY
+			
+			}
+		}
+	}
+news_event = {
+	id = ily.33
+	title = ily.33.t
+	desc = ily.33.d
+	picture = GFX_news_event_italian_civil_war
+	is_triggered_only = yes
+	option = {
+		name = ily.33.a			
+	}
+}
